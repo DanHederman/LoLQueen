@@ -1,0 +1,7 @@
+1. Research API
+2. Connect to API
+3. Pull Specified Information from json files
+4. Temporarily Store info pulled from API
+5. Push info to GUI
+6. Design GUI in practical layout.
+7. Allow multiple queries - Replace info in GUI with new search. (refresh screen)

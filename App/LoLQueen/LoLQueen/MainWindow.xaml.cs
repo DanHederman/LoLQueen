@@ -32,7 +32,7 @@ namespace LoLQueen
             string name = root.summoner.name;
             int level = root.summoner.summonerLevel;
 
-            Label1.Text = name + " is level " + level;
+            Label1.Content = name + " is level " + level;
         }
     }
 }

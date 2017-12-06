@@ -7,13 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-<<<<<<< HEAD
         <Button Content="Button" HorizontalAlignment="Left" Margin="195,193,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label Content="Label1" HorizontalAlignment="Left" Margin="217,130,0,0" VerticalAlignment="Top"/>
-=======
-        <TextBox Name="NameSearch" HorizontalAlignment="Left" Height="23" Margin="187,45,0,0" TextWrapping="Wrap" Text="Notorious Nutz" VerticalAlignment="Top" Width="114"/>
-        <Label Content="SUMMONER NAME" HorizontalAlignment="Left" Margin="187,14,0,0" VerticalAlignment="Top"/>
-
->>>>>>> origin/master
+        <Label Name="Label1" Content="Label1" HorizontalAlignment="Left" Margin="217,130,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

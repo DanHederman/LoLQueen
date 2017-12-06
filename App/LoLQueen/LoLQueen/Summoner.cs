@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace LoLQueen
 {
-    //// swap class summoner.cs with this code
 
     public class wrapper
     {

@@ -3,3 +3,4 @@ storage.ide-wal
 *.ide-wal
 *.ide-wal
 *.ide-shm
+*.ide-wal

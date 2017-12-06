@@ -24,5 +24,15 @@ namespace LoLQueen
         {
             InitializeComponent();
         }
+
+        public async Task Button_ClickAsync(object sender, RoutedEventArgs e)
+        {
+            Summoner root = new Summoner { summoner = new Summoner() };
+            root = await Deserialize.ConnectToRiot("Notorious Nutz", "EUW");
+            string name = root.summoner.name;
+            int level = root.summoner.summonerLevel;
+
+            Label1.Text = name + " is level " + level;
+        }
     }
 }

@@ -15,13 +15,14 @@ namespace LoLQueen
 {
     public class Deserialize
     {
-        private const string APIKey = "RGAPI-78d81007-1c3c-4586-8d6c-52c94163f3eb";
+        private const string APIKey = "key";
 
         public async static Task<wrapper> ConnectToRiot(string user, string regionName)
         {
             var http = new HttpClient();
-            string riotURL = String.Format("https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/Notorious%20Nutz?api_key=RGAPI-78d81007-1c3c-4586-8d6c-52c94163f3eb",
+            string riotURL = String.Format("link",
                 regionName, user, APIKey);
+
             var response = await http.GetAsync(riotURL);
 
             var result = await response.Content.ReadAsStringAsync();

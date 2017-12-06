@@ -6,10 +6,24 @@
         xmlns:local="clr-namespace:LoLQueen"
         mc:Ignorable="d"
         Title="LoLQueen" Height="500" Width="500" Background="BlueViolet">
+    <Window.Resources>
+        <Style TargetType="TextBlock" >
+            <Setter Property="FontSize" Value="13"></Setter>
+            <Setter Property="Visibility" Value="Visible"></Setter>
+            <Setter Property="Background" Value="BlanchedAlmond"></Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="195,193,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label Name="Label1"  Content="Label1" HorizontalAlignment="Left" Margin="217,130,0,0" VerticalAlignment="Top"/>
-        <Image Source="Images/logo.png"  HorizontalAlignment="Left" Height="54" Margin="188,33,0,0" VerticalAlignment="Top" Width="98"/>
+        
+        <Button Content="Button" HorizontalAlignment="Left" Margin="27,401,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Name="Label1"  Content="Label1" HorizontalAlignment="Left" Margin="367,395,0,0" VerticalAlignment="Top"/>
+        <Image Name="Logo" Source="Images/logo.png"  HorizontalAlignment="Left" Height="54" Margin="188,33,0,0" VerticalAlignment="Top" Width="98"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="496,143,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image Name="SummonerIcon" Source="Images/SummonerIcon.png" HorizontalAlignment="Left" Height="100" Margin="27,116,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBlock HorizontalAlignment="Left" Margin="141,116,0,0" TextWrapping="Wrap" Text="Sumoner Name: " VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="141,143,0,0" TextWrapping="Wrap" Text="Summoner Level:" VerticalAlignment="Top"/>
+        <DataGrid HorizontalAlignment="Left" Height="100" Margin="186,257,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBlock HorizontalAlignment="Left" Margin="141,171,0,0" TextWrapping="Wrap" Text="Summoner Rank:" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>

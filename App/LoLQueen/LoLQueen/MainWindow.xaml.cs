@@ -31,7 +31,8 @@ namespace LoLQueen
             string output = JsonConvert.SerializeObject(obj);
             var root = JsonConvert.DeserializeObject<Summoner>(output);
 
-            Label1.Content = root.name + " is level " + root.summonerLevel;
+            Label1.Content = root.name;
+            Label2.Content = root.summonerLevel;
         }
     }
 }

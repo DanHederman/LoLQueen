@@ -1,0 +1,13 @@
+match history: grid list to view for gui
+summonor name
+win percentage
+summoner icon 
+level 
+Hours logged 
+stats most played champ
+
+
+Json file to get and display icons - http://ddragon.leagueoflegends.com/cdn/6.24.1/data/en_US/profileicon.json
+
+Website to pull images to show beside the data we pull - https://developer.riotgames.com/static-data.html#realms
+

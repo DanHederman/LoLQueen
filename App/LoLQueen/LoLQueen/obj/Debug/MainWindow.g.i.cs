@@ -41,9 +41,25 @@ namespace LoLQueen {
     public partial class MainWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 11 "..\..\MainWindow.xaml"
+        #line 12 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label Label1;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 13 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Image Logo;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 15 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Image SummonerIcon;
         
         #line default
         #line hidden
@@ -80,6 +96,12 @@ namespace LoLQueen {
             {
             case 1:
             this.Label1 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 2:
+            this.Logo = ((System.Windows.Controls.Image)(target));
+            return;
+            case 3:
+            this.SummonerIcon = ((System.Windows.Controls.Image)(target));
             return;
             }
             this._contentLoaded = true;

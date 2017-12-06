@@ -17,17 +17,19 @@ namespace LoLQueen
     {
         private const string APIKey = "key";
 
-        public async static Task<wrapper> ConnectToRiot(string user, string regionName)
+        ///replace deserialize.cs asyn method with this
+        public async static Task<Summoner> ConnectToRiot(string user, string regionName)
         {
             var http = new HttpClient();
-            string riotURL = String.Format("link",
+            string riotURL = String.Format(
+                "https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/Notorious%20Nutz?api_key=RGAPI-78d81007-1c3c-4586-8d6c-52c94163f3eb",
                 regionName, user, APIKey);
 
             var response = await http.GetAsync(riotURL);
 
             var result = await response.Content.ReadAsStringAsync();
 
-            return JsonConvert.DeserializeObject<wrapper>(result);
+            return JsonConvert.DeserializeObject<Summoner>(result);
 
         }
     }

@@ -14,8 +14,6 @@
         </Style>
     </Window.Resources>
     <Grid>
-        
-        <Button Content="Button" HorizontalAlignment="Left" Margin="27,401,0,0" VerticalAlignment="Top" Width="75"/>
         <Label Name="Label1"  Content="Label1" HorizontalAlignment="Left" Margin="367,395,0,0" VerticalAlignment="Top"/>
         <Image Name="Logo" Source="Images/logo.png"  HorizontalAlignment="Left" Height="54" Margin="188,33,0,0" VerticalAlignment="Top" Width="98"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="496,143,0,0" VerticalAlignment="Top" Width="100"/>
@@ -24,6 +22,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="141,143,0,0" TextWrapping="Wrap" Text="Summoner Level:" VerticalAlignment="Top"/>
         <DataGrid HorizontalAlignment="Left" Height="100" Margin="186,257,0,0" VerticalAlignment="Top" Width="100"/>
         <TextBlock HorizontalAlignment="Left" Margin="141,171,0,0" TextWrapping="Wrap" Text="Summoner Rank:" VerticalAlignment="Top"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="55,406,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>

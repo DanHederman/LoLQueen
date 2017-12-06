@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace LoLQueen
 {
+    //// swap class summoner.cs with this code
+
     public class wrapper
     {
         public Summoner summoner { get; set; }
     }
+
     public class Summoner
     {
         internal Summoner summoner;

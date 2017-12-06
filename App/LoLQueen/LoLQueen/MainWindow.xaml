@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LoLQueen"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="LoLQueen" Height="500" Width="500" Background="BlueViolet">
     <Grid>
         <Button Content="Button" HorizontalAlignment="Left" Margin="195,193,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label Name="Label1" Content="Label1" HorizontalAlignment="Left" Margin="217,130,0,0" VerticalAlignment="Top"/>
+        <Label Name="Label1"  Content="Label1" HorizontalAlignment="Left" Margin="217,130,0,0" VerticalAlignment="Top"/>
+        <Image Source="Images/logo.png"  HorizontalAlignment="Left" Height="54" Margin="188,33,0,0" VerticalAlignment="Top" Width="98"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="496,143,0,0" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Window>

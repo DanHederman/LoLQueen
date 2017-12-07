@@ -17,14 +17,18 @@ namespace LoLQueen
     {
         //test new comment
         //another new comment
-        private const string APIKey = "key";
+        private const string APIKey = "";
+
+        private const string SummonerName = "Harmelody?";
+
+        private const string Region = "euw1";
 
         ///replace deserialize.cs asyn method with this
         public async static Task<Summoner> ConnectToRiot(string user, string regionName)
         {
             var http = new HttpClient();
             string riotURL = String.Format(
-                "https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/Notorious%20Nutz?api_",
+                "https://" + Region + ".api.riotgames.com/lol/summoner/v3/summoners/by-name/" + SummonerName + "api_key=" + APIKey,
                 regionName, user, APIKey);
 
             var response = await http.GetAsync(riotURL);

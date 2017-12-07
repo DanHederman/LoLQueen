@@ -27,7 +27,7 @@ namespace LoLQueen
         private async void Button_ClickAsync(object sender, RoutedEventArgs e)
         {
             Console.WriteLine("Entered button click");
-            var obj = await Deserialize.ConnectToRiot("Notorious Nutz", "EUW1");
+            var obj = await Deserialize.ConnectToRiot("MLPQuadzilla", "EUW1");
             string output = JsonConvert.SerializeObject(obj);
             var root = JsonConvert.DeserializeObject<Summoner>(output);
 

@@ -13,7 +13,7 @@ namespace LoLQueen
          * Different users without altering the URL manually
          */
 
-        private const string ApiKey = "RGAPI-78d81007-1c3c-4586-8d6c-52c94163f3eb";
+        private const string ApiKey = "";
 
         private const string SummonerName = "Harmelody";
 

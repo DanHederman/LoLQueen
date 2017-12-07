@@ -1,16 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using Newtonsoft.Json;
 
 namespace LoLQueen
@@ -31,8 +20,8 @@ namespace LoLQueen
             string output = JsonConvert.SerializeObject(obj);
             var root = JsonConvert.DeserializeObject<Summoner>(output);
 
-            Label1.Content = root.name;
-            Label2.Content = root.summonerLevel;
+            Label1.Content = root.Name;
+            Label2.Content = root.SummonerLevel;
         }
     }
 }

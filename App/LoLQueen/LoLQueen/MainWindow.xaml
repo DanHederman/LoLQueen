@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:LoLQueen"
         mc:Ignorable="d"
         Title="LoLQueen" Height="500" Width="500" Background="AntiqueWhite">
     <Window.Resources>
@@ -14,15 +13,16 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Label Name="Label1"  Content="" HorizontalAlignment="Left" Margin="257,112,0,0" VerticalAlignment="Top" />
+        
         <Image Name="Logo" Source="Images/logo.png"  HorizontalAlignment="Left" Height="54" Margin="188,33,0,0" VerticalAlignment="Top" Width="98"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="496,143,0,0" VerticalAlignment="Top" Width="100"/>
         <Image Name="SummonerIcon" Source="Images/SummonerIcon.png" HorizontalAlignment="Left" Height="100" Margin="27,116,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBlock Name="l1" HorizontalAlignment="Left" Margin="141,116,0,0" TextWrapping="Wrap" Text="Sumoner Name: " VerticalAlignment="Top"/>
+        <TextBlock Name="L1" HorizontalAlignment="Left" Margin="141,116,0,0" TextWrapping="Wrap" Text="Sumoner Name: " VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="141,154,0,0" TextWrapping="Wrap" Text="Summoner Level:" VerticalAlignment="Top"/>
         <DataGrid HorizontalAlignment="Left" Height="100" Margin="186,257,0,0" VerticalAlignment="Top" Width="100"/>
         <TextBlock HorizontalAlignment="Left" Margin="141,182,0,0" TextWrapping="Wrap" Text="Summoner Rank:" VerticalAlignment="Top"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="55,406,0,0" VerticalAlignment="Top" Width="75" Click="Button_ClickAsync"/>
+        <Label Name="Label1"  Content="" HorizontalAlignment="Left" Margin="257,112,0,0" VerticalAlignment="Top" />
         <Label Name="Label2" Content="" HorizontalAlignment="Left" Margin="257,150,0,0" VerticalAlignment="Top"/>
 
     </Grid>

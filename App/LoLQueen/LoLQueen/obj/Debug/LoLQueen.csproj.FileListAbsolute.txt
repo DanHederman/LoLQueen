@@ -133,7 +133,6 @@ C:\Users\Dan\Documents\GitHub\LoLQueen\App\LoLQueen\LoLQueen\obj\Debug\LoLQueen.
 C:\Users\Dan\Documents\GitHub\LoLQueen\App\LoLQueen\LoLQueen\obj\Debug\MainWindow.g.cs
 C:\Users\Dan\Documents\GitHub\LoLQueen\App\LoLQueen\LoLQueen\obj\Debug\App.g.cs
 C:\Users\Dan\Documents\GitHub\LoLQueen\App\LoLQueen\LoLQueen\obj\Debug\LoLQueen_MarkupCompile.cache
-C:\Users\Dan\Documents\GitHub\LoLQueen\App\LoLQueen\LoLQueen\obj\Debug\LoLQueen_MarkupCompile.lref
 C:\Users\Dan\Documents\GitHub\LoLQueen\App\LoLQueen\LoLQueen\obj\Debug\MainWindow.baml
 C:\Users\Dan\Documents\GitHub\LoLQueen\App\LoLQueen\LoLQueen\obj\Debug\LoLQueen.g.resources
 C:\Users\Dan\Documents\GitHub\LoLQueen\App\LoLQueen\LoLQueen\obj\Debug\LoLQueen.Properties.Resources.resources

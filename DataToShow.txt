@@ -11,3 +11,8 @@ Json file to get and display icons - http://ddragon.leagueoflegends.com/cdn/6.24
 
 Website to pull images to show beside the data we pull - https://developer.riotgames.com/static-data.html#realms
 
+Possible hurdles- match history
+
+								a lot of info to pull
+								how to display it 
+								how much of the info we need

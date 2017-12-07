@@ -24,7 +24,7 @@ namespace LoLQueen
         {
             var http = new HttpClient();
             string riotURL = String.Format(
-                "https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/Notorious%20Nutz?api_key=RGAPI-78d81007-1c3c-4586-8d6c-52c94163f3eb",
+                "https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/Notorious%20Nutz?api_",
                 regionName, user, APIKey);
 
             var response = await http.GetAsync(riotURL);

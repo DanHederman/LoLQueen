@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Windows;
 using Newtonsoft.Json;
 
@@ -22,6 +24,14 @@ namespace LoLQueen
 
             Label1.Content = root.Name;
             Label2.Content = root.SummonerLevel;
+        }
+
+        private async Task DataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            var obj = await Deserialize.ConnectToRito("Harmelody", "EUW1");
+            string output = JsonConvert.SerializeObject(obj);
+            var root = JsonConvert.DeserializeObject<List<MatchHistory>>(output);
+           // dataGridView.DataGrid = output;
         }
     }
 }

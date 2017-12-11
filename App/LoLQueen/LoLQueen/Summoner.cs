@@ -7,7 +7,7 @@ namespace LoLQueen
     public class Summoner
     {
         //internal Summoner summoner;
-
+        //testing
         public int ProfileIconId { get; set; }
         public string Name { get; set; }
         public int SummonerLevel { get; set; }

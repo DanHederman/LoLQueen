@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 
 namespace LoLQueen
 {
+    //REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
     public class Deserialize
     {
         /*Variable used to make the program more universal
@@ -14,7 +15,7 @@ namespace LoLQueen
          * Different users without altering the URL manually
          */
 
-        private const string ApiKey = "RGAPI-70e6c8fd-701d-43de-8fa4-3d3ac4efd6df";
+        private const string ApiKey = "RGAPI-4f07acaf-404a-452b-b02e-53f40affd1bd";
 
         private const string SummonerName = "kgbbí";
 

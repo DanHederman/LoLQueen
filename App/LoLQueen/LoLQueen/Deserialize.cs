@@ -45,12 +45,17 @@ namespace LoLQueen
 
         }
 
-        public async static Task<List<MatchHistory>> ConnectToRito(string user, string regionName)
+        public async static Task<MatchList> ObtainMatchList(string accID, string regionName)
         {
+            Console.WriteLine("Entered obtaining match hist");
             var http = new HttpClient();
-            string riotUrl = String.Format(
-                "https://" + Region + ".api.riotgames.com/lol/summoner/v3/summoners/by-name/" + SummonerName + "?api_key=" + ApiKey,
-                regionName, user, ApiKey);
+            //string riotUrl = String.Format(
+                //"https://" + Region + ".api.riotgames.com/lol/match/v3/matchlists/by-account/"+accID+"/recent?api_key=" + ApiKey,
+                //regionName, ApiKey);
+
+            //"https://euw1.api.riotgames.com/lol/match/v3/matchlists/by-account/" + ACCOUNT_ID + "/recent?api_key=" + API_KEY;
+
+            string riotUrl = String.Format("https://{0}.api.riotgames.com/lol/match/v3/matchlists/by-account/{1}/recent?api_key={2}", regionName, accID, ApiKey);
 
             /* Wait for the url to respond
              * Wait for the url to return something
@@ -64,7 +69,11 @@ namespace LoLQueen
 
             var result = await response.Content.ReadAsStringAsync();
 
-            return JsonConvert.DeserializeObject<List<MatchHistory>>(result);
+            MatchList matchList = JsonConvert.DeserializeObject<MatchList>(result); // can you place breakpoint here?
+
+            
+            //return JsonConvert.DeserializeObject<List<MatchList>>(result); //error
+            return matchList;
 
         }
     }

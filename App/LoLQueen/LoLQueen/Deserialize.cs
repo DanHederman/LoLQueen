@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Net.Http;
 using Newtonsoft.Json;
@@ -9,12 +8,12 @@ namespace LoLQueen
 {
     public class Deserialize
     {
-        /*Variable used to make the program more universal
+        /* Variable used to make the program more universal
          * Changing the variables allows the program to show
          * Different users without altering the URL manually
          */
 
-        private const string ApiKey = "RGAPI-11c3cd7b-b1da-46d7-a2da-1cb35ec5e893";
+        private const string ApiKey = "";
 
         private const string Region = "euw1";
 
@@ -34,6 +33,12 @@ namespace LoLQueen
             return JsonConvert.DeserializeObject<Summoner>(result);
 
         }
+
+        /*
+         * Connects to the API to retrive the match history
+         * useds account id and region to create the correct
+         * link & then deserialize the response
+         */
 
         public static async Task<MatchList> ObtainMatchList(string accID, string regionName)
         {

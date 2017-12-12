@@ -1,12 +1,9 @@
-﻿using System;
-using LoLQueen;
-
-namespace LoLQueen
+﻿namespace LoLQueen
 {
 
     public class Summoner
     {
-        public int ProfileIconId { get; set; }
+        private int ProfileIconId { get; set; }
         public string Name { get; set; }
         public int SummonerLevel { get; set; }
         public long RevisionDate { get; set; }

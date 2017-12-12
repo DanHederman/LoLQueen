@@ -46,6 +46,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <TextBox Name="SummName"  HorizontalAlignment="Left" Height="25" Margin="192,82,0,0" TextWrapping="Wrap" Text="Notorious Nutz" VerticalAlignment="Top" Width="168"/>
+        <TextBox Name="SummName" HorizontalAlignment="Left" Height="25" Margin="192,82,0,0" TextWrapping="Wrap" Text="Notorious Nutz" VerticalAlignment="Top" Width="168"/>
     </Grid>
 </Window>

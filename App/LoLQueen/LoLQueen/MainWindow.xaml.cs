@@ -49,15 +49,11 @@ namespace LoLQueen
                 //Hardcoded the summoner ID for now
                 MatchList matchList = await Deserialize.ObtainMatchList("25414674", "euw1");
                
-<<<<<<< HEAD
                 MatchHist1.Content = matchList.Matches[0].Lane;
                 MatchHist2.Content = matchList.Matches[0].PlatformId;
                 MatchHist3.Content = matchList.Matches[0].Role;
                 MatchHist4.Content = matchList.Matches[0].Queue.ToString();
 
-=======
-                MatchHist1.Content = ("Lane: "+matchList.Matches[0].Lane);
->>>>>>> c32c68de7aacb94bf93de6ec0e3de32e46c8acdb
             }
             catch(Exception b)
             {

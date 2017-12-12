@@ -16,8 +16,6 @@ namespace LoLQueen
 
         private const string ApiKey = "RGAPI-11c3cd7b-b1da-46d7-a2da-1cb35ec5e893";
 
-        //private const string SummonerName = "kgbbí";
-
         private const string Region = "euw1";
 
 

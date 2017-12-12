@@ -14,9 +14,9 @@ namespace LoLQueen
          * Different users without altering the URL manually
          */
 
-        private const string ApiKey = "";
+        private const string ApiKey = "RGAPI-11c3cd7b-b1da-46d7-a2da-1cb35ec5e893";
 
-        private const string SummonerName = "kgbbí";
+        //private const string SummonerName = "kgbbí";
 
         private const string Region = "euw1";
 
@@ -26,7 +26,7 @@ namespace LoLQueen
             var http = new HttpClient();
 
             string riotUrl = String.Format(
-                "https://" + Region + ".api.riotgames.com/lol/summoner/v3/summoners/by-name/" + SummonerName + "?api_key=" + ApiKey,
+                "https://" + Region + ".api.riotgames.com/lol/summoner/v3/summoners/by-name/" + user + "?api_key=" + ApiKey,
                 regionName, user, ApiKey);
 
             var response = await http.GetAsync(riotUrl);

@@ -17,8 +17,8 @@ namespace LoLQueen
         }
         private async void Button_ClickAsync(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("Entered button click");
-            var obj = await Deserialize.ConnectToRiot("MLPQuadzilla", "EUW1");
+            string userInput = SummName.Text.Replace(" ", "%20");
+            var obj = await Deserialize.ConnectToRiot(userInput, "EUW1");
             string output = JsonConvert.SerializeObject(obj);
             var root = JsonConvert.DeserializeObject<Summoner>(output);
 
@@ -32,19 +32,8 @@ namespace LoLQueen
         {
             try
             {
-                Console.WriteLine("Entered match hist select");
                 MatchList matchList = await Deserialize.ObtainMatchList("25414674", "euw1");
-                Console.WriteLine("Done");
-                // string output = JsonConvert.SerializeObject(obj);
-                //var matchHist = JsonConvert.DeserializeObject<MatchList>(output);
-                /*
-                MatchList matchList = JsonConvert.DeserializeObject<MatchList>(obj);
-                */
-                foreach (Match match in matchList.matches)
-                {
-                    Console.WriteLine(match.role);
-                }
-
+               
                 MatchHist1.Content = matchList.matches[0].Lane;
             }
             catch(Exception b)
@@ -54,7 +43,7 @@ namespace LoLQueen
             }
             
 
-            //Console.WriteLine(matchHist.testMatches[0].role);
+
             
 
         }

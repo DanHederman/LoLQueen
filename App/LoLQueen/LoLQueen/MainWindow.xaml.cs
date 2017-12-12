@@ -34,7 +34,7 @@ namespace LoLQueen
             {
                 MatchList matchList = await Deserialize.ObtainMatchList("25414674", "euw1");
                
-                MatchHist1.Content = matchList.matches[0].Lane;
+                MatchHist1.Content = matchList.Matches[0].Lane;
             }
             catch(Exception b)
             {

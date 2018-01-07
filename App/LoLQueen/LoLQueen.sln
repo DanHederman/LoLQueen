@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoLQueen", "LoLQueen\LoLQueen.csproj", "{5702E013-1376-42BF-B5D4-0941552B22BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoLQueen.Tests", "LoLQueen.Tests\LoLQueen.Tests.csproj", "{C8715195-42EB-4C1A-AF54-12440F76424A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5702E013-1376-42BF-B5D4-0941552B22BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5702E013-1376-42BF-B5D4-0941552B22BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5702E013-1376-42BF-B5D4-0941552B22BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5702E013-1376-42BF-B5D4-0941552B22BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8715195-42EB-4C1A-AF54-12440F76424A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8715195-42EB-4C1A-AF54-12440F76424A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8715195-42EB-4C1A-AF54-12440F76424A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8715195-42EB-4C1A-AF54-12440F76424A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28730EC8-AE25-4057-90CC-40016062C653}
+	EndGlobalSection
+EndGlobal

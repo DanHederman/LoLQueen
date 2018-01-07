@@ -36,9 +36,11 @@ namespace LoLQueen
 
             System.Diagnostics.Debug.WriteLine("Match hist url contains " + matchHistUrl);
 
-            MatchHist matchHist = JsonConvert.DeserializeObject<MatchHist>(matchHistUrl);
-            //Testting
-            System.Diagnostics.Debug.WriteLine(matchHist);
+            json = new WebClient().DownloadString(matchHistUrl);
+
+            MatchHist matchHist = JsonConvert.DeserializeObject<MatchHist>(json);
+
+            System.Diagnostics.Debug.WriteLine(matchHist.TotalGames);
             //call method to gain match history info and other info
             UpdatePageData(currentSummoner);
 

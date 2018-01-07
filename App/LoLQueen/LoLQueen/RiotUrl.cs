@@ -5,6 +5,7 @@ using System.Web;
 
 namespace LoLQueen
 {
+    //test
     public class RiotUrl
     {
         static string apiKey = "RGAPI-e0d0a0ab-1309-4c4d-bfbf-de3f3d680242";

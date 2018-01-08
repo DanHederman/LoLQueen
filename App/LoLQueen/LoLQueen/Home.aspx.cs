@@ -35,8 +35,18 @@ namespace LoLQueen
 
             MatchHist matchHist = JsonConvert.DeserializeObject<MatchHist>(json);
 
-            System.Diagnostics.Debug.WriteLine(matchHist.TotalGames);
-            //call method to gain match history info and other info
+            System.Diagnostics.Debug.WriteLine(matchHist.Matches[0].GameId);
+
+            //Loop to get last 20 urls and jsons
+            string matchUrl = RiotUrl.GetMatchUrl(matchHist.Matches[0].GameId.ToString(),"euw1");
+
+            System.Diagnostics.Debug.WriteLine("url contains " + matchUrl);
+            json = new WebClient().DownloadString(matchUrl);
+
+            MatchInfo.MyJsonObject matchInfo  = JsonConvert.DeserializeObject<MatchInfo.MyJsonObject>(json);
+            
+            //currently being worked on
+            System.Diagnostics.Debug.WriteLine(matchInfo.Participants[4].ToString());
             UpdatePageData(currentSummoner);
 
         }

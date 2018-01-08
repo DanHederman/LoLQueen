@@ -12,7 +12,7 @@ namespace LoLQueen
      */
     public class RiotUrl
     {
-        static string apiKey = "RGAPI-e0d0a0ab-1309-4c4d-bfbf-de3f3d680242";
+        static string apiKey = "RGAPI-535d3898-5f2f-4b4b-b8c9-f033e6739405";
 
         public static string GetSummonerUrl(string username, string region)
         {
@@ -31,12 +31,12 @@ namespace LoLQueen
             return url;
         }
 
-        public static string GetMatchUrls(string region, string matchid)
+        public static string GetMatchUrl(string gameId, string region)
         {
-            string url = String.Format("https://{0}.api.riotgames.com/"); //working progress
-            return null;
-        }
+            string url = $"https://{region}.api.riotgames.com/lol/match/v3/matches/{gameId}?api_key={apiKey}";
 
+            return url;
+        }
 
     }
 }

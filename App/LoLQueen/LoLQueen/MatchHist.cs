@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 
 namespace LoLQueen
 {
@@ -12,7 +9,10 @@ namespace LoLQueen
         public int StartIndex;
         public int EndIndex;
     }
-
+    /*
+     * getters and setters to grab and display the information
+     * the user wants
+     */
     public class Match
     {
         public string Lane { get; set; }

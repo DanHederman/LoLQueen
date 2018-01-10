@@ -12,7 +12,7 @@ namespace LoLQueen
      */
     public class RiotUrl
     {
-        static string apiKey = "RGAPI-535d3898-5f2f-4b4b-b8c9-f033e6739405";
+        static string apiKey = "RGAPI-cf6dadfb-39ae-4a8a-9452-ec4f29136763";
 
         public static string GetSummonerUrl(string username, string region)
         {
@@ -35,6 +35,19 @@ namespace LoLQueen
         {
             string url = $"https://{region}.api.riotgames.com/lol/match/v3/matches/{gameId}?api_key={apiKey}";
 
+            return url;
+        }
+
+        public static string GetTotalMasteryScoreUrl(string summonerId, string region)
+        {
+            string url = $"https://{region}.api.riotgames.com/lol/champion-mastery/v3/scores/by-summoner/{summonerId}?api_key={apiKey}";
+            return url;
+        }
+
+        public static string GetMasteryProgressUrl(string summonerId, string region)
+        {
+            string url =
+                $"https://{region}.api.riotgames.com/lol/champion-mastery/v3/champion-masteries/by-summoner/{summonerId}?api_key={apiKey}";
             return url;
         }
 

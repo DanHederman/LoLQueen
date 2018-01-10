@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Net;
 using Newtonsoft.Json;
 
@@ -47,6 +49,31 @@ namespace LoLQueen
             
             //currently being worked on
             System.Diagnostics.Debug.WriteLine(matchInfo.Participants[4].ToString());
+
+
+            //get info on champion mastery
+            string masteryUrl = RiotUrl.GetTotalMasteryScoreUrl(currentSummoner.Id.ToString(), "euw1");
+
+            var mastery = new WebClient().DownloadString(masteryUrl);
+
+            //ChampionMastery mastery = JsonConvert.DeserializeObject<ChampionMastery>(json);
+            
+            System.Diagnostics.Debug.WriteLine("total mastery score = " + mastery);
+
+
+            //get individual champion mastery levels
+            string masteryProgressUrl = RiotUrl.GetMasteryProgressUrl(currentSummoner.Id.ToString(), "euw1");
+
+            System.Diagnostics.Debug.WriteLine("url contains = " + masteryProgressUrl);
+
+            json = new WebClient().DownloadString(masteryProgressUrl);
+
+            System.Diagnostics.Debug.WriteLine("json contains :::: " + json);
+
+            
+            IList<ProgressionContents> champMastery = JsonConvert.DeserializeObject<IList<ProgressionContents>>(json);
+
+            System.Diagnostics.Debug.WriteLine("champ id from champ mastery = " + champMastery[0].championId);
             UpdatePageData(currentSummoner);
 
         }

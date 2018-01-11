@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net;
 using Newtonsoft.Json;
 
@@ -18,65 +19,64 @@ namespace LoLQueen
         protected void SubmitSummonerName(object sender, EventArgs e)
         {
 
-
-            string jsonUrl = RiotUrl.GetSummonerUrl(SummonerName.Text,"euw1");
+            //get summoners name from textbox
+            string summonerName = SummonerName.Text;
 
             //call method to check characters
 
-            System.Diagnostics.Debug.WriteLine("url contains " + jsonUrl);
 
-            var json = new WebClient().DownloadString(jsonUrl);
+            //get summoner info from user input through textbox
+            string summonerUrl = RiotUrl.GetSummonerUrl(SummonerName.Text,"euw1");
+            Summoner currentSummoner = getJsonObject<Summoner>(summonerUrl);
 
-            Summoner currentSummoner = JsonConvert.DeserializeObject<Summoner>(json);
+            Debug.WriteLine("Collected summoner info");
 
+
+            //get 2o match history games
             string matchHistUrl = RiotUrl.GetMatchHistUrl("euw1",currentSummoner.AccountId.ToString());
+            MatchHist matchHist = getJsonObject<MatchHist>(matchHistUrl);
 
-            System.Diagnostics.Debug.WriteLine("Match hist url contains " + matchHistUrl);
+            Debug.WriteLine("Collected match hist");
 
-            json = new WebClient().DownloadString(matchHistUrl);
-
-            MatchHist matchHist = JsonConvert.DeserializeObject<MatchHist>(json);
-
-            System.Diagnostics.Debug.WriteLine(matchHist.Matches[0].GameId);
-
-            //Loop to get last 20 urls and jsons
+            //get specific match information (NEEDS TO BE LOOPED FOR LAST 20)
             string matchUrl = RiotUrl.GetMatchUrl(matchHist.Matches[0].GameId.ToString(),"euw1");
+            MatchInfo.MyJsonObject matchInfo  = getJsonObject<MatchInfo.MyJsonObject>(matchUrl);
 
-            System.Diagnostics.Debug.WriteLine("url contains " + matchUrl);
-            json = new WebClient().DownloadString(matchUrl);
+            Debug.WriteLine("Collect match info");
 
-            MatchInfo.MyJsonObject matchInfo  = JsonConvert.DeserializeObject<MatchInfo.MyJsonObject>(json);
-            
-            //currently being worked on
-            System.Diagnostics.Debug.WriteLine(matchInfo.Participants[4].ToString());
-
-
-            //get info on champion mastery
+            //get total champion mastery
             string masteryUrl = RiotUrl.GetTotalMasteryScoreUrl(currentSummoner.Id.ToString(), "euw1");
-
             var mastery = new WebClient().DownloadString(masteryUrl);
 
-            //ChampionMastery mastery = JsonConvert.DeserializeObject<ChampionMastery>(json);
-            
-            System.Diagnostics.Debug.WriteLine("total mastery score = " + mastery);
+            Debug.WriteLine("Collected mastery");
 
 
             //get individual champion mastery levels
             string masteryProgressUrl = RiotUrl.GetMasteryProgressUrl(currentSummoner.Id.ToString(), "euw1");
+            IList<ProgressionContents> champMastery = getJsonObject<IList<ProgressionContents>>(masteryProgressUrl);
 
-            System.Diagnostics.Debug.WriteLine("url contains = " + masteryProgressUrl);
-
-            json = new WebClient().DownloadString(masteryProgressUrl);
-
-            System.Diagnostics.Debug.WriteLine("json contains :::: " + json);
-
-            
-            IList<ProgressionContents> champMastery = JsonConvert.DeserializeObject<IList<ProgressionContents>>(json);
+            Debug.WriteLine("Collected champ mastery");
 
             System.Diagnostics.Debug.WriteLine("champ id from champ mastery = " + champMastery[0].championId);
             UpdatePageData(currentSummoner);
 
         }
+
+        public T getJsonObject<T>(string queryUrl)
+        {
+            var jsonSerializerSettings = new JsonSerializerSettings();
+
+            //ignores json data if structure required is not present
+            jsonSerializerSettings.MissingMemberHandling = MissingMemberHandling.Ignore;
+            Debug.WriteLine("url contains : " + queryUrl);
+
+            var jsonResult = new WebClient().DownloadString(queryUrl);
+            T newObject = JsonConvert.DeserializeObject<T>(jsonResult, jsonSerializerSettings);
+
+            return newObject;
+        }
+
+
         public void UpdatePageData(Summoner currentSummoner)
         {
             summonerNameLabel.Text = currentSummoner.Name;

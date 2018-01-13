@@ -38,6 +38,7 @@ namespace LoLQueen
 
             Debug.WriteLine("Collected match hist : " + matchHist.Matches[0].Champion + " and game ID = " + matchHist.Matches[0].GameId);
 
+
             //get specific match information (NEEDS TO BE LOOPED FOR LAST 20)
             string matchUrl = RiotUrl.GetMatchUrl(matchHist.Matches[0].GameId.ToString(),"euw1");
             MatchInfo.singleMatch matchInfo  = getJsonObject<MatchInfo.singleMatch>(matchUrl);
@@ -45,11 +46,14 @@ namespace LoLQueen
             Debug.WriteLine(" url contains = " + matchUrl);
             Debug.WriteLine("Collect match info Kills : " + matchInfo.Participants[0].Stats.Kills);
 
+
+
             //get total champion mastery
             string masteryUrl = RiotUrl.GetTotalMasteryScoreUrl(currentSummoner.Id.ToString(), "euw1");
             var mastery = new WebClient().DownloadString(masteryUrl);
 
             Debug.WriteLine("Collected mastery");
+
 
 
             //get individual champion mastery levels

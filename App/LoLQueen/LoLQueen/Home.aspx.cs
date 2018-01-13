@@ -36,13 +36,14 @@ namespace LoLQueen
             string matchHistUrl = RiotUrl.GetMatchHistUrl("euw1",currentSummoner.AccountId.ToString());
             MatchHist matchHist = getJsonObject<MatchHist>(matchHistUrl);
 
-            Debug.WriteLine("Collected match hist");
+            Debug.WriteLine("Collected match hist : " + matchHist.Matches[0].Champion + " and game ID = " + matchHist.Matches[0].GameId);
 
             //get specific match information (NEEDS TO BE LOOPED FOR LAST 20)
             string matchUrl = RiotUrl.GetMatchUrl(matchHist.Matches[0].GameId.ToString(),"euw1");
-            MatchInfo.MyJsonObject matchInfo  = getJsonObject<MatchInfo.MyJsonObject>(matchUrl);
+            MatchInfo.singleMatch matchInfo  = getJsonObject<MatchInfo.singleMatch>(matchUrl);
 
-            Debug.WriteLine("Collect match info");
+            Debug.WriteLine(" url contains = " + matchUrl);
+            Debug.WriteLine("Collect match info Kills : " + matchInfo.Participants[0].Stats.Kills);
 
             //get total champion mastery
             string masteryUrl = RiotUrl.GetTotalMasteryScoreUrl(currentSummoner.Id.ToString(), "euw1");

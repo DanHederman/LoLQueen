@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 
 namespace LoLQueen
 {
@@ -169,19 +170,19 @@ namespace LoLQueen
             public int ChampionId;
         }
 
-        public class MyJsonObject
+        public class singleMatch
         {
             public int SeasonId;
             public int QueueId;
             public long GameId;
-            public IList ParticipantIdentities;
+            public List<ParticipantIdentities> ParticipantIdentities;
             public string GameVersion;
             public string PlatformId;
             public string GameMode;
             public int MapId;
             public string GameType;
-            public IList Teams;
-            public IList Participants;
+            public List<Teams> Teams;
+            public List<Participants> Participants;
             public int GameDuration;
             public long GameCreation;
         }

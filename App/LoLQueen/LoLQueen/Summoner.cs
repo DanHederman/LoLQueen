@@ -1,4 +1,4 @@
-﻿namespace LoLQueen
+﻿    namespace LoLQueen
 {
     public class Summoner
     {

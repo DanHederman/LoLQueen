@@ -26,7 +26,7 @@ namespace LoLQueen
 
 
             //get summoner info from user input through textbox
-            string summonerUrl = RiotUrl.GetSummonerUrl(SummonerName.Text,"euw1");
+            string summonerUrl = RiotUrl.GetSummonerUrl(summonerName,"euw1");
             Summoner currentSummoner = getJsonObject<Summoner>(summonerUrl);
 
             Debug.WriteLine("Collected summoner info");

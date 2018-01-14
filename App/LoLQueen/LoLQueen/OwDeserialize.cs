@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -21,7 +22,11 @@ namespace LoLQueen
 
             var result = await response.Content.ReadAsStringAsync();
 
+            Debug.WriteLine("The result is: ",result);
+
             return JsonConvert.DeserializeObject<OWInfo>(result);
+
+
         }
     }
 }

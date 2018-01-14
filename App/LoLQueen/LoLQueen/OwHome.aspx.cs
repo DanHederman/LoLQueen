@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -22,6 +23,17 @@ namespace LoLQueen
         protected void RedirectHome(object sender, EventArgs e)
         {
             
+        }
+
+        protected void DataGen(object sender, EventArgs e)
+        {
+            string heroName = HeroName.Text;
+            string heroTag = HeroTag.Text;
+
+            string blizzardUrl = OwUrl.OverwatchUrl(heroName, heroTag);
+
+            Debug.WriteLine("Full URL is: ");
+            Debug.WriteLine(blizzardUrl);
         }
     }
 }

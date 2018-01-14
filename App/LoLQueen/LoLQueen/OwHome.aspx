@@ -11,8 +11,12 @@
         <div>
         </div>
         <asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
-        <p>
+&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="HeroName" runat="server"></asp:TextBox>
+&nbsp;<p>
         <asp:Label ID="Label2" runat="server" Text="Rank"></asp:Label>
+        &nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="HeroTag" runat="server"></asp:TextBox>
         </p>
         <p>
             &nbsp;</p>
@@ -21,6 +25,7 @@
 &nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button2" runat="server" Text="Home" OnClick="RedirectHome" />
         </p>
+        <asp:Button ID="Button3" runat="server" Text="GenerateData" OnClick="DataGen" />
     </form>
 </body>
 </html>

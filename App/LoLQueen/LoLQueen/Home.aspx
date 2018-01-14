@@ -25,6 +25,7 @@
             Summoner ID:
             <asp:Label ID="summonerAccIdLabel" runat="server" Text=""></asp:Label>
         </p>
+        <asp:Button ID="Button2" runat="server" OnClick="RedirectOW" Text="OverWatch" />
     </form>
 </body>
 </html>

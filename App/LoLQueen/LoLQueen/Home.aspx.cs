@@ -89,5 +89,9 @@ namespace LoLQueen
             summonerAccIdLabel.Text = currentSummoner.AccountId.ToString();
         }
 
+        protected void RedirectOW(object sender, EventArgs e)
+        {
+            Response.Redirect("OwHome.aspx");
+        }
     }
 }

@@ -10,7 +10,7 @@
 namespace LoLQueen {
     
     
-    public partial class Home {
+    public partial class OwHome {
         
         /// <summary>
         /// form1 control.
@@ -31,13 +31,13 @@ namespace LoLQueen {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// SummonerName control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SummonerName;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
         /// Button1 control.
@@ -47,33 +47,6 @@ namespace LoLQueen {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
-        
-        /// <summary>
-        /// summonerNameLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label summonerNameLabel;
-        
-        /// <summary>
-        /// summonerLevelLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label summonerLevelLabel;
-        
-        /// <summary>
-        /// summonerAccIdLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label summonerAccIdLabel;
         
         /// <summary>
         /// Button2 control.

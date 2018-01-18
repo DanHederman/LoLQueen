@@ -27,13 +27,23 @@ namespace LoLQueen
 
         protected void DataGen(object sender, EventArgs e)
         {
-            string heroName = HeroName.Text;
-            string heroTag = HeroTag.Text;
+            var username = HeroName.Text;
+            var usernum = HeroTag.Text;
+            Debug.WriteLine("Deserialize");
 
-            string blizzardUrl = OwUrl.OverwatchUrl(heroName, heroTag);
+            string obj = BlizzardUrl.ConnectToBlizzard(username, usernum);
+            Debug.WriteLine(obj);
+            Hero currentHero = Home.getJsonObject<Hero>(obj);
+            Debug.WriteLine(currentHero);
 
-            Debug.WriteLine("Full URL is: ");
-            Debug.WriteLine(blizzardUrl);
+            UpdatePageData(currentHero);
+        }
+
+        public void UpdatePageData(Hero currentHero)
+        {
+            Label1.Text = currentHero.UserName;
+            Label2.Text = currentHero.Level.ToString();
+            Image1.ImageUrl = currentHero.Portrait;
         }
     }
 }

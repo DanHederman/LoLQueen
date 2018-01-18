@@ -67,7 +67,7 @@ namespace LoLQueen
 
         }
 
-        public T getJsonObject<T>(string queryUrl)
+        public static T getJsonObject<T>(string queryUrl)
         {
             var jsonSerializerSettings = new JsonSerializerSettings();
 

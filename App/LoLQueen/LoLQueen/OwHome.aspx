@@ -10,22 +10,31 @@
     <form id="form1" runat="server">
         <div>
         </div>
-        <asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
 &nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="HeroName" runat="server"></asp:TextBox>
-&nbsp;<p>
-        <asp:Label ID="Label2" runat="server" Text="Rank"></asp:Label>
+        &nbsp;<p>
         &nbsp;&nbsp;&nbsp;
+            <asp:Image ID="Image1" ImageUrl="" runat="server" />
+        </p>
+        <p>
+        <asp:TextBox ID="HeroName" runat="server"></asp:TextBox>
+        </p>
+        <p>
+&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="HeroTag" runat="server"></asp:TextBox>
         </p>
         <p>
-            &nbsp;</p>
+        <asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
+        </p>
+        <p>
+        <asp:Label ID="Label2" runat="server" Text="Rank"></asp:Label>
+        </p>
         <p>
             <asp:Button ID="Button1" runat="server" Text="LoLQueen" OnClick="RedirectToLoL" />
-&nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button2" runat="server" Text="Home" OnClick="RedirectHome" />
         </p>
+        <p>
         <asp:Button ID="Button3" runat="server" Text="GenerateData" OnClick="DataGen" />
+        </p>
     </form>
 </body>
 </html>

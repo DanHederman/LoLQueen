@@ -10,5 +10,6 @@ namespace LoLQueen
         public string UserName { get; set; }
         public int Level { get; set; }
         public string Portrait { get; set; }
+        public string Stats { get; set; }
     }
 }

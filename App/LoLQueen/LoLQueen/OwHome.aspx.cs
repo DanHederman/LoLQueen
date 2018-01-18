@@ -44,6 +44,7 @@ namespace LoLQueen
             Label1.Text = currentHero.UserName;
             Label2.Text = currentHero.Level.ToString();
             Image1.ImageUrl = currentHero.Portrait;
+            Label3.Text = currentHero.Stats;
         }
     }
 }

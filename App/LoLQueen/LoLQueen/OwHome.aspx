@@ -35,6 +35,7 @@
         <p>
         <asp:Button ID="Button3" runat="server" Text="GenerateData" OnClick="DataGen" />
         </p>
+        <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
     </form>
 </body>
 </html>

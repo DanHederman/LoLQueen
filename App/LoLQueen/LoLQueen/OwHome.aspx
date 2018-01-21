@@ -11,24 +11,25 @@
         <div>
         </div>
 &nbsp;&nbsp;Hero Name: &nbsp;
-        &nbsp;<asp:TextBox ID="HeroName" runat="server"></asp:TextBox>
+        &nbsp;<asp:TextBox ID="HeroNameBox" runat="server"></asp:TextBox>
         <p>
         &nbsp;&nbsp;&nbsp;Hero Tag:
             <asp:TextBox ID="HeroTag" runat="server"></asp:TextBox>
         </p>
-        <p>
-            <asp:Image ID="Image1" ImageUrl="" runat="server" Width="16px" />
+        <p style="width: 141px">
+            <asp:Image ID="PlayerImg" ImageUrl="" runat="server" Height="123px" Width="127px" />
         &nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
-        </p>
-        <p style="margin-left: 40px">
-&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label2" runat="server" Text="Rank"></asp:Label>
         </p>
         <p>
-            &nbsp;</p>
+            <asp:Label ID="Label5" runat="server" Text="Heros Name"></asp:Label>
+            :
+        <asp:Label ID="HeroName" runat="server" Text=""></asp:Label>
+        </p>
         <p>
-            &nbsp;</p>
+            <asp:Label ID="Label6" runat="server" Text="Hero Level"></asp:Label>
+            &nbsp;&nbsp;
+            <asp:Label ID="HeroLevel" runat="server" Text=""></asp:Label>
+        </p>
         <p>
             <asp:Button ID="Button1" runat="server" Text="LoLQueen" OnClick="RedirectToLoL" />
             <asp:Button ID="Button2" runat="server" Text="Home" OnClick="RedirectHome" />
@@ -38,8 +39,8 @@
         </p>
         <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
         <p>
-            <asp:Label ID="Label4" runat="server" Text="won"></asp:Label>
-            <asp:Image ID="Image2" ImageUrl="" runat="server" />
+            <asp:Label ID="CompWin" runat="server" Text="won"></asp:Label>
+            <asp:Image ID="RankImg" ImageUrl="" runat="server" Height="145px" Width="152px" />
         </p>
     </form>
 </body>

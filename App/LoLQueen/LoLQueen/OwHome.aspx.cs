@@ -27,7 +27,7 @@ namespace LoLQueen
 
         protected void DataGen(object sender, EventArgs e)
         {
-            var username = HeroName.Text;
+            var username = HeroNameBox.Text;
             var usernum = HeroTag.Text;
             Debug.WriteLine("Deserialize");
 
@@ -43,18 +43,12 @@ namespace LoLQueen
 
         public void UpdatePageData(RootObject currentHero, Root currentHero2)
         {
-            Label1.Text = currentHero.username;
-            Label2.Text = currentHero.level.ToString();
-            Image1.ImageUrl = currentHero.portrait;
-            Debug.WriteLine("contents is: " + currentHero.stats.best.competitive.Capacity);
-            Label3.Text = currentHero.stats.best.competitive.Count.ToString();
-            foreach (int i in currentHero.stats.best.competitive.Capacity.ToString())
-            {
-                Debug.WriteLine(i);
-            }
-            
-            Image2.ImageUrl = currentHero2.competitive.rank_img;
-            Label4.Text = currentHero2.games.competitive.won.ToString();
+            HeroName.Text = currentHero.username;
+            HeroLevel.Text = currentHero.level.ToString();
+            PlayerImg.ImageUrl = currentHero.portrait;
+            Label3.Text = currentHero2.games.quickplay.won.ToString();          
+            RankImg.ImageUrl = currentHero2.competitive.rank_img;
+            CompWin.Text = currentHero2.games.competitive.won.ToString();
         }
     }
 }

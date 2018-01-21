@@ -182,6 +182,7 @@
     <Compile Include="BlizzardUrl.cs" />
     <Compile Include="ChampionMastery.cs" />
     <Compile Include="Hero.cs" />
+    <Compile Include="Hero2.cs" />
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

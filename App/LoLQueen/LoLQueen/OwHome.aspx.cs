@@ -32,19 +32,29 @@ namespace LoLQueen
             Debug.WriteLine("Deserialize");
 
             string obj = BlizzardUrl.ConnectToBlizzard(username, usernum);
+            string obj2 = BlizzardUrl.ConnectToBlizzard2(username, usernum);
             Debug.WriteLine(obj);
-            Hero currentHero = Home.getJsonObject<Hero>(obj);
+            RootObject currentHero = Home.getJsonObject<RootObject>(obj);
+            Root currentHero2 = Home.getJsonObject<Root>(obj2);
             Debug.WriteLine(currentHero);
 
-            UpdatePageData(currentHero);
+            UpdatePageData(currentHero, currentHero2);
         }
 
-        public void UpdatePageData(Hero currentHero)
+        public void UpdatePageData(RootObject currentHero, Root currentHero2)
         {
-            Label1.Text = currentHero.UserName;
-            Label2.Text = currentHero.Level.ToString();
-            Image1.ImageUrl = currentHero.Portrait;
-            Label3.Text = currentHero.Stats;
+            Label1.Text = currentHero.username;
+            Label2.Text = currentHero.level.ToString();
+            Image1.ImageUrl = currentHero.portrait;
+            Debug.WriteLine("contents is: " + currentHero.stats.best.competitive.Capacity);
+            Label3.Text = currentHero.stats.best.competitive.Count.ToString();
+            foreach (int i in currentHero.stats.best.competitive.Capacity.ToString())
+            {
+                Debug.WriteLine(i);
+            }
+            
+            Image2.ImageUrl = currentHero2.competitive.rank_img;
+            Label4.Text = currentHero2.games.competitive.won.ToString();
         }
     }
 }

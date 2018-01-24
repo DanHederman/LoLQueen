@@ -37,7 +37,7 @@
         <p>
         <asp:Button ID="Button3" runat="server" Text="GenerateData" OnClick="DataGen" />
         </p>
-        <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="QuickWin" runat="server" Text="Label"></asp:Label>
         <p>
             <asp:Label ID="CompWin" runat="server" Text="won"></asp:Label>
             <asp:Image ID="RankImg" ImageUrl="" runat="server" Height="145px" Width="152px" />

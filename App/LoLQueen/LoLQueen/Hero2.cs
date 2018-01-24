@@ -1,50 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace LoLQueen
+﻿namespace LoLQueen
 {
     public class Quick
     {
-        public int won { get; set; }
+        public int Won { get; set; }
     }
 
     public class Comp
     {
-        public int won { get; set; }
-        public int lost { get; set; }
-        public int draw { get; set; }
-        public int played { get; set; }
+        public int Won { get; set; }
+        public int Lost { get; set; }
+        public int Draw { get; set; }
+        public int Played { get; set; }
     }
 
     public class Games
     {
-        public Quick quickplay { get; set; }
-        public Comp competitive { get; set; }
+        public Quick Quickplay { get; set; }
+        public Comp Competitive { get; set; }
     }
 
     public class Playtime
     {
-        public string quickplay { get; set; }
-        public string competitive { get; set; }
+        public string Quickplay { get; set; }
+        public string Competitive { get; set; }
     }
 
     public class Comp2
     {
-        public int rank { get; set; }
-        public string rank_img { get; set; }
+        public int Rank { get; set; }
+        public string RankImg { get; set; }
     }
 
     public class Root
     {
-        public string username { get; set; }
-        public int level { get; set; }
-        public string portrait { get; set; }
-        public Games games { get; set; }
-        public Playtime playtime { get; set; }
-        public Comp2 competitive { get; set; }
-        public string levelFrame { get; set; }
-        public string star { get; set; }
+        public string Username { get; set; }
+        public int Level { get; set; }
+        public string Portrait { get; set; }
+        public Games Games { get; set; }
+        public Playtime Playtime { get; set; }
+        public Comp2 Competitive { get; set; }
+        public string LevelFrame { get; set; }
+        public string Star { get; set; }
     }
 }

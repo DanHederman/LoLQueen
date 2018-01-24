@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace LoLQueen
 {
@@ -29,26 +24,26 @@ namespace LoLQueen
         {
             var username = HeroNameBox.Text;
             var usernum = HeroTag.Text;
-            Debug.WriteLine("Deserialize");
+            
 
-            string obj = BlizzardUrl.ConnectToBlizzard(username, usernum);
-            string obj2 = BlizzardUrl.ConnectToBlizzard2(username, usernum);
-            Debug.WriteLine(obj);
-            RootObject currentHero = Home.getJsonObject<RootObject>(obj);
-            Root currentHero2 = Home.getJsonObject<Root>(obj2);
-            Debug.WriteLine(currentHero);
+            var obj = BlizzardUrl.ConnectToBlizzard(username, usernum);
+            var obj2 = BlizzardUrl.ConnectToBlizzard2(username, usernum);
+            
+            var currentHero = Home.getJsonObject<RootObject>(obj);
+            var currentHero2 = Home.getJsonObject<Root>(obj2);
+            
 
             UpdatePageData(currentHero, currentHero2);
         }
 
         public void UpdatePageData(RootObject currentHero, Root currentHero2)
         {
-            HeroName.Text = currentHero.username;
-            HeroLevel.Text = currentHero.level.ToString();
-            PlayerImg.ImageUrl = currentHero.portrait;
-            Label3.Text = currentHero2.games.quickplay.won.ToString();          
-            RankImg.ImageUrl = currentHero2.competitive.rank_img;
-            CompWin.Text = currentHero2.games.competitive.won.ToString();
+            HeroName.Text = currentHero.Username;
+            HeroLevel.Text = currentHero.Level.ToString();
+            PlayerImg.ImageUrl = currentHero.Portrait;
+            QuickWin.Text = currentHero2.Games.Quickplay.Won.ToString();
+            RankImg.ImageUrl = currentHero2.Competitive.RankImg;
+            CompWin.Text = currentHero2.Games.Competitive.Won.ToString();
         }
     }
 }

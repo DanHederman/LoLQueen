@@ -20,10 +20,9 @@ namespace LoLQueen
         {
 
             //get summoners name from textbox
-            string summonerName = SummonerName.Text;
+            string summonerName = ValidateName(SummonerName.Text);
 
-            //call method to check characters
-
+            Debug.WriteLine("summoner name contains" + summonerName);
 
             //get summoner info from user input through textbox
             string summonerUrl = RiotUrl.GetSummonerUrl(summonerName,"euw1");
@@ -40,11 +39,22 @@ namespace LoLQueen
 
 
             //get specific match information (NEEDS TO BE LOOPED FOR LAST 20)
-            string matchUrl = RiotUrl.GetMatchUrl(matchHist.Matches[0].GameId.ToString(),"euw1");
-            MatchInfo.singleMatch matchInfo  = getJsonObject<MatchInfo.singleMatch>(matchUrl);
+            List<MatchInfo.singleMatch> allMatchDetails = new List<MatchInfo.singleMatch>();
 
-            Debug.WriteLine(" url contains = " + matchUrl);
-            Debug.WriteLine("Collect match info Kills : " + matchInfo.Participants[0].Stats.Kills);
+            for(int i= 0; i < 20; ++i)
+            {
+                string matchUrl = RiotUrl.GetMatchUrl(matchHist.Matches[i].GameId.ToString(), "euw1");
+
+                allMatchDetails.Add(getJsonObject<MatchInfo.singleMatch>(matchUrl));
+            }
+            
+  
+
+
+
+            //Debug.WriteLine(" url contains = " + matchUrl);
+            Debug.WriteLine("Collect match info Kills : " + allMatchDetails[0].Participants[0].Stats.Kills);
+            Debug.WriteLine("SECOND GAME KILLS : " + allMatchDetails[1].Participants[0].Stats.Kills);
 
 
 
@@ -62,7 +72,7 @@ namespace LoLQueen
 
             Debug.WriteLine("Collected champ mastery");
 
-            System.Diagnostics.Debug.WriteLine("champ id from champ mastery = " + champMastery[0].championId);
+            Debug.WriteLine("champ id from champ mastery = " + champMastery[0].championId);
             UpdatePageData(currentSummoner);
 
         }
@@ -92,6 +102,13 @@ namespace LoLQueen
         protected void RedirectOW(object sender, EventArgs e)
         {
             Response.Redirect("OwHome.aspx");
+        }
+
+        public string ValidateName(string summonerName)
+        {
+            string newSummonerName = summonerName.Replace(" ", "%20");
+
+            return newSummonerName;
         }
     }
 }

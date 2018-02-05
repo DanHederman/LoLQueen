@@ -12,7 +12,7 @@ namespace LoLQueen
      */
     public class RiotUrl
     {
-        static string apiKey = "";
+        static string apiKey = "RGAPI-51bc36b7-5045-4952-948a-7e11b6887a1e";
 
         public static string GetSummonerUrl(string username, string region)
         {

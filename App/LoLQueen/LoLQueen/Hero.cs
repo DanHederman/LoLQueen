@@ -1,5 +1,10 @@
 ﻿using System.Collections.Generic;
-
+/*
+ * This class contains a number of different structures 
+ * that have the information from the json read into 
+ * thses structures to then be accessed aqnd displayed 
+ * to the user
+ */
 namespace LoLQueen
 {
     public class Quickplay

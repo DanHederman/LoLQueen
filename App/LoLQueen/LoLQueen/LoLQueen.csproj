@@ -615,7 +615,6 @@
     <Compile Include="OwHome.aspx.designer.cs">
       <DependentUpon>OwHome.aspx</DependentUpon>
     </Compile>
-    <Compile Include="OWInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RiotUrl.cs" />
     <Compile Include="Site.Master.cs">

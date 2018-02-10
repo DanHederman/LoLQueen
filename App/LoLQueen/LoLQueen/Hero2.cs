@@ -1,4 +1,11 @@
 ﻿namespace LoLQueen
+/*
+ * This second structure is also used to
+ * get data from a second smaller json 
+ * file that contains important indormation
+ * that the large json file simply did not 
+ * contain 
+ */
 {
     public class Quick
     {

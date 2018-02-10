@@ -26,14 +26,14 @@ namespace LoLQueen
 
             //get summoner info from user input through textbox
             string summonerUrl = RiotUrl.GetSummonerUrl(summonerName,"euw1");
-            Summoner currentSummoner = getJsonObject<Summoner>(summonerUrl);
+            Summoner currentSummoner = getStats<Summoner>(summonerUrl);
 
             Debug.WriteLine("Collected summoner info");
 
 
             //get 2o match history games
             string matchHistUrl = RiotUrl.GetMatchHistUrl("euw1",currentSummoner.AccountId.ToString());
-            MatchHist matchHist = getJsonObject<MatchHist>(matchHistUrl);
+            MatchHist matchHist = getStats<MatchHist>(matchHistUrl);
 
             Debug.WriteLine("Collected match hist : " + matchHist.Matches[0].Champion + " and game ID = " + matchHist.Matches[0].GameId);
 
@@ -45,7 +45,7 @@ namespace LoLQueen
             {
                 string matchUrl = RiotUrl.GetMatchUrl(matchHist.Matches[i].GameId.ToString(), "euw1");
 
-                allMatchDetails.Add(getJsonObject<MatchInfo.singleMatch>(matchUrl));
+                allMatchDetails.Add(getStats<MatchInfo.singleMatch>(matchUrl));
             }
             
   
@@ -68,7 +68,7 @@ namespace LoLQueen
 
             //get individual champion mastery levels
             string masteryProgressUrl = RiotUrl.GetMasteryProgressUrl(currentSummoner.Id.ToString(), "euw1");
-            IList<ProgressionContents> champMastery = getJsonObject<IList<ProgressionContents>>(masteryProgressUrl);
+            IList<ProgressionContents> champMastery = getStats<IList<ProgressionContents>>(masteryProgressUrl);
 
             Debug.WriteLine("Collected champ mastery");
 
@@ -77,7 +77,7 @@ namespace LoLQueen
 
         }
 
-        public static T getJsonObject<T>(string queryUrl)
+        public static T getStats<T>(string queryUrl)
         {
             var jsonSerializerSettings = new JsonSerializerSettings();
 

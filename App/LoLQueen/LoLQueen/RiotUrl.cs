@@ -12,7 +12,10 @@ namespace LoLQueen
      */
     public class RiotUrl
     {
-
+        public string GetKey()
+        {
+            string apiKey = "";
+        }
         static string apiKey = "";
 
         public static string GetSummonerUrl(string username, string region)

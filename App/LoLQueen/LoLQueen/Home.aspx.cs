@@ -26,14 +26,14 @@ namespace LoLQueen
 
             //get summoner info from user input through textbox
             string summonerUrl = RiotUrl.GetSummonerUrl(summonerName,"euw1");
-            Summoner currentSummoner = getStats<Summoner>(summonerUrl);
+            Summoner currentSummoner = GetStats<Summoner>(summonerUrl);
 
             Debug.WriteLine("Collected summoner info");
 
 
             //get 2o match history games
             string matchHistUrl = RiotUrl.GetMatchHistUrl("euw1",currentSummoner.AccountId.ToString());
-            MatchHist matchHist = getStats<MatchHist>(matchHistUrl);
+            MatchHist matchHist = GetStats<MatchHist>(matchHistUrl);
 
             Debug.WriteLine("Collected match hist : " + matchHist.Matches[0].Champion + " and game ID = " + matchHist.Matches[0].GameId);
 
@@ -45,7 +45,7 @@ namespace LoLQueen
             {
                 string matchUrl = RiotUrl.GetMatchUrl(matchHist.Matches[i].GameId.ToString(), "euw1");
 
-                allMatchDetails.Add(getStats<MatchInfo.singleMatch>(matchUrl));
+                allMatchDetails.Add(GetStats<MatchInfo.singleMatch>(matchUrl));
             }
             
   
@@ -68,7 +68,7 @@ namespace LoLQueen
 
             //get individual champion mastery levels
             string masteryProgressUrl = RiotUrl.GetMasteryProgressUrl(currentSummoner.Id.ToString(), "euw1");
-            IList<ProgressionContents> champMastery = getStats<IList<ProgressionContents>>(masteryProgressUrl);
+            IList<ProgressionContents> champMastery = GetStats<IList<ProgressionContents>>(masteryProgressUrl);
 
             Debug.WriteLine("Collected champ mastery");
 
@@ -77,18 +77,20 @@ namespace LoLQueen
 
         }
 
-        public static T getStats<T>(string queryUrl)
+        public static T GetStats<T>(string queryUrl)
         {
-            var jsonSerializerSettings = new JsonSerializerSettings();
+    
+                var jsonSerializerSettings = new JsonSerializerSettings();
 
-            //ignores json data if structure required is not present
-            jsonSerializerSettings.MissingMemberHandling = MissingMemberHandling.Ignore;
-            Debug.WriteLine("url contains : " + queryUrl);
+                //ignores json data if structure required is not present
+                jsonSerializerSettings.MissingMemberHandling = MissingMemberHandling.Ignore;
+                Debug.WriteLine("url contains : " + queryUrl);
 
-            var jsonResult = new WebClient().DownloadString(queryUrl);
-            T newObject = JsonConvert.DeserializeObject<T>(jsonResult, jsonSerializerSettings);
+                var jsonResult = new WebClient().DownloadString(queryUrl);
+                T newObject = JsonConvert.DeserializeObject<T>(jsonResult, jsonSerializerSettings);
 
-            return newObject;
+                return newObject;
+
         }
 
 

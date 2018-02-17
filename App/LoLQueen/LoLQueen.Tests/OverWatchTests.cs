@@ -7,6 +7,11 @@ namespace LoLQueen.Tests
     [TestClass]
     public class OverWatchTests
     {
+        [TestInitialize]
+        public void fillStruct()
+        {
+            
+        }
         /*
          * The following 2 tests will test
          * the link to the large json file 

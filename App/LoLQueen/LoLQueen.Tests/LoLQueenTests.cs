@@ -60,7 +60,7 @@ namespace LoLQueen.Tests
         }
 
         /*
-         * The following 2 tests check that the url for matchhist 
+         * The following 2 tests check that the url for getmatch
          * is created successfully and also checks for failure
          */
 
@@ -77,6 +77,46 @@ namespace LoLQueen.Tests
         {
             string actual = RiotUrl.GetMatchUrl("", "");
             string expected = ("https://{region}.api.riotgames.com/lol/match/v3/matches/{gameId}?api_key=" + APIKey);
+            Assert.AreNotEqual(actual, expected);
+        }
+
+        /*
+         * The following 2 tests check that the url for GetTotalMasteryScoreUrl
+         * is created successfully and also checks for failure
+         */
+
+        [TestMethod]
+        public void Test_GetTotalMasteryScoreUrl_Pass()
+        {
+            string actual = RiotUrl.GetTotalMasteryScoreUrl("", "");
+            string expected = ("https://{region}.api.riotgames.com/lol/champion-mastery/v3/scores/by-summoner/{summonerId}?api_key=" + APIKey);
+            Assert.AreEqual(actual, expected);
+        }
+
+        [TestMethod]
+        public void Test_GetTotalMasteryScoreUrl_Fail()
+        {
+            string actual = RiotUrl.GetTotalMasteryScoreUrl("", "");
+            string expected = ("https://{region}.api.riotgames.com/lol/champion-mastery/v3/scores/by-summoner/{summonerId}?api_key=" + APIKey);
+            Assert.AreNotEqual(actual, expected);
+        }
+
+        /*
+         * 
+         */
+         [TestMethod]
+         public void Test_GetMasteryProgressUrl_Pass()
+        {
+            string actual = RiotUrl.GetTotalMasteryScoreUrl("", "");
+            string expected = ("https://{region}.api.riotgames.com/lol/champion-mastery/v3/champion-masteries/by-summoner/{summonerId}?api_key=" + APIKey);
+            Assert.AreEqual(actual, expected);
+        }
+
+        [TestMethod]
+        public void Test_GetMasteryProgressUrl_Fail()
+        {
+            string actual = RiotUrl.GetTotalMasteryScoreUrl("", "");
+            string expected = ("https://{region}.api.riotgames.com/lol/champion-mastery/v3/champion-masteries/by-summoner/{summonerId}?api_key=" + APIKey);
             Assert.AreNotEqual(actual, expected);
         }
     }

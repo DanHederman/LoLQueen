@@ -89,16 +89,20 @@ namespace LoLQueen
 
                 var jsonResult = new WebClient().DownloadString(queryUrl);
                 T newObject = JsonConvert.DeserializeObject<T>(jsonResult, jsonSerializerSettings);
+                Debug.WriteLine("new object is: " + newObject);
+                Debug.WriteLine(newObject.GetType());
                 return newObject;
             }
             catch
             {
                 Debug.WriteLine("Error");
+                Debug.WriteLine("new object is: " + default(T));
+
                 return default(T);
             }
                 
 
-            //Debug.WriteLine("new object is: " + newObject);
+            
 
         }
 

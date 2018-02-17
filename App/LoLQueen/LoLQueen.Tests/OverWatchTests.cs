@@ -51,13 +51,23 @@ namespace LoLQueen.Tests
             Assert.AreNotEqual(expected, actual);
         }
 
+        //Test method getStats
+
         [TestMethod]
-        public void teststruct()
+        public void Test_Struct()
         {
-            string actual = Home.GetStats<string>("https://ow-api.herokuapp.com/profile/pc/us/Quadzilla-21122");
-            string expected = "LoLQueen.RootObject";
-            Console.WriteLine("String actual is: " + actual);
+            string actual= Home.GetStats<string>("https://ow-api.herokuapp.com/profile/pc/us/Quadzilla-21122");
+            string expected = null;
+
+            System.Diagnostics.Debug.WriteLine("String actual is: " + actual);
             Assert.AreEqual(expected, actual);
         }
+        /*
+        [TestMethod]
+        public void Test_UpdatePageData()
+        {
+            string actual = 
+        }
+        */
     }
 }

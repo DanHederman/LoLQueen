@@ -15,7 +15,7 @@
     public class Comp
     {
         public int Won { get; set; }
-        public int Lost { get; set; }
+        public object Lost { get; set; }
         public int Draw { get; set; }
         public int Played { get; set; }
     }
@@ -28,14 +28,14 @@
 
     public class Playtime
     {
-        public string Quickplay { get; set; }
-        public string Competitive { get; set; }
+        public string Quick { get; set; }
+        public string Comp { get; set; }
     }
 
     public class Comp2
     {
-        public int Rank { get; set; }
-        public string RankImg { get; set; }
+        public int rank { get; set; }
+        public string Rank_img { get; set; }
     }
 
     public class Root

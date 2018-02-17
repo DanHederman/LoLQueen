@@ -79,7 +79,8 @@ namespace LoLQueen
 
         public static T GetStats<T>(string queryUrl)
         {
-    
+            try
+            {
                 var jsonSerializerSettings = new JsonSerializerSettings();
 
                 //ignores json data if structure required is not present
@@ -88,8 +89,16 @@ namespace LoLQueen
 
                 var jsonResult = new WebClient().DownloadString(queryUrl);
                 T newObject = JsonConvert.DeserializeObject<T>(jsonResult, jsonSerializerSettings);
-
                 return newObject;
+            }
+            catch
+            {
+                Debug.WriteLine("Error");
+                return default(T);
+            }
+                
+
+            //Debug.WriteLine("new object is: " + newObject);
 
         }
 

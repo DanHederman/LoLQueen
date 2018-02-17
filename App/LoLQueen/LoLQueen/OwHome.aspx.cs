@@ -42,7 +42,7 @@ namespace LoLQueen
             HeroLevel.Text = currentHero.Level.ToString();
             PlayerImg.ImageUrl = currentHero.Portrait;
             QuickWin.Text = currentHero2.Games.Quickplay.Won.ToString();
-            RankImg.ImageUrl = currentHero2.Competitive.RankImg;
+            RankImg.ImageUrl = currentHero2.Competitive.Rank_img;
             CompWin.Text = currentHero2.Games.Competitive.Won.ToString();
         }
     }

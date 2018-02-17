@@ -26,7 +26,7 @@ namespace LoLQueen.Tests
         public void Test_Large_URL_Fail()
         {
             string actual = BlizzardUrl.ConnectToBlizzard("Quadzilla", "21122");
-            string expected = "https://ow-api.herokuapp.com/stats/pc/us/cathal1k97-220";
+            string expected = "https://ow-api.herokuapp.com/stats/pc/us/cathal1k97-2203";
             Assert.AreNotEqual(expected, actual);
         }
 
@@ -46,7 +46,18 @@ namespace LoLQueen.Tests
         [TestMethod]
         public void Test_Small_URL_Fail()
         {
+            string actual = BlizzardUrl.ConnectToBlizzard2("Quadzilla", "21122");
+            string expected = "https://ow-api.herokuapp.com/profile/pc/us/cathal1k97-2203";
+            Assert.AreNotEqual(expected, actual);
+        }
 
+        [TestMethod]
+        public void teststruct()
+        {
+            string actual = Home.GetStats<string>("https://ow-api.herokuapp.com/profile/pc/us/Quadzilla-21122");
+            string expected = "LoLQueen.RootObject";
+            Console.WriteLine("String actual is: " + actual);
+            Assert.AreEqual(expected, actual);
         }
     }
 }

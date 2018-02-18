@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LoLQueen
+﻿namespace LoLQueen
 {
     /*
      * This class is used to connect to the API. It used the

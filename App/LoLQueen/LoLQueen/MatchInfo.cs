@@ -6,9 +6,9 @@ namespace LoLQueen
     public class MatchInfo
     {
 
-        /*
-         * PLayer stats 
-         */
+        /// <summary>
+        /// PLayer stats 
+        /// </summary>
 
         public class Player
         {
@@ -28,9 +28,9 @@ namespace LoLQueen
             public int ParticipantId;
         }
 
-        /*
-         * Used to get the stats on the team
-         */
+        /// <summary>
+        /// Used to get the stats on the team
+        /// </summary>
 
         public class Teams
         {
@@ -51,11 +51,11 @@ namespace LoLQueen
             public int DominionVictoryScore;
             public int DragonKills;
         }
+        /// <summary>
+        /// Large class used to get statistics on a wide variety of player
+        /// actions and contributions to the match
+        /// </summary>
 
-        /*
-         * Large class used to get statistics on a wide variety of player
-         * actions and contributions to the match
-         */
 
         public class Stats
         {
@@ -158,7 +158,10 @@ namespace LoLQueen
             public int TimeCCingOthers;
         }
 
-
+        /// <summary>
+        /// Structure to hold info based 
+        /// on participation for a season
+        /// </summary>
         public class Participants
         {
             public Stats Stats;
@@ -170,6 +173,10 @@ namespace LoLQueen
             public int ChampionId;
         }
 
+        /// <summary>
+        /// Structure to hold information based 
+        /// on a single in game match
+        /// </summary>
         public class singleMatch
         {
             public int SeasonId;

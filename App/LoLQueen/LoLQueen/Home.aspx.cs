@@ -7,10 +7,15 @@ using Newtonsoft.Json;
 
 namespace LoLQueen
 
-    //this is a test comment
+    
 {
     public partial class Home : System.Web.UI.Page
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -34,13 +39,11 @@ namespace LoLQueen
 
             Debug.WriteLine("Collected summoner info");
 
-
             //get 2o match history games
             string matchHistUrl = RiotUrl.GetMatchHistUrl("euw1",currentSummoner.AccountId.ToString());
             MatchHist matchHist = GetStats<MatchHist>(matchHistUrl);
 
             Debug.WriteLine("Collected match hist : " + matchHist.Matches[0].Champion + " and game ID = " + matchHist.Matches[0].GameId);
-
 
             //get specific match information (NEEDS TO BE LOOPED FOR LAST 20)
             List<MatchInfo.singleMatch> allMatchDetails = new List<MatchInfo.singleMatch>();
@@ -51,16 +54,10 @@ namespace LoLQueen
 
                 allMatchDetails.Add(GetStats<MatchInfo.singleMatch>(matchUrl));
             }
-            
-  
-
-
 
             //Debug.WriteLine(" url contains = " + matchUrl);
             Debug.WriteLine("Collect match info Kills : " + allMatchDetails[0].Participants[0].Stats.Kills);
             Debug.WriteLine("SECOND GAME KILLS : " + allMatchDetails[1].Participants[0].Stats.Kills);
-
-
 
             //get total champion mastery
             string masteryUrl = RiotUrl.GetTotalMasteryScoreUrl(currentSummoner.Id.ToString(), "euw1");
@@ -109,10 +106,6 @@ namespace LoLQueen
 
                 return default(T);
             }
-                
-
-            
-
         }
 
         /// <summary>
@@ -126,11 +119,22 @@ namespace LoLQueen
             summonerAccIdLabel.Text = currentSummoner.AccountId.ToString();
         }
 
+        /// <summary>
+        /// Redirect to OverWatch
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void RedirectOW(object sender, EventArgs e)
         {
             Response.Redirect("OwHome.aspx");
         }
 
+        /// <summary>
+        /// Replace the space in summonerName to ensure 
+        /// successful link creation
+        /// </summary>
+        /// <param name="summonerName"></param>
+        /// <returns></returns>
         public string ValidateName(string summonerName)
         {
             string newSummonerName = summonerName.Replace(" ", "%20");

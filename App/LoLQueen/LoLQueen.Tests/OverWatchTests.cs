@@ -1,7 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using LoLQueen;
-
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace LoLQueen.Tests
 {
     [TestClass]
@@ -90,12 +87,12 @@ namespace LoLQueen.Tests
             System.Diagnostics.Debug.WriteLine("String actual is: " + actual);
             Assert.AreEqual(expected, actual);
         }
-        /*
+        
         [TestMethod]
         public void Test_UpdatePageData()
         {
-            string actual = 
+            string actual = null;
         }
-        */
+        
     }
 }

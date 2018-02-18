@@ -1,15 +1,23 @@
 ﻿using System;
-using System.Diagnostics;
 
 namespace LoLQueen
 {
     public partial class OwHome : System.Web.UI.Page
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
+        /// <summary>
+        /// Redirect to LoLQueen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void RedirectToLoL(object sender, EventArgs e)
         {
             Response.Redirect("Home.aspx");
@@ -46,12 +54,31 @@ namespace LoLQueen
         /// <param name="currentHero2"></param>
         public void UpdatePageData(RootObject currentHero, Root currentHero2)
         {
-            HeroName.Text = currentHero.Username;
-            HeroLevel.Text = currentHero.Level.ToString();
-            PlayerImg.ImageUrl = currentHero.Portrait;
-            QuickWin.Text = currentHero2.Games.Quickplay.Won.ToString();
-            RankImg.ImageUrl = currentHero2.Competitive.Rank_img;
-            CompWin.Text = currentHero2.Games.Competitive.Won.ToString();
+            if (currentHero == null)
+            {
+                throw new ArgumentNullException(nameof(currentHero));
+            }
+            else if(currentHero2 == null)
+            {
+                throw new ArgumentNullException(nameof(currentHero2));
+            }
+
+            else
+            {
+                try
+                {
+                    HeroName.Text = currentHero.Username;
+                    HeroLevel.Text = currentHero.Level.ToString();
+                    PlayerImg.ImageUrl = currentHero.Portrait;
+                    QuickWin.Text = currentHero2.Games.Quickplay.Won.ToString();
+                    RankImg.ImageUrl = currentHero2.Competitive.Rank_img;
+                    CompWin.Text = currentHero2.Games.Competitive.Won.ToString();
+                }
+                catch
+                {
+                    System.Diagnostics.Debug.WriteLine(message: "Error occured: Could not assign data from structures in Hero and Hero2 to GUI");
+                }
+            }
         }
     }
 }

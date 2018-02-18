@@ -2,6 +2,10 @@
 
 namespace LoLQueen
 {
+    /// <summary>
+    /// Base structure to get info based 
+    /// on the match history
+    /// </summary>
     public class MatchHist
     {
         public List<Match> Matches;
@@ -9,10 +13,10 @@ namespace LoLQueen
         public int StartIndex;
         public int EndIndex;
     }
-    /*
-     * getters and setters to grab and display the information
-     * the user wants
-     */
+    /// <summary>
+    /// getters and setters to grab and display the information
+    /// the user wants
+    /// </summary>
     public class Match
     {
         public string Lane { get; set; }

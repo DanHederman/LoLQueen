@@ -542,7 +542,6 @@
     <Content Include="css\component\timeline\js\TimelineJS-master\website\templates\examples\user-interface\data.json" />
     <Content Include="css\component\timeline\mustache\template.mustache" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="GameSelect.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="images\Backround1.jpg" />
     <Content Include="images\Backround2.png" />
@@ -590,12 +589,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BlizzardUrl.cs" />
     <Compile Include="ChampionMastery.cs" />
-    <Compile Include="GameSelect.aspx.cs">
-      <DependentUpon>GameSelect.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GameSelect.aspx.designer.cs">
-      <DependentUpon>GameSelect.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Hero.cs" />
     <Compile Include="Hero2.cs" />
     <Compile Include="Home.aspx.cs">

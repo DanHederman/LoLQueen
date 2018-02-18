@@ -194,5 +194,19 @@ namespace LoLQueen
             public long GameCreation;
         }
 
+
+        public static List<singleMatch> GetMatchDetails(string region,MatchHist matchHist)
+        {
+            List<singleMatch> allMatchDetails = new List<singleMatch>();
+
+            for (int i = 0; i < 20; ++i)
+            {
+                string matchUrl = RiotUrl.GetMatchUrl(matchHist.Matches[i].GameId.ToString(), "euw1");
+
+                allMatchDetails.Add(JsonSettings.GetStats<singleMatch>(matchUrl));
+            }
+            return allMatchDetails;
+        }
+
     }
 }

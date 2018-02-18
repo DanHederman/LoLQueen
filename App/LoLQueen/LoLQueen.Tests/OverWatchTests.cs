@@ -81,7 +81,7 @@ namespace LoLQueen.Tests
         [TestMethod]
         public void Test_Struct()
         {
-            string actual= Home.GetStats<string>("https://ow-api.herokuapp.com/profile/pc/us/Quadzilla-21122");
+            string actual= JsonSettings.GetStats<string>("https://ow-api.herokuapp.com/profile/pc/us/Quadzilla-21122");
             string expected = null;
 
             System.Diagnostics.Debug.WriteLine("String actual is: " + actual);

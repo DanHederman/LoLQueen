@@ -600,6 +600,7 @@
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Items.cs" />
+    <Compile Include="JsonSettings.cs" />
     <Compile Include="LiveGame.cs" />
     <Compile Include="MatchHist.cs" />
     <Compile Include="MatchInfo.cs" />

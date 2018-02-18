@@ -13,6 +13,7 @@ namespace LoLQueen
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //get static LoL info
 
         }
 
@@ -40,17 +41,12 @@ namespace LoLQueen
 
             //get specific match information (NEEDS TO BE LOOPED FOR LAST 20)
             List<MatchInfo.singleMatch> allMatchDetails = new List<MatchInfo.singleMatch>();
-
             for(int i= 0; i < 20; ++i)
             {
                 string matchUrl = RiotUrl.GetMatchUrl(matchHist.Matches[i].GameId.ToString(), "euw1");
 
                 allMatchDetails.Add(getJsonObject<MatchInfo.singleMatch>(matchUrl));
             }
-            
-  
-
-
 
             //Debug.WriteLine(" url contains = " + matchUrl);
             Debug.WriteLine("Collect match info Kills : " + allMatchDetails[0].Participants[0].Stats.Kills);

@@ -7,18 +7,22 @@ namespace LoLQueen.Tests
     [TestClass]
     public class OverWatchTests
     {
+        /// <summary>
+        /// Initialize 
+        /// </summary>
         [TestInitialize]
         public void fillStruct()
         {
-            
-        }
-        /*
-         * The following 2 tests will test
-         * the link to the large json file 
-         * is being created successfully and 
-         * will also test for failure also 
-         */
 
+        }
+      
+         /// <summary>
+         /// Test the method to create the link 
+         /// to the large json file
+         /// <remark>
+         /// test is for a successfully made url 
+         /// </remark>
+        /// </summary>
         [TestMethod]
         public void Test_Large_Url_Pass()
         {
@@ -26,6 +30,14 @@ namespace LoLQueen.Tests
             string expected = "https://ow-api.herokuapp.com/stats/pc/us/Quadzilla-21122";
             Assert.AreEqual(expected, actual);
         }
+
+        /// <summary>
+        /// Test the method to create the link
+        /// for the large json file
+        /// <remark>
+        /// test is for a bad match
+        /// </remark>
+        /// </summary>
 
         [TestMethod]
         public void Test_Large_URL_Fail()
@@ -35,12 +47,12 @@ namespace LoLQueen.Tests
             Assert.AreNotEqual(expected, actual);
         }
 
-        /*
-         * The next 2 tests will test the url to the small
-         * json file is being created both successfully 
-         * and will also test for failure
-         */
-
+        /// <summary>
+        /// Test for a successfully created json file
+        /// <remarks>
+        /// Test is for a successfully created url
+        /// </remarks>
+        /// </summary>
         [TestMethod]
         public void Test_Small_URL_Pass()
         {
@@ -48,6 +60,14 @@ namespace LoLQueen.Tests
             string expected = "https://ow-api.herokuapp.com/profile/pc/us/Quadzilla-21122";
             Assert.AreEqual(expected, actual);
         }
+
+        /// <summary>
+        /// Test the method to create the link
+        /// for the small json file
+        /// <remarks>
+        /// The test is for an unsuccessfully created link
+        /// </remarks>
+        /// </summary>
         [TestMethod]
         public void Test_Small_URL_Fail()
         {
@@ -56,7 +76,10 @@ namespace LoLQueen.Tests
             Assert.AreNotEqual(expected, actual);
         }
 
-        //Test method getStats
+        /// <summary>
+        /// Test the method to read in the json 
+        /// file to the structs
+        /// </summary>
 
         [TestMethod]
         public void Test_Struct()

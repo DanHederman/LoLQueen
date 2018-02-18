@@ -7,11 +7,16 @@
  * contain 
  */
 {
+    /// <summary>
+    /// Structure to hold quickplay game data
+    /// </summary>
     public class Quick
     {
         public int Won { get; set; }
     }
-
+    /// <summary>
+    /// Structure to hold competitive game data
+    /// </summary>
     public class Comp
     {
         public int Won { get; set; }
@@ -19,25 +24,34 @@
         public int Draw { get; set; }
         public int Played { get; set; }
     }
-
+    /// <summary>
+    /// Base structure to split game type data
+    /// </summary>
     public class Games
     {
         public Quick Quickplay { get; set; }
         public Comp Competitive { get; set; }
     }
-
+    /// <summary>
+    /// Structure to split game time
+    /// </summary>
     public class Playtime
     {
         public string Quick { get; set; }
         public string Comp { get; set; }
     }
-
+    /// <summary>
+    /// Structure to hold what rank the user is 
+    /// </summary>
     public class Comp2
     {
         public int rank { get; set; }
         public string Rank_img { get; set; }
     }
 
+    /// <summary>
+    /// Structure base to hold the heros data
+    /// </summary>
     public class Root
     {
         public string Username { get; set; }

@@ -4,9 +4,12 @@ namespace LoLQueen
 {
     public class BlizzardUrl
     {
-        /*
-         * First large json, some information missing
-         */
+        /// <summary>
+        /// First large json, some information missing
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="usernum"></param>
+        /// <returns></returns>
 
         public static string ConnectToBlizzard(string username, string usernum)
         {
@@ -15,9 +18,12 @@ namespace LoLQueen
             return blizzardUrl;
         }
 
-        /*
-         * Second smaller json, information the first was missing 
-         */
+        /// <summary>
+        /// Second smaller json, information the first was missing
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="usernum"></param>
+        /// <returns></returns>
 
         public static string ConnectToBlizzard2(string username, string usernum)
         {

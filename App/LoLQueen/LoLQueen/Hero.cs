@@ -7,20 +7,28 @@
  */
 namespace LoLQueen
 {
+    /// <summary>
+    /// Structure holds Hero details for quickplay
+    /// </summary>
     public class Quickplay
     {
         public string Hero { get; set; }
         public string Played { get; set; }
         public string Img { get; set; }
     }
-
+    /// <summary>
+    /// Structure holds Hero details for competitive 
+    /// </summary>
     public class Competitive
     {
         public string Hero { get; set; }
         public string Played { get; set; }
         public string Img { get; set; }
     }
-
+    /// <summary>
+    /// Strructure for top picked hero
+    /// from each game type
+    /// </summary>
     public class TopHeroes
     {
         public List<Quickplay> Quickplay { get; set; }
@@ -38,7 +46,10 @@ namespace LoLQueen
         public string Title { get; set; }
         public string Value { get; set; }
     }
-
+    /// <summary>
+    /// Structure containing lists that will hold 
+    /// the data for each of the game types combat stats
+    /// </summary>
     public class Combat
     {
         public List<Quickplay2> Quickplay { get; set; }
@@ -56,7 +67,10 @@ namespace LoLQueen
         public string Title { get; set; }
         public string Value { get; set; }
     }
-
+    /// <summary>
+    /// Structure that contains lists to hold the 
+    /// MatchAwards fro each hero in each game type
+    /// </summary>
     public class MatchAwards
     {
         public List<Quickplay3> Quickplay { get; set; }
@@ -74,6 +88,10 @@ namespace LoLQueen
         public string Title { get; set; }
         public string Value { get; set; }
     }
+    /// <summary>
+    /// Structure that contains lists to hold 
+    /// info on assists for each game type 
+    /// </summary>
 
     public class Assists
     {
@@ -128,7 +146,10 @@ namespace LoLQueen
         public List<Quickplay7> Quickplay { get; set; }
         public List<Competitive6> Competitive { get; set; }
     }
-
+    /// <summary>
+    /// Holds 2 values i.e. title = "Most elims in game"
+    /// value = "68"
+    /// </summary>
     public class Quickplay8
     {
         public string Title { get; set; }
@@ -140,13 +161,19 @@ namespace LoLQueen
         public string Title { get; set; }
         public string Value { get; set; }
     }
-
+    /// <summary>
+    /// Splits the different game types that 
+    /// are held in the json file 
+    /// </summary>
     public class Game
     {
         public List<Quickplay8> Quickplay { get; set; }
         public List<Competitive7> Competitive { get; set; }
     }
-
+    /// <summary>
+    /// Structure that is used to group all the 
+    /// other structures 
+    /// </summary>
     public class Stats
     {
         public TopHeroes TopHeroes { get; set; }
@@ -158,7 +185,10 @@ namespace LoLQueen
         public Best Best { get; set; }
         public Game Game { get; set; }
     }
-
+    /// <summary>
+    /// Base structure to hold all game data 
+    /// that is read in from the json
+    /// </summary>
     public class RootObject
     {
         public string Username { get; set; }

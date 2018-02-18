@@ -19,7 +19,11 @@ namespace LoLQueen
         {
             
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void DataGen(object sender, EventArgs e)
         {
             var username = HeroNameBox.Text;
@@ -35,7 +39,11 @@ namespace LoLQueen
 
             UpdatePageData(currentHero, currentHero2);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="currentHero"></param>
+        /// <param name="currentHero2"></param>
         public void UpdatePageData(RootObject currentHero, Root currentHero2)
         {
             HeroName.Text = currentHero.Username;

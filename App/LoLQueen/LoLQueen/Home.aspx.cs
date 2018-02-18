@@ -15,7 +15,11 @@ namespace LoLQueen
         {
 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void SubmitSummonerName(object sender, EventArgs e)
         {
 
@@ -40,7 +44,7 @@ namespace LoLQueen
 
             //get specific match information (NEEDS TO BE LOOPED FOR LAST 20)
             List<MatchInfo.singleMatch> allMatchDetails = new List<MatchInfo.singleMatch>();
-
+            
             for(int i= 0; i < 20; ++i)
             {
                 string matchUrl = RiotUrl.GetMatchUrl(matchHist.Matches[i].GameId.ToString(), "euw1");
@@ -76,7 +80,12 @@ namespace LoLQueen
             UpdatePageData(currentSummoner);
 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="queryUrl"></param>
+        /// <returns></returns>
         public static T GetStats<T>(string queryUrl)
         {
             try
@@ -106,7 +115,10 @@ namespace LoLQueen
 
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="currentSummoner"></param>
         public void UpdatePageData(Summoner currentSummoner)
         {
             summonerNameLabel.Text = currentSummoner.Name;

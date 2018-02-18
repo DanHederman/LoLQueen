@@ -73,15 +73,21 @@ li.dropdown:hover > .dropdown-menu {
 }
 
 #bannerImg2 {
-
+	padding-bottom: 20%;
+	padding-top: 20%;
 	background-image: url("../images/Backround2.png");
+	background-position: center top;
+	background-size: cover;
 
 
 }
 
 #bannerImg3 {
-
+	padding-bottom: 20%;
+	padding-top: 20%;
 	background-image: url("../images/Backround3.jpg");
+	background-position: center top;
+	background-size: cover;
 
 }
 
@@ -159,7 +165,7 @@ li.dropdown:hover > .dropdown-menu {
     cursor: pointer
 }
 
-#searchForm {
+#form1{
 	width: 50%;
 	margin-left: 25%;
 	margin-bottom: 5%;
@@ -493,7 +499,7 @@ div.scrollmenu a {
   height: 500px;
 }
 
-#searchForm {
+#form1 {
 	position:absolute;
   	top:40%;
 }

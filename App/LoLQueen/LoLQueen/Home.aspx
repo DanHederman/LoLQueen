@@ -81,16 +81,29 @@
     </div>
 
     <div >
-    <form class="col-sm-12" id="searchForm" >
+    <form id="form1" runat="server" class="col-sm-12">
     <div class="form-group col-sm-4 col-sm-offset-4">
     	<h1 class="text-center">LoL Queen</h1>
       <div class="input-group input-group-lg center-block">
-        <input id="searchBar2" type="text" class="form-control" placeholder="Search">
-        	<button type="button" class="btn btn-default"  onClick="searchFunction()">Search  <span class="glyphicon glyphicon-search"></span></button>
-      </form>
-        </i></span>
+          <asp:TextBox ID="SummonerName" class="form-control" runat="server"></asp:TextBox>
+          <asp:Button ID="Button1" type="button" class="btn btn-default" runat="server" Text="Search" OnClick="SubmitSummonerName"/>
       </div>
     </div>
+        <p>
+         Summoner Name:
+         <asp:Label ID="summonerNameLabel" runat="server" Text=""></asp:Label>
+        </p>
+         <p>
+            Summoner Level:
+            <asp:Label ID="summonerLevelLabel" runat="server" Text=""></asp:Label>
+        </p>
+        <p>
+            Summoner ID:
+            <asp:Label ID="summonerAccIdLabel" runat="server" Text=""></asp:Label>
+        </p>
+        <asp:Button ID="Button2" runat="server" OnClick="RedirectOW" Text="OverWatch" />
+         </i></span>
+      </div>
   </form>
 </div>
 
@@ -104,26 +117,5 @@
 
 </div>
     </div>
-</div>
-    <form id="form1" runat="server">
-        <div>
-            <asp:Label ID="Label1" runat="server" Text="Insert Summoner Name"></asp:Label>
-            <asp:TextBox ID="SummonerName"  runat="server"></asp:TextBox>
-            <asp:Button ID="Button1" runat="server" Text="Go" OnClick="SubmitSummonerName" />
-        </div>
-        <p>
-            Summoner Name:
-            <asp:Label ID="summonerNameLabel" runat="server" Text=""></asp:Label>
-        </p>
-        <p>
-            Summoner Level:
-            <asp:Label ID="summonerLevelLabel" runat="server" Text=""></asp:Label>
-        </p>
-        <p>
-            Summoner ID:
-            <asp:Label ID="summonerAccIdLabel" runat="server" Text=""></asp:Label>
-        </p>
-        <asp:Button ID="Button2" runat="server" OnClick="RedirectOW" Text="OverWatch" />
-    </form>
 </body>
 </html>

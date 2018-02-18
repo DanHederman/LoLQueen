@@ -38,8 +38,7 @@ namespace LoLQueen
 
 
             //get 2o match history games
-            string matchHistUrl = RiotUrl.GetMatchHistUrl("euw1",currentSummoner.AccountId.ToString());
-            MatchHist matchHist = JsonSettings.GetStats<MatchHist>(matchHistUrl);
+            MatchHist matchHist = MatchHist.GetMatchHistory("euw1", currentSummoner.AccountId.ToString());
          
 
 

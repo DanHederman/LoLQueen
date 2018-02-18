@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LoLQueen
+﻿namespace LoLQueen
 {
     /*
      * This class is used to connect to the API. It used the
@@ -12,9 +10,14 @@ namespace LoLQueen
      */
     public class RiotUrl
     {
-
+        
         static string apiKey = "";
-
+        /// <summary>
+        /// Summoner information
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="region"></param>
+        /// <returns></returns>
         public static string GetSummonerUrl(string username, string region)
         {
             string url =
@@ -22,7 +25,12 @@ namespace LoLQueen
 
             return url;
         }
-
+        /// <summary>
+        /// Match History information
+        /// </summary>
+        /// <param name="region"></param>
+        /// <param name="accid"></param>
+        /// <returns></returns>
         public static string GetMatchHistUrl(string region, string accid)
         {
 
@@ -31,20 +39,35 @@ namespace LoLQueen
 
             return url;
         }
-
+        /// <summary>
+        /// Match information
+        /// </summary>
+        /// <param name="gameId"></param>
+        /// <param name="region"></param>
+        /// <returns></returns>
         public static string GetMatchUrl(string gameId, string region)
         {
             string url = $"https://{region}.api.riotgames.com/lol/match/v3/matches/{gameId}?api_key={apiKey}";
 
             return url;
         }
-
+        /// <summary>
+        /// Mastery information 
+        /// </summary>
+        /// <param name="summonerId"></param>
+        /// <param name="region"></param>
+        /// <returns></returns>
         public static string GetTotalMasteryScoreUrl(string summonerId, string region)
         {
             string url = $"https://{region}.api.riotgames.com/lol/champion-mastery/v3/scores/by-summoner/{summonerId}?api_key={apiKey}";
             return url;
         }
-
+        /// <summary>
+        /// Mastery progress information
+        /// </summary>
+        /// <param name="summonerId"></param>
+        /// <param name="region"></param>
+        /// <returns></returns>
         public static string GetMasteryProgressUrl(string summonerId, string region)
         {
             string url =

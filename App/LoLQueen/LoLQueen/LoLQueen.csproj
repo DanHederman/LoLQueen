@@ -592,7 +592,6 @@
     <Compile Include="ChampionMastery.cs" />
     <Compile Include="GameSelect.aspx.cs">
       <DependentUpon>GameSelect.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GameSelect.aspx.designer.cs">
       <DependentUpon>GameSelect.aspx</DependentUpon>

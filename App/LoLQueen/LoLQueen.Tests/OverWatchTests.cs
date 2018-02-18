@@ -83,16 +83,7 @@ namespace LoLQueen.Tests
         {
             string actual= JsonSettings.GetStats<string>("https://ow-api.herokuapp.com/profile/pc/us/Quadzilla-21122");
             string expected = null;
-
-            System.Diagnostics.Debug.WriteLine("String actual is: " + actual);
             Assert.AreEqual(expected, actual);
-        }
-        
-        [TestMethod]
-        public void Test_UpdatePageData()
-        {
-            string actual = null;
-        }
-        
+        }  
     }
 }

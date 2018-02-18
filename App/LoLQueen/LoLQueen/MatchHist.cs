@@ -13,7 +13,7 @@ namespace LoLQueen
         public int StartIndex;
         public int EndIndex;
     
-        public static MatchHist GetMatchHistory(string region,string accId)
+        public static MatchHist GetMatchHistory(string region, string accId)
         {
             string matchHistUrl = RiotUrl.GetMatchHistUrl("euw1", accId);
             MatchHist matchHist = JsonSettings.GetStats<MatchHist>(matchHistUrl);

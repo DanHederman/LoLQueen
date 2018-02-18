@@ -14,24 +14,7 @@ namespace LoLQueen.Tests
         /// API key must be manyally put in
         /// </summary>
         /// 
-        /*
-         * 
-         * 
-         * 
-         * 
-        public  string APIKey;
-
-         [TestInitialize]
-         public string setKey()
-        {
-            string APIKey = "RGAPI-f7ee5817-92bc-4100-90d5-9a64994f6a8b";
-            return APIKey;
-        }
-
-
-
-
-        */
+        
         private static string APIKey;
 
         [ClassInitialize()]
@@ -138,5 +121,24 @@ namespace LoLQueen.Tests
             string expected = ("https://euw1.api.riotgames.com/lol/champion-mastery/v3/scores/by-summoner/3534754707?api_key=" + APIKey);
             Assert.AreNotEqual(actual, expected);
         }    
+
+        /// <summary>
+        /// Test the method get stats
+        /// </summary>
+        [TestMethod]
+        public void Test_GetStats_Pass()
+        {
+            string actual = JsonSettings.GetStats<string>("https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/Notorious%20Nutz?api_key=" + APIKey);
+            string expected = (null);
+            Assert.AreEqual(actual, expected);
+        }
+
+        [TestMethod]
+        public void Test_GetStats_Fail()
+        {
+            string actual = JsonSettings.GetStats<string>("https://ow-api.herokuapp.com/profile/pc/us/Quadzilla-21122" + APIKey);
+            string expected = ("LoLQueen.Root");
+            Assert.AreNotEqual(actual, expected);
+        }
     }
 }

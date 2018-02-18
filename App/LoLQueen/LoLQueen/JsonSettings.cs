@@ -41,6 +41,5 @@ namespace LoLQueen
                 return default(T);
             }
         }
-
     }
 }

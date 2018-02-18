@@ -41,8 +41,8 @@ namespace LoLQueen
             var obj = BlizzardUrl.ConnectToBlizzard(username, usernum);
             var obj2 = BlizzardUrl.ConnectToBlizzard2(username, usernum);
             
-            var currentHero = Home.GetStats<RootObject>(obj);
-            var currentHero2 = Home.GetStats<Root>(obj2);
+            var currentHero = JsonSettings.GetStats<RootObject>(obj);
+            var currentHero2 = JsonSettings.GetStats<Root>(obj2);
             
 
             UpdatePageData(currentHero, currentHero2);

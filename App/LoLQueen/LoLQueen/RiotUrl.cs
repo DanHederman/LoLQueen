@@ -11,14 +11,14 @@
     public class RiotUrl
     {
         
-        static string apiKey = "";
+        static string apiKey = "RGAPI-f7ee5817-92bc-4100-90d5-9a64994f6a8b";
         /// <summary>
         /// Summoner information
         /// </summary>
         /// <param name="username"></param>
         /// <param name="region"></param>
         /// <returns></returns>
-        public static string GetSummonerUrl(string username, string region)
+        public static string GetSummonerUrl(string region, string username)
         {
             string url =
                 $"https://{region}.api.riotgames.com/lol/summoner/v3/summoners/by-name/{username}?api_key={apiKey}";

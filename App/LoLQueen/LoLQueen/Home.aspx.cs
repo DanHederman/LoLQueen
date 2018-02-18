@@ -43,6 +43,7 @@ namespace LoLQueen
             //get 2o match history games
             string matchHistUrl = RiotUrl.GetMatchHistUrl("euw1",currentSummoner.AccountId.ToString());
             MatchHist matchHist = GetStats<MatchHist>(matchHistUrl);
+            
 
             Debug.WriteLine("Collected match hist : " + matchHist.Matches[0].Champion + " and game ID = " + matchHist.Matches[0].GameId);
 
@@ -63,7 +64,7 @@ namespace LoLQueen
             //get total champion mastery
             string masteryUrl = RiotUrl.GetTotalMasteryScoreUrl(currentSummoner.Id.ToString(), "euw1");
             var mastery = new WebClient().DownloadString(masteryUrl);
-
+            Debug.WriteLine("this url is the most strange thing ever", masteryUrl);
             Debug.WriteLine("Collected mastery");
 
 

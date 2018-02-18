@@ -11,14 +11,14 @@
     public class RiotUrl
     {
         
-        static string apiKey = "";
+        static string apiKey = "RGAPI-f7ee5817-92bc-4100-90d5-9a64994f6a8b";
         /// <summary>
         /// Summoner information
         /// </summary>
         /// <param name="username"></param>
         /// <param name="region"></param>
         /// <returns></returns>
-        public static string GetSummonerUrl(string username, string region)
+        public static string GetSummonerUrl(string region, string username)
         {
             string url =
                 $"https://{region}.api.riotgames.com/lol/summoner/v3/summoners/by-name/{username}?api_key={apiKey}";
@@ -45,7 +45,7 @@
         /// <param name="gameId"></param>
         /// <param name="region"></param>
         /// <returns></returns>
-        public static string GetMatchUrl(string gameId, string region)
+        public static string GetMatchUrl(string region, string gameId)
         {
             string url = $"https://{region}.api.riotgames.com/lol/match/v3/matches/{gameId}?api_key={apiKey}";
 
@@ -57,7 +57,7 @@
         /// <param name="summonerId"></param>
         /// <param name="region"></param>
         /// <returns></returns>
-        public static string GetTotalMasteryScoreUrl(string summonerId, string region)
+        public static string GetTotalMasteryScoreUrl(string region, string summonerId)
         {
             string url = $"https://{region}.api.riotgames.com/lol/champion-mastery/v3/scores/by-summoner/{summonerId}?api_key={apiKey}";
             return url;
@@ -68,7 +68,7 @@
         /// <param name="summonerId"></param>
         /// <param name="region"></param>
         /// <returns></returns>
-        public static string GetMasteryProgressUrl(string summonerId, string region)
+        public static string GetMasteryProgressUrl(string region, string summonerId)
         {
             string url =
                 $"https://{region}.api.riotgames.com/lol/champion-mastery/v3/champion-masteries/by-summoner/{summonerId}?api_key={apiKey}";

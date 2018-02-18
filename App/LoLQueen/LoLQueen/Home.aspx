@@ -49,12 +49,6 @@
       </button>
       <a class="navbar-brand"><img id="headerlogo" src="images/logoletters.ico"  alt="logo" height="30" width="30"></a>
     </div>
-       <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input id="searchBar" type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="button" class="btn btn-default"  onClick="searchFunction()">Submit</button>
-      </form>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -87,6 +81,7 @@
       <div class="input-group input-group-lg center-block">
           <asp:TextBox ID="SummonerName" class="form-control" runat="server"></asp:TextBox>
           <asp:Button ID="Button1" type="button" class="btn btn-default" runat="server" Text="Search" OnClick="SubmitSummonerName"/>
+          <asp:Button ID="Button3" type="button" class="btn btn-default" runat="server" Text="Search Live Game" OnClick="SubmitSummonerName"/>
       </div>
     </div>
         <p>
@@ -104,6 +99,20 @@
         <asp:Button ID="Button2" runat="server" OnClick="RedirectOW" Text="OverWatch" />
          </i></span>
       </div>
+    <section>
+        <div>
+            <h1> Match History</h1>
+    <asp:GridView runat="server" ID="MatchHist"
+        ItemType="MatchHist.Match" DataKeyNames="Match" AutoGenerateColumns="false">
+        <Columns>
+            <asp:DynamicField DataField="Match.Lane" />
+            <asp:DynamicField DataField="Match.Champion" />
+            <asp:DynamicField DataField="Match.Role" />
+            <asp:DynamicField DataField="Match.Timestamp" />               
+        </Columns>
+    </asp:GridView>
+        </div>
+    </section>
   </form>
 </div>
 

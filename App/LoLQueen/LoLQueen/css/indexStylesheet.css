@@ -73,22 +73,44 @@ li.dropdown:hover > .dropdown-menu {
 }
 
 #bannerImg2 {
-	padding-bottom: 20%;
-	padding-top: 20%;
-	background-image: url("../images/Backround2.png");
-	background-position: center top;
-	background-size: cover;
-
-
+    padding-bottom: 20%;
+    padding-top: 20%;
+    background-image: url("../images/Backround3.jpg");
+    background-position: center top;
+    background-size: cover;
 }
 
 #bannerImg3 {
 	padding-bottom: 20%;
 	padding-top: 20%;
-	background-image: url("../images/Backround3.jpg");
+	background-image: url("../images/LoL.png");
 	background-position: center top;
 	background-size: cover;
 
+}
+
+#bannerImg4 {
+    padding-bottom: 20%;
+    padding-top: 20%;
+    background-image: url("../images/OW.png");
+    background-position: center top;
+    background-size: cover;
+}
+
+#bannerImg5 {
+    padding-bottom: 20%;
+    padding-top: 20%;
+    background-image: url("../images/Backround2.png");
+    background-position: center top;
+    background-size: cover;
+}
+
+#bannerImg6 {
+    padding-bottom: 20%;
+    padding-top: 20%;
+    background-image: url("../images/Background4.png");
+    background-position: center top;
+    background-size: cover;
 }
 
 /* List */
@@ -493,10 +515,11 @@ div.scrollmenu a {
 }
 .carousel img {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 3px;
+  left: 129px;
   min-width: 100%;
-  height: 500px;
+  height: 47px;
+    width: 54px;
 }
 
 #form1 {

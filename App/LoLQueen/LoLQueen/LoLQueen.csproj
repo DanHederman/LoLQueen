@@ -544,6 +544,7 @@
     <Content Include="css\component\timeline\mustache\template.mustache" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Home.aspx" />
+    <Content Include="images\Background4.png" />
     <Content Include="images\Backround1.jpg" />
     <Content Include="images\Backround2.png" />
     <Content Include="images\Backround3.jpg" />

@@ -6,7 +6,7 @@
 <head runat="server">
     <title>LoL Queen</title>
 		 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  		<link rel="icon" href="images/logoletters.ico" type="image/x-icon">
+  		<link rel="icon" href="images/league-logo.ico" type="image/x-icon">
 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,7 +47,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand"><img id="headerlogo" src="images/logoletters.ico"  alt="logo" height="30" width="30"></a>
+      <a class="navbar-brand"><img id="headerlogo" src="images/league-logo.ico"  alt="logo" height="30" width="30"></a>
     </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -102,8 +102,8 @@
     <section>
         <div>
             <h1> Match History</h1>
-    <asp:GridView runat="server" ID="MatchHist"
-        ItemType="MatchHist.Match" DataKeyNames="Match" AutoGenerateColumns="false">
+    <asp:GridView runat="server" ID="GetMatchHistory"
+        ItemType="MatchHist.GetMatchHistory" DataKeyNames="Match" AutoGenerateColumns="false">
         <Columns>
             <asp:DynamicField DataField="Match.Lane" />
             <asp:DynamicField DataField="Match.Champion" />

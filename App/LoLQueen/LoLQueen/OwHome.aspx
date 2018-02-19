@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
       <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  		<link rel="icon" href="images/logoletters.ico" type="image/x-icon">
+  		<link rel="icon" href="images/ow-logo.ico" type="image/x-icon">
 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,7 +37,7 @@
 <body>
     <!-- Navigation -->
 <nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid" style="background-color:#071D49">
+  <div class="container-fluid" style="background-color:#f99e1a">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header" >
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
@@ -46,7 +46,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand"><img id="headerlogo" src="images/logoletters.ico"  alt="logo" height="30" width="30"></a>
+      <a class="navbar-brand"><img id="headerlogo" src="images/ow-logo.ico"  alt="logo" height="30" width="30"></a>
     </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

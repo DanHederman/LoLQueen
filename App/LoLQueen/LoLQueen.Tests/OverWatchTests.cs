@@ -12,13 +12,13 @@ namespace LoLQueen.Tests
         {
 
         }
-      
-         /// <summary>
-         /// Test the method to create the link 
-         /// to the large json file
-         /// <remark>
-         /// test is for a successfully made url 
-         /// </remark>
+
+        /// <summary>
+        /// Test the method to create the link 
+        /// to the large json file
+        /// <remark>
+        /// test is for a successfully made url 
+        /// </remark>
         /// </summary>
         [TestMethod]
         public void Test_Large_Url_Pass()
@@ -75,15 +75,47 @@ namespace LoLQueen.Tests
 
         /// <summary>
         /// Test the method to read in the json 
-        /// file to the structs
+        /// file to the large struct
         /// </summary>
 
         [TestMethod]
-        public void Test_Struct()
+        public void Test_Struct_Hero()
         {
-            string actual= JsonSettings.GetStats<string>("https://ow-api.herokuapp.com/profile/pc/us/Quadzilla-21122");
-            string expected = null;
-            Assert.AreEqual(expected, actual);
-        }  
+            RootObject actual = JsonSettings.GetStats<RootObject>("https://ow-api.herokuapp.com/profile/pc/us/Quadzilla-21122");
+            string actualName = actual.Username;
+            string expected = ("Quadzilla");
+            Assert.AreEqual(expected, actualName);
+        }
+        
+        [TestMethod]
+        public void Test_GetStats_Struct_Hero_End()
+        {
+            RootObject actual = JsonSettings.GetStats<RootObject>("https://ow-api.herokuapp.com/stats/pc/us/Quadzilla-21122");
+            string actualString = actual.Portrait.ToString();
+            string expected = ("https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000BB8.png");
+            Assert.AreEqual(actualString, expected);
+        }       
+
+        /// <summary>
+        /// Test the method to read in the json
+        /// file to the small struct
+        /// </summary>
+        [TestMethod]
+        public void Test_GetStats_struct_Hero2()
+        {
+            Root actual = JsonSettings.GetStats<Root>("https://ow-api.herokuapp.com/profile/pc/us/Quadzilla-21122");
+            string actualString = actual.Username;
+            string expected = "Quadzilla";
+            Assert.AreEqual(actualString, expected);
+        }
+
+        [TestMethod]
+        public void Test_getStats_struct_Hero2_End()
+        {
+            Root actual = JsonSettings.GetStats<Root>("https://ow-api.herokuapp.com/profile/pc/us/Quadzilla-21122");
+            string actualString = actual.Portrait.ToString();
+            string expected = "https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000BB8.png";
+            Assert.AreEqual(actualString, expected);
+        }
     }
 }

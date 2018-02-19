@@ -78,8 +78,8 @@
     <div class="form-group col-sm-4 col-sm-offset-4">
     	<h1 class="text-center">OverWatch</h1>
       <div class="input-group input-group-lg center-block">
-          <asp:TextBox ID="HeroNameBox" class="form-control" runat="server" Text="Enter Player Name"></asp:TextBox>
-          <asp:TextBox ID="HeroTag" class="form-control" runat="server" Text="Enter Battletag"></asp:TextBox>
+          <asp:TextBox ID="HeroNameBox" class="form-control" runat="server" Placeholder="Enter Player Name"></asp:TextBox>
+          <asp:TextBox ID="HeroTag" class="form-control" runat="server" Placeholder="Enter Battletag"></asp:TextBox>
           <asp:Button ID="Button3" type="button" class="btn btn-default" runat="server" Text="Get Hero Data" OnClick="DataGen" />
       </div>
     </div>
@@ -88,7 +88,7 @@
          <asp:Label ID="HeroName" runat="server" Text=""></asp:Label>
         </p>
         <p>
-         <asp:Image ID="PlayerImg" ImageUrl="" runat="server" Height="50px" Width="50px" />
+         <asp:Image ID="PlayerImg" ImageUrl="" runat="server" ImageAlign="Right" />
         </p>
          <p>
             Hero Level:

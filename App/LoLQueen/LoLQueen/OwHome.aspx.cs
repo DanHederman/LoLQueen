@@ -58,7 +58,7 @@ namespace LoLQueen
             {
                 throw new ArgumentNullException(nameof(currentHero));
             }
-            else if(currentHero2 == null)
+            else if (currentHero2 == null)
             {
                 throw new ArgumentNullException(nameof(currentHero2));
             }
@@ -73,6 +73,10 @@ namespace LoLQueen
                     QuickWin.Text = currentHero2.Games.Quickplay.Won.ToString();
                     RankImg.ImageUrl = currentHero2.Competitive.Rank_img;
                     CompWin.Text = currentHero2.Games.Competitive.Won.ToString();
+                   /* MatchHistoryGrid = currentHero.Stats.TopHeroes;
+                    MatchHistoryGrid = currentHero.Stats.Assists.ToString();
+                    MatchHistoryGrid = currentHero.Stats.Average.ToString();
+                    */
                 }
                 catch
                 {

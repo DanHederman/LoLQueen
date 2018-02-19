@@ -102,13 +102,12 @@
     <section>
         <div>
             <h1> Match History</h1>
-    <asp:GridView runat="server" ID="GetMatchHistory"
-        ItemType="MatchHist.GetMatchHistory" DataKeyNames="Match" AutoGenerateColumns="false">
+    <asp:GridView runat="server" ID="MatchHistoryGrid"
+        ItemType="matchHist" DataKeyNames="MatchHistory" AutoGenerateColumns="false">
         <Columns>
-            <asp:DynamicField DataField="Match.Lane" />
-            <asp:DynamicField DataField="Match.Champion" />
-            <asp:DynamicField DataField="Match.Role" />
-            <asp:DynamicField DataField="Match.Timestamp" />               
+            <asp:DynamicField DataField="MatchHistoryLane" />
+            <asp:DynamicField DataField="MatchHistoryRole" />
+            <asp:DynamicField DataField="MatchHistoryChampion" />             
         </Columns>
     </asp:GridView>
         </div>

@@ -87,21 +87,40 @@
          Hero Name:
          <asp:Label ID="HeroName" runat="server" Text=""></asp:Label>
         </p>
+        <p>
+         <asp:Image ID="PlayerImg" ImageUrl="" runat="server" Height="50px" Width="50px" />
+        </p>
          <p>
             Hero Level:
             <asp:Label ID="HeroLevel" runat="server" Text=""></asp:Label>
+        </p>
+        <p>
+            <asp:Image ID="RankImg" ImageUrl="" runat="server" Height="50px" Width="50px" />
         </p>
             QuickPlay Wins:
         <asp:Label ID="QuickWin" runat="server" Text=""></asp:Label>
         <p>
             Competitive Wins:
             <asp:Label ID="CompWin" runat="server" Text=""></asp:Label>
+
         </p>
         <asp:Button ID="Button1" runat="server" Text="LoLQueen" OnClick="RedirectToLoL" />
         <asp:Button ID="Button2" runat="server" Text="Home" OnClick="RedirectHome" />
          </div>
-        <asp:Image ID="PlayerImg" ImageUrl="" runat="server" Height="123px" Width="127px" />
-        <asp:Image ID="RankImg" ImageUrl="" runat="server" Height="145px" Width="152px" />
+        <section>
+        <div>
+            <h1> Match History</h1>
+    <asp:GridView runat="server" ID="GetMatchHistory"
+        ItemType="MatchHist.GetMatchHistory" DataKeyNames="Match" AutoGenerateColumns="false">
+        <Columns>
+            <asp:DynamicField DataField="Match.Lane" />
+            <asp:DynamicField DataField="Match.Champion" />
+            <asp:DynamicField DataField="Match.Role" />
+            <asp:DynamicField DataField="Match.Timestamp" />               
+        </Columns>
+    </asp:GridView>
+        </div>
+    </section>
     </form>
         </div>
 

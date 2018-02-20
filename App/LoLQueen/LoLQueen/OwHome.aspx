@@ -110,15 +110,26 @@
         <section>
         <div>
             <h1> Match History</h1>
-    <asp:GridView runat="server" ID="GetMatchHistory"
-        ItemType="MatchHist.GetMatchHistory" DataKeyNames="Match" AutoGenerateColumns="false">
+    <asp:GridView runat="server" ID="MatchHistoryGrid"
+        ItemType="currentHero" DataKeyNames="currentHero.Stats" SelectMethod="" AutoGenerateColumns="false">
         <Columns>
-            <asp:DynamicField DataField="Match.Lane" />
-            <asp:DynamicField DataField="Match.Champion" />
-            <asp:DynamicField DataField="Match.Role" />
-            <asp:DynamicField DataField="Match.Timestamp" />               
+            <asp:DynamicField DataField="TopHeroes" />
+            <asp:DynamicField DataField="Assists" />
+            <asp:DynamicField DataField="Average" />               
         </Columns>
     </asp:GridView>
+            <p>
+            Top Heroes:
+            <asp:Label ID="TopHeroesLabel" runat="server" Text=""></asp:Label>
+            </p>
+            <p>
+            Assits:
+            <asp:Label ID="AssistsLabel" runat="server" Text=""></asp:Label>
+            </p>
+            <p>
+            Average:
+            <asp:Label ID="AverageLabel" runat="server" Text=""></asp:Label>
+</p>
         </div>
     </section>
     </form>

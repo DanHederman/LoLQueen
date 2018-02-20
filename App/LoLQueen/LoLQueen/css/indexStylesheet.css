@@ -515,11 +515,11 @@ div.scrollmenu a {
 }
 .carousel img {
   position: absolute;
-  top: 3px;
-  left: 129px;
+  top: -346px;
+  left: 590px;
   min-width: 100%;
   height: 47px;
-    width: 54px;
+    width: 14px;
 }
 
 #form1 {

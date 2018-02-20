@@ -56,10 +56,11 @@ namespace LoLQueen
             IList<ProgressionContents> champMastery = JsonSettings.GetStats<IList<ProgressionContents>>(masteryProgressUrl);
 
             UpdatePageData(currentSummoner);
+            UpdateGrid(matchHist);
 
         }
-        
-        
+
+
 
         /// <summary>
         /// 
@@ -71,6 +72,21 @@ namespace LoLQueen
             summonerLevelLabel.Text = currentSummoner.SummonerLevel.ToString();
             summonerAccIdLabel.Text = currentSummoner.AccountId.ToString();
         }
+
+        public void UpdateGrid(MatchHist matchHist)
+        { 
+                
+                MatchHistoryGrid.EmptyDataText = matchHist.TotalGames.ToString();
+                MatchHistoryGrid.EmptyDataText = matchHist.Matches[0].Lane;
+                MatchHistoryGrid.EmptyDataText = matchHist.Matches[0].Role;
+                MatchHistoryGrid.EmptyDataText = matchHist.Matches[0].Champion.ToString();
+              TotalGamesLabel.Text = matchHist.TotalGames.ToString();
+              LaneLabel.Text = matchHist.Matches[0].Lane;
+              SummonerRoleLabel.Text = matchHist.Matches[0].Role;
+              ChampionLabel.Text = matchHist.Matches[0].Champion.ToString();
+        }
+
+         
 
         /// <summary>
         /// Redirect to OverWatch

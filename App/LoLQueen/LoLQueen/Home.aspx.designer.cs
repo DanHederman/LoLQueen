@@ -94,6 +94,24 @@ namespace LoLQueen {
         protected global::System.Web.UI.WebControls.GridView MatchHistoryGrid;
         
         /// <summary>
+        /// SummonerImg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label SummonerImg;
+        
+        /// <summary>
+        /// RankImg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image RankImg;
+        
+        /// <summary>
         /// TotalGamesLabel control.
         /// </summary>
         /// <remarks>

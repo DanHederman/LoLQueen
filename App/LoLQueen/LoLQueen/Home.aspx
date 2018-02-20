@@ -110,6 +110,10 @@
             <asp:DynamicField DataField="MatchHistoryChampion" />             
         </Columns>
     </asp:GridView>
+            <p>
+            <asp:Label ID="SummonerImg" Text=" " runat="server"/>
+            <asp:Image ID="RankImg" ImageUrl="" runat="server" Height="50px" Width="50px" />
+                </p>
              <p>
             Total Games:
             <asp:Label ID="TotalGamesLabel" runat="server" Text=""></asp:Label>

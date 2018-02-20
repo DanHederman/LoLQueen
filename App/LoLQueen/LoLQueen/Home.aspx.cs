@@ -58,6 +58,16 @@ namespace LoLQueen
             UpdateGrid(matchHist,allMatchDetails);
 
         }
+        public static string GetSummonerImg(int IconID,Summoner currentSummoner)
+        {
+            IconID = currentSummoner.ProfileIconId;
+            string Imgid =
+                $"http://ddragon.leagueoflegends.com/cdn/6.24.1/img/profileicon/{IconID}.png";
+
+            //RankImg.ImageUrl = currentSummoner.Imgid;
+
+            return Imgid;
+        }
 
 
 
@@ -70,6 +80,7 @@ namespace LoLQueen
             summonerNameLabel.Text = currentSummoner.Name;
             summonerLevelLabel.Text = currentSummoner.SummonerLevel.ToString();
             summonerAccIdLabel.Text = currentSummoner.AccountId.ToString();
+            SummonerImg.Text = currentSummoner.ProfileIconId.ToString();
         }
 
         public void UpdateGrid(MatchHist matchHist, List<MatchInfo.singleMatch> allMatchDetails)
@@ -86,7 +97,9 @@ namespace LoLQueen
               KillsLabel.Text = allMatchDetails[0].Participants[0].Stats.Kills.ToString();
               DeathsLabel.Text = allMatchDetails[0].Participants[0].Stats.Deaths.ToString();
               AssistsLabel.Text = allMatchDetails[0].Participants[0].Stats.Assists.ToString();
-              
+
+
+
 
 
         }

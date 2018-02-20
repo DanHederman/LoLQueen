@@ -201,7 +201,7 @@ namespace LoLQueen
 
             for (int i = 0; i < 20; ++i)
             {
-                string matchUrl = RiotUrl.GetMatchUrl(matchHist.Matches[i].GameId.ToString(), "euw1");
+                string matchUrl = RiotUrl.GetMatchUrl("euw1",matchHist.Matches[i].GameId.ToString());
 
                 allMatchDetails.Add(JsonSettings.GetStats<singleMatch>(matchUrl));
             }

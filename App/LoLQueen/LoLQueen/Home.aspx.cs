@@ -84,10 +84,6 @@ namespace LoLQueen
         public void UpdateGrid(MatchHist matchHist, List<MatchInfo.singleMatch> allMatchDetails)
         { 
                 
-                MatchHistoryGrid.EmptyDataText = matchHist.TotalGames.ToString();
-                MatchHistoryGrid.EmptyDataText = matchHist.Matches[0].Lane;
-                MatchHistoryGrid.EmptyDataText = matchHist.Matches[0].Role;
-                MatchHistoryGrid.EmptyDataText = matchHist.Matches[0].Champion.ToString();
               TotalGamesLabel.Text = matchHist.TotalGames.ToString();
               LaneLabel.Text = matchHist.Matches[0].Lane;
               SummonerRoleLabel.Text = matchHist.Matches[0].Role;

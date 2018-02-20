@@ -110,31 +110,19 @@
          </i></span>
       </div>
     <section>
-        <div>
+        <div class="col-sm-12">
+
             <h1> Match History</h1>
-    <asp:GridView runat="server" ID="MatchHistoryGrid"
-        ItemType="matchHist" DataKeyNames="MatchHistory" AutoGenerateColumns="false">
-        <Columns>
-            <asp:DynamicField DataField="MatchHistoryLane" />
-            <asp:DynamicField DataField="MatchHistoryRole" />
-            <asp:DynamicField DataField="MatchHistoryChampion" />             
-        </Columns>
-    </asp:GridView>
             <p>
             <asp:Label ID="SummonerImg" Text=" " runat="server"/>
             <asp:Image ID="RankImg" ImageUrl="GetSummonerImg.Imgid" runat="server" Height="50px" Width="50px" />
-                </p>
+             </p>
              <p>
             Total Games:
             <asp:Label ID="TotalGamesLabel" runat="server" Text=""></asp:Label>
-        </p>
-             <p>
             Lane:
             <asp:Label ID="LaneLabel" runat="server" Text=""></asp:Label>
-        </p>
-             <p>
-            
-            Role:
+             Role:
             <asp:Label ID="SummonerRoleLabel" runat="server" Text=""></asp:Label>
              Vision Score:
             <asp:Label ID="VisionScoreLabel" runat="server" Text=""></asp:Label>

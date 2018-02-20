@@ -80,7 +80,17 @@
     <div class="form-group col-sm-4 col-sm-offset-4">
     	<h1 class="text-center">LoL Queen</h1>
       <div class="input-group input-group-lg center-block">
-          <asp:TextBox ID="SummonerName" class="form-control" runat="server"></asp:TextBox>
+          <asp:TextBox ID="SummonerName" class="form-control" runat="server" Placeholder="Enter Summoner Name"></asp:TextBox>
+          <asp:DropDownList ID="RegionList" runat="server">
+                <asp:ListItem Value="EUW"></asp:ListItem>
+                <asp:ListItem Value="EUNW"></asp:ListItem>
+                <asp:ListItem Value="NA"></asp:ListItem>
+                <asp:ListItem Value="OCE"></asp:ListItem>
+                <asp:ListItem Value="KOR"></asp:ListItem>
+                <asp:ListItem Value="RU"></asp:ListItem>
+                <asp:ListItem Value="JP"></asp:ListItem>
+                <asp:ListItem Value="BR"></asp:ListItem>
+            </asp:DropDownList>
           <asp:Button ID="Button1" type="button" class="btn btn-default" runat="server" Text="Search" OnClick="SubmitSummonerName"/>
           <asp:Button ID="Button3" type="button" class="btn btn-default" runat="server" Text="Search Live Game" OnClick="SubmitSummonerName"/>
       </div>
@@ -88,7 +98,6 @@
         <p>
          Summoner Name:
          <asp:Label ID="summonerNameLabel" runat="server" Text=""></asp:Label>
-        </p>
          <p>
             Summoner Level:
             <asp:Label ID="summonerLevelLabel" runat="server" Text=""></asp:Label>

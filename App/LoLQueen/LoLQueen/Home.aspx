@@ -22,6 +22,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="js/pageFunctionality.js"></script>
+    <?php include 'ChIDToName.php';?>
 
 
 		<!-- Optional theme -->
@@ -112,7 +113,7 @@
     </asp:GridView>
             <p>
             <asp:Label ID="SummonerImg" Text=" " runat="server"/>
-            <asp:Image ID="RankImg" ImageUrl="" runat="server" Height="50px" Width="50px" />
+            <asp:Image ID="RankImg" ImageUrl="GetSummonerImg.Imgid" runat="server" Height="50px" Width="50px" />
                 </p>
              <p>
             Total Games:
@@ -126,6 +127,8 @@
             
             Role:
             <asp:Label ID="SummonerRoleLabel" runat="server" Text=""></asp:Label>
+             Vision Score:
+            <asp:Label ID="VisionScoreLabel" runat="server" Text=""></asp:Label>
         </p>
              <p>
             Champion:
@@ -138,6 +141,30 @@
             <asp:Label ID="AssistsLabel" runat="server" Text=""></asp:Label>
             Deaths:
             <asp:Label ID="DeathsLabel" runat="server" Text=""></asp:Label>
+        </p>
+            <p>
+            Total Damage Dealt:
+            <asp:Label ID="DamageDealtToObjectivesLabel" runat="server" Text=""></asp:Label>
+              Damage Dealt to Objectives:
+            <asp:Label ID="TotalDamageDealtToChampionsLabel" runat="server" Text=""></asp:Label>
+                Damage Taken:
+            <asp:Label ID="TotalDamageTakenLabel" runat="server" Text=""></asp:Label>
+        </p>
+            <p>
+            Item 1:
+            <asp:Label ID="Item1Label" runat="server" Text=""></asp:Label>
+            Item 2:
+            <asp:Label ID="Item2Label" runat="server" Text=""></asp:Label>
+            Item 3:
+            <asp:Label ID="Item3Label" runat="server" Text=""></asp:Label>
+            Item 4:
+            <asp:Label ID="Item4Label" runat="server" Text=""></asp:Label>
+            Item 5:
+            <asp:Label ID="Item5Label" runat="server" Text=""></asp:Label>
+            Item 6:
+            <asp:Label ID="Item6Label" runat="server" Text=""></asp:Label>
+            Item 7:
+            <asp:Label ID="Item7Label" runat="server" Text=""></asp:Label>
         </p>
         </div>
     </section>

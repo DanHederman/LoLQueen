@@ -64,12 +64,10 @@ namespace LoLQueen
             string Imgid =
                 $"http://ddragon.leagueoflegends.com/cdn/6.24.1/img/profileicon/{IconID}.png";
 
-            //RankImg.ImageUrl = currentSummoner.Imgid;
+           // RankImg.ImageUrl = currentSummoner.Imgid;
 
             return Imgid;
         }
-
-
 
         /// <summary>
         /// 
@@ -97,11 +95,17 @@ namespace LoLQueen
               KillsLabel.Text = allMatchDetails[0].Participants[0].Stats.Kills.ToString();
               DeathsLabel.Text = allMatchDetails[0].Participants[0].Stats.Deaths.ToString();
               AssistsLabel.Text = allMatchDetails[0].Participants[0].Stats.Assists.ToString();
-
-
-
-
-
+              VisionScoreLabel.Text= allMatchDetails[0].Participants[0].Stats.VisionScore.ToString();
+            DamageDealtToObjectivesLabel.Text= allMatchDetails[0].Participants[0].Stats.DamageDealtToObjectives.ToString();
+            TotalDamageDealtToChampionsLabel.Text = allMatchDetails[0].Participants[0].Stats.TotalDamageDealtToChampions.ToString();
+            TotalDamageTakenLabel.Text = allMatchDetails[0].Participants[0].Stats.TotalDamageTaken.ToString();
+            Item1Label.Text = allMatchDetails[0].Participants[0].Stats.Item0.ToString();
+            Item2Label.Text = allMatchDetails[0].Participants[0].Stats.Item1.ToString();
+            Item3Label.Text = allMatchDetails[0].Participants[0].Stats.Item2.ToString();
+            Item4Label.Text = allMatchDetails[0].Participants[0].Stats.Item3.ToString();
+            Item5Label.Text = allMatchDetails[0].Participants[0].Stats.Item4.ToString();
+            Item6Label.Text = allMatchDetails[0].Participants[0].Stats.Item5.ToString();
+            Item7Label.Text = allMatchDetails[0].Participants[0].Stats.Item6.ToString();
         }
 
          

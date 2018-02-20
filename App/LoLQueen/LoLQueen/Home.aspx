@@ -126,7 +126,15 @@
              <p>
             Champion:
             <asp:Label ID="ChampionLabel" runat="server" Text=""></asp:Label>
-
+        </p>
+            <p>
+            Kills:
+            <asp:Label ID="KillsLabel" runat="server" Text=""></asp:Label>
+            Assists:
+            <asp:Label ID="AssistsLabel" runat="server" Text=""></asp:Label>
+            Deaths:
+            <asp:Label ID="DeathsLabel" runat="server" Text=""></asp:Label>
+        </p>
         </div>
     </section>
   </form>

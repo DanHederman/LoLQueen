@@ -56,7 +56,7 @@ namespace LoLQueen
             IList<ProgressionContents> champMastery = JsonSettings.GetStats<IList<ProgressionContents>>(masteryProgressUrl);
 
             UpdatePageData(currentSummoner);
-            UpdateGrid(matchHist);
+          //  UpdateGrid(matchHist);
 
         }
 
@@ -73,7 +73,7 @@ namespace LoLQueen
             summonerAccIdLabel.Text = currentSummoner.AccountId.ToString();
         }
 
-        public void UpdateGrid(MatchHist matchHist)
+        public void UpdateGrid(MatchHist matchHist, List<MatchInfo.singleMatch> allMatchDetails)
         { 
                 
                 MatchHistoryGrid.EmptyDataText = matchHist.TotalGames.ToString();
@@ -84,6 +84,12 @@ namespace LoLQueen
               LaneLabel.Text = matchHist.Matches[0].Lane;
               SummonerRoleLabel.Text = matchHist.Matches[0].Role;
               ChampionLabel.Text = matchHist.Matches[0].Champion.ToString();
+             /* KillsLabel.Text = allMatchDetails[0].singleMatch.Participants[0].Stats.Kills;
+              DeathsLabel.Text = allMatchDetails[0].singleMatch.Participants[0].Stats.Deaths;
+              AssistsLabel.Text = allMatchDetails[0].singleMatch.Participants[0].Stats.Assists;
+              */
+
+
         }
 
          

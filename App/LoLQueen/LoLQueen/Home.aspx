@@ -110,6 +110,23 @@
             <asp:DynamicField DataField="MatchHistoryChampion" />             
         </Columns>
     </asp:GridView>
+             <p>
+            Total Games:
+            <asp:Label ID="TotalGamesLabel" runat="server" Text=""></asp:Label>
+        </p>
+             <p>
+            Lane:
+            <asp:Label ID="LaneLabel" runat="server" Text=""></asp:Label>
+        </p>
+             <p>
+            
+            Role:
+            <asp:Label ID="SummonerRoleLabel" runat="server" Text=""></asp:Label>
+        </p>
+             <p>
+            Champion:
+            <asp:Label ID="ChampionLabel" runat="server" Text=""></asp:Label>
+
         </div>
     </section>
   </form>

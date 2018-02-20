@@ -118,6 +118,18 @@
             <asp:DynamicField DataField="Average" />               
         </Columns>
     </asp:GridView>
+            <p>
+            Top Heroes:
+            <asp:Label ID="TopHeroesLabel" runat="server" Text=""></asp:Label>
+            </p>
+            <p>
+            Assits:
+            <asp:Label ID="AssistsLabel" runat="server" Text=""></asp:Label>
+            </p>
+            <p>
+            Average:
+            <asp:Label ID="AverageLabel" runat="server" Text=""></asp:Label>
+</p>
         </div>
     </section>
     </form>

@@ -24,7 +24,7 @@ namespace LoLQueen
 
         public class ParticipantIdentities
         {
-            public Player Player;
+            public Player player;
             public int ParticipantId;
         }
 

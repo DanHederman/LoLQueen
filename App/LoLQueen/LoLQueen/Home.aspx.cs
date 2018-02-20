@@ -51,11 +51,6 @@ namespace LoLQueen
             string masteryUrl = RiotUrl.GetTotalMasteryScoreUrl("euw1", currentSummoner.Id.ToString());
             var mastery = new WebClient().DownloadString(masteryUrl);
 
-            Debug.WriteLine("this url is the most strange thing ever", masteryUrl);
-            Debug.WriteLine("Collected mastery");
-
-
-
             //get individual champion mastery levels
             string masteryProgressUrl = RiotUrl.GetMasteryProgressUrl("euw1", currentSummoner.Id.ToString());
             IList<ProgressionContents> champMastery = JsonSettings.GetStats<IList<ProgressionContents>>(masteryProgressUrl);

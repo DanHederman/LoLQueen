@@ -87,15 +87,9 @@
          Hero Name:
          <asp:Label ID="HeroName" runat="server" Text=""></asp:Label>
         </p>
-        <p>
-         <asp:Image ID="PlayerImg" ImageUrl="" runat="server" ImageAlign="Right" />
-        </p>
          <p>
             Hero Level:
             <asp:Label ID="HeroLevel" runat="server" Text=""></asp:Label>
-        </p>
-        <p>
-            <asp:Image ID="RankImg" ImageUrl="" runat="server" />
         </p>
             QuickPlay Wins:
         <asp:Label ID="QuickWin" runat="server" Text=""></asp:Label>
@@ -224,6 +218,12 @@
         </div>
         </div>
     </div>
+    <p>
+            <asp:Image ID="PlayerImg" ImageUrl="" runat="server"  />
+                </p>
+                <p>
+            <asp:Image ID="RankImg" ImageUrl="" runat="server" />
+            </p>
     </section>
     </form>
         </div>

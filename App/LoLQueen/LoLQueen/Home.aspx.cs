@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net;
 
 namespace LoLQueen
@@ -49,7 +50,17 @@ namespace LoLQueen
             string masteryProgressUrl = RiotUrl.GetMasteryProgressUrl("euw1", currentSummoner.Id.ToString());
             IList<ProgressionContents> champMastery = JsonSettings.GetStats<IList<ProgressionContents>>(masteryProgressUrl);
 
-            LiveGame.LiveGameData inGameData = LiveGame.GetLiveGame("euw1", currentSummoner.Id.ToString());
+
+            LiveGame.LiveGameData inGameData = new LiveGame.LiveGameData();
+            try
+            {
+                inGameData = LiveGame.GetLiveGame("euw1", currentSummoner.Id.ToString());
+                UpdateLiveGame();
+            }
+            catch (NullReferenceException)
+            {
+                Debug.WriteLine("No live game data available");
+            }
 
             UpdatePageData(currentSummoner);
             UpdateGrid(matchHist,allMatchDetails);
@@ -62,6 +73,11 @@ namespace LoLQueen
 
             ChampionImg.ImageUrl = imgid;
 
+        }
+
+        public void UpdateLiveGame()
+        {
+            //UserGameStatusLabel.Text =
         }
 
         /// <summary>

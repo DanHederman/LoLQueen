@@ -58,15 +58,6 @@ namespace LoLQueen {
         protected global::System.Web.UI.WebControls.Label HeroName;
         
         /// <summary>
-        /// PlayerImg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image PlayerImg;
-        
-        /// <summary>
         /// HeroLevel control.
         /// </summary>
         /// <remarks>
@@ -74,15 +65,6 @@ namespace LoLQueen {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label HeroLevel;
-        
-        /// <summary>
-        /// RankImg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image RankImg;
         
         /// <summary>
         /// QuickWin control.
@@ -371,5 +353,23 @@ namespace LoLQueen {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label MiscCompLabel;
+        
+        /// <summary>
+        /// PlayerImg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image PlayerImg;
+        
+        /// <summary>
+        /// RankImg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image RankImg;
     }
 }

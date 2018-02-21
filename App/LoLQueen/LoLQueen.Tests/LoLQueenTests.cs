@@ -19,7 +19,7 @@ namespace LoLQueen.Tests
         [ClassInitialize()]
         public static void InitApiTest(TestContext context)
         {
-            _apiKey = "RGAPI-2ec4087b-52d8-4450-b6c2-ba35dbee6e75";
+            _apiKey = "";
         }
 
         [TestMethod]

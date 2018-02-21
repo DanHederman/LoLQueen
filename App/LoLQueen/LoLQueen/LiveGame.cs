@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 
 namespace LoLQueen
 {
@@ -9,62 +6,62 @@ namespace LoLQueen
     {
         public class LiveGameData
         {
-            public long gameId;
-            public long gameStartTime;
-            public string platformId;
-            public string gameMode;
-            public long mapId;
-            public string gameType;
-            public List<BannedChampion> bannedChampions;
-            public Observer observers;
-            public List<Participant> participants;
-            public long gameLength;
-            public long gameQueueConfigId;
+            public long GameId;
+            public long GameStartTime;
+            public string PlatformId;
+            public string GameMode;
+            public long MapId;
+            public string GameType;
+            public List<BannedChampion> BannedChampions;
+            public Observer Observers;
+            public List<Participant> Participants;
+            public long GameLength;
+            public long GameQueueConfigId;
         }
 
         public class BannedChampion
         {
-            public int pickTurn;
-            public long championId;
-            public long teamId;
+            public int PickTurn;
+            public long ChampionId;
+            public long TeamId;
         }
 
         public class Observer
         {
-            public string encryptionKey;
+            public string EncryptionKey;
         }
 
         public class Participant
         {
-            public long profileIconId;
-            public long championId;
-            public string summonerName;
-            public List<GameCustomizationObject> gameCustomizationObjects;
-            public bool bot;
-            public Perks perks;
-            public long spell2Id;
-            public long teamId;
-            public long spell1Id;
-            public long summonerId;
+            public long ProfileIconId;
+            public long ChampionId;
+            public string SummonerName;
+            public List<GameCustomizationObject> GameCustomizationObjects;
+            public bool Bot;
+            public Perks Perks;
+            public long Spell2Id;
+            public long TeamId;
+            public long Spell1Id;
+            public long SummonerId;
         }
 
         public class GameCustomizationObject
         {
-            public string category;
-            public string content;
+            public string Category;
+            public string Content;
         }
 
         public class Perks
         {
-            public long perkStyle;
-            public List<long> perkIds;
-            public long perkSubStyle;
+            public long PerkStyle;
+            public List<long> PerkIds;
+            public long PerkSubStyle;
         }
 
         public static LiveGameData GetLiveGame(string region, string summonerId)
         {
-            string liveGameUrl = RiotUrl.GetLiveGameUrl("euw1", summonerId);
-            LiveGameData liveGame = JsonSettings.GetStats<LiveGameData>(liveGameUrl);
+            var liveGameUrl = RiotUrl.GetLiveGameUrl("euw1", summonerId);
+            var liveGame = JsonSettings.GetStats<LiveGameData>(liveGameUrl);
             return liveGame;
         }
     }

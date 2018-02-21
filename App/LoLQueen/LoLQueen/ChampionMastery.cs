@@ -1,25 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace LoLQueen
+﻿namespace LoLQueen
 {
     public class ChampionMastery
     {
-        public long totalMasteryScore;
+        public long TotalMasteryScore;
     }
 
     public class ProgressionContents
     {
-        public int playerId;
-        public int championId;
-        public int championLevel;
-        public int championPoints;
-        public long lastPlayTime;
-        public int championPointsSinceLastLevel;
-        public int championPointsUntilNextLevel;
-        public bool chestGranted;
-        public int tokensEarned;
+        public int PlayerId;
+        public int ChampionId;
+        public int ChampionLevel;
+        public int ChampionPoints;
+        public long LastPlayTime;
+        public int ChampionPointsSinceLastLevel;
+        public int ChampionPointsUntilNextLevel;
+        public bool ChestGranted;
+        public int TokensEarned;
     }
 }

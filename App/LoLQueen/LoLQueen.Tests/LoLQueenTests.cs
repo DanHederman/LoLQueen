@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Text;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LoLQueen.Tests
 {
@@ -16,27 +14,27 @@ namespace LoLQueen.Tests
         /// </summary>
         /// 
         
-        private static string APIKey;
+        private static string _apiKey;
 
         [ClassInitialize()]
         public static void InitApiTest(TestContext context)
         {
-            APIKey = "";
+            _apiKey = "";
         }
 
         [TestMethod]
         public void Test_GetSummonerUrl_Pass()
         {
-            string actual = RiotUrl.GetSummonerUrl("euw1", "Notorious%20Nutz");
-            string expected = ("https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/Notorious%20Nutz?api_key=" + APIKey);
+            var actual = RiotUrl.GetSummonerUrl("euw1", "Notorious%20Nutz");
+            var expected = ("https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/Notorious%20Nutz?api_key=" + _apiKey);
             Assert.AreEqual(actual, expected);
         }
         
         [TestMethod]
         public void Test_GetSummonerUrl_Fail()
         {
-            string actual = RiotUrl.GetSummonerUrl("euw1", "MLPQuadzilla");
-            string expected = ("https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/Notorious%20Nutz?api_key=" + APIKey);
+            var actual = RiotUrl.GetSummonerUrl("euw1", "MLPQuadzilla");
+            var expected = ("https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/Notorious%20Nutz?api_key=" + _apiKey);
             Assert.AreNotEqual(actual, expected);
         }
         
@@ -48,16 +46,16 @@ namespace LoLQueen.Tests
         [TestMethod]
         public void Test_GetMatchHistUrl_Pass()
         {
-            string actual = RiotUrl.GetMatchHistUrl("euw1", "22097197");
-            string expected = ("https://euw1.api.riotgames.com/lol/match/v3/matchlists/by-account/22097197/recent?api_key=" + APIKey);
+            var actual = RiotUrl.GetMatchHistUrl("euw1", "22097197");
+            var expected = ("https://euw1.api.riotgames.com/lol/match/v3/matchlists/by-account/22097197/recent?api_key=" + _apiKey);
             Assert.AreEqual(actual, expected);
         }
         
         [TestMethod]
         public void Test_GetMatchHistUrl_Fail()
         {
-            string actual = RiotUrl.GetMatchHistUrl("euw1", "22097197");
-            string expected = ("https://euw1.api.riotgames.com/lol/match/v3/matchlists/by-account/22097198/recent?api_key=" + APIKey);
+            var actual = RiotUrl.GetMatchHistUrl("euw1", "22097197");
+            var expected = ("https://euw1.api.riotgames.com/lol/match/v3/matchlists/by-account/22097198/recent?api_key=" + _apiKey);
             Assert.AreNotEqual(actual, expected);
         }
         
@@ -69,16 +67,16 @@ namespace LoLQueen.Tests
         [TestMethod]
         public void Test_GetMatchUrl_Pass()
         {
-            string actual = RiotUrl.GetMatchUrl("euw1", "3534917828");
-            string expected = ("https://euw1.api.riotgames.com/lol/match/v3/matches/3534917828?api_key=" + APIKey);
+            var actual = RiotUrl.GetMatchUrl("euw1", "3534917828");
+            var expected = ("https://euw1.api.riotgames.com/lol/match/v3/matches/3534917828?api_key=" + _apiKey);
             Assert.AreEqual(actual, expected);
         }
         
         [TestMethod]
         public void Test_GetMatchUrl_fail()
         {
-            string actual = RiotUrl.GetMatchUrl("euw1", "3534917828");
-            string expected = ("https://euw1.api.riotgames.com/lol/match/v3/matches/3534917827?api_key=" + APIKey);
+            var actual = RiotUrl.GetMatchUrl("euw1", "3534917828");
+            var expected = ("https://euw1.api.riotgames.com/lol/match/v3/matches/3534917827?api_key=" + _apiKey);
             Assert.AreNotEqual(actual, expected);
         }
 
@@ -90,16 +88,16 @@ namespace LoLQueen.Tests
         [TestMethod]
         public void Test_GetTotalMasteryScoreUrl_Pass()
         {
-            string actual = RiotUrl.GetTotalMasteryScoreUrl("euw1", "3534754700");
-            string expected = ("https://euw1.api.riotgames.com/lol/champion-mastery/v3/scores/by-summoner/3534754700?api_key=" + APIKey);
+            var actual = RiotUrl.GetTotalMasteryScoreUrl("euw1", "3534754700");
+            var expected = ("https://euw1.api.riotgames.com/lol/champion-mastery/v3/scores/by-summoner/3534754700?api_key=" + _apiKey);
             Assert.AreEqual(actual, expected);
         }
         
         [TestMethod]
         public void Test_GetTotalMasteryScoreUrl_Fail()
         {
-            string actual = RiotUrl.GetTotalMasteryScoreUrl("euw1", "3534754700");
-            string expected = ("https://euw1.api.riotgames.com/lol/champion-mastery/v3/scores/by-summoner/3534754707?api_key=" + APIKey);
+            var actual = RiotUrl.GetTotalMasteryScoreUrl("euw1", "3534754700");
+            var expected = ("https://euw1.api.riotgames.com/lol/champion-mastery/v3/scores/by-summoner/3534754707?api_key=" + _apiKey);
             Assert.AreNotEqual(actual, expected);
         }
         
@@ -110,16 +108,16 @@ namespace LoLQueen.Tests
         [TestMethod]
          public void Test_GetMasteryProgressUrl_Pass()
         {
-            string actual = RiotUrl.GetTotalMasteryScoreUrl("euw1", "3534754700");
-            string expected = ("https://euw1.api.riotgames.com/lol/champion-mastery/v3/scores/by-summoner/3534754700?api_key=" + APIKey);
+            var actual = RiotUrl.GetTotalMasteryScoreUrl("euw1", "3534754700");
+            var expected = ("https://euw1.api.riotgames.com/lol/champion-mastery/v3/scores/by-summoner/3534754700?api_key=" + _apiKey);
             Assert.AreEqual(actual, expected);
         }
         
         [TestMethod]
         public void Test_GetMasteryProgressUrl_Fail()
         {
-            string actual = RiotUrl.GetTotalMasteryScoreUrl("euw1", "3534754700");
-            string expected = ("https://euw1.api.riotgames.com/lol/champion-mastery/v3/scores/by-summoner/3534754707?api_key=" + APIKey);
+            var actual = RiotUrl.GetTotalMasteryScoreUrl("euw1", "3534754700");
+            var expected = ("https://euw1.api.riotgames.com/lol/champion-mastery/v3/scores/by-summoner/3534754707?api_key=" + _apiKey);
             Assert.AreNotEqual(actual, expected);
         }    
 
@@ -130,27 +128,27 @@ namespace LoLQueen.Tests
         public void Test_GetStats_Pass()
         {
 
-            Summoner actual = JsonSettings.GetStats<Summoner>("https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/Notorious%20Nutz?api_key=" + APIKey.ToString());
-            string actualName = actual.Name;
-            string expected = ("Notorious Nutz");
+            var actual = JsonSettings.GetStats<Summoner>("https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/Notorious%20Nutz?api_key=" + _apiKey);
+            var actualName = actual.Name;
+            const string expected = ("Notorious Nutz");
             Assert.AreEqual(actualName, expected);
         }
 
         [TestMethod]
         public void Test_GetStats_Fail()
         {
-            Summoner actual = JsonSettings.GetStats<Summoner>("https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/kgbbí?api_key=" + APIKey);
-            string actualName = actual.Name;
-            string expected = ("Notorious Nutz");
-            Assert.AreNotEqual(actual, expected);
+            Summoner actual = JsonSettings.GetStats<Summoner>("https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/kgbbí?api_key=" + _apiKey);
+            var actualName = actual.Name;
+            const string expected = ("Notorious Nutz");
+            Assert.AreNotEqual(actualName, expected);
         }
 
         [TestMethod]
         public void Test_GetStats_Pass2()
         {
-            Summoner actual = JsonSettings.GetStats<Summoner>("https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/MLPQuadzilla?api_key=" + APIKey.ToString());
-            string actualName = actual.Name;
-            string expected = ("MLPQuadzilla");
+            var actual = JsonSettings.GetStats<Summoner>("https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/MLPQuadzilla?api_key=" + _apiKey);
+            var actualName = actual.Name;
+            const string expected = ("MLPQuadzilla");
             Assert.AreEqual(actualName, expected);
         }
     }

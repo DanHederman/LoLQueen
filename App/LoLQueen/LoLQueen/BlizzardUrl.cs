@@ -13,7 +13,7 @@ namespace LoLQueen
 
         public static string ConnectToBlizzard(string username, string usernum)
         {
-            string blizzardUrl = Format("https://" + "ow-api.herokuapp.com/stats/pc/us/" + username + "-" + usernum);
+            var blizzardUrl = Format("https://" + "ow-api.herokuapp.com/stats/pc/us/" + username + "-" + usernum);
 
             return blizzardUrl;
         }
@@ -27,7 +27,7 @@ namespace LoLQueen
 
         public static string ConnectToBlizzard2(string username, string usernum)
         {
-            string blizzardUrl = Format("https://" + "ow-api.herokuapp.com/profile/pc/us/" + username + "-" + usernum);
+            var blizzardUrl = Format("https://" + "ow-api.herokuapp.com/profile/pc/us/" + username + "-" + usernum);
             
             return blizzardUrl;
         }

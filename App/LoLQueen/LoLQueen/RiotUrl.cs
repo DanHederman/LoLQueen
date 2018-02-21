@@ -11,7 +11,7 @@
     public class RiotUrl
     {
         
-        static string apiKey = "RGAPI-40c20c64-9db8-42af-8231-e03620be8c50";
+        static string apiKey = "RGAPI-2ec4087b-52d8-4450-b6c2-ba35dbee6e75";
         /// <summary>
         /// Summoner information
         /// </summary>

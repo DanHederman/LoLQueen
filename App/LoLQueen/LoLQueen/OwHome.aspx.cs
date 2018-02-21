@@ -69,7 +69,7 @@ namespace LoLQueen
                 try
                 {
                     Debug.WriteLine("Attempt");
-                    Debug.WriteLine("\n\n\n\n\n\n" + currentHero.stats.top_heroes.competitive[1].hero.ToString());
+                    Debug.WriteLine("\n\n\n\n\n\n" + currentHero.stats.top_heroes.Competitive[1].Hero);
                     Debug.WriteLine("\n\n\n\n\n\n\n");
                     HeroName.Text = currentHero.username;
                     Debug.WriteLine("new hero"+HeroName);
@@ -77,49 +77,49 @@ namespace LoLQueen
                     Debug.WriteLine("Successful");
                     PlayerImg.ImageUrl = currentHero.portrait;
                     QuickWin.Text = currentHero2.Games.Quickplay.Won.ToString();
-                    RankImg.ImageUrl = currentHero2.Competitive.Rank_img;
+                    RankImg.ImageUrl = currentHero2.Competitive.RankImg;
                     CompWin.Text = currentHero2.Games.Competitive.Won.ToString();
                     
                     //Quickplay top herpoes
-                    TopHeroesLabel1.Text = currentHero.stats.top_heroes.quickplay[0].hero.ToString();
-                    TopHeroesLabel2.Text = currentHero.stats.top_heroes.quickplay[1].hero.ToString();
-                    TopHeroesLabel3.Text = currentHero.stats.top_heroes.quickplay[2].hero.ToString();
-                    TopHeroesLabel4.Text = currentHero.stats.top_heroes.quickplay[3].hero.ToString();
-                    TopHeroesLabel5.Text = currentHero.stats.top_heroes.quickplay[4].hero.ToString();
+                    TopHeroesLabel1.Text = currentHero.stats.top_heroes.Quickplay[0].Hero;
+                    TopHeroesLabel2.Text = currentHero.stats.top_heroes.Quickplay[1].Hero;
+                    TopHeroesLabel3.Text = currentHero.stats.top_heroes.Quickplay[2].Hero;
+                    TopHeroesLabel4.Text = currentHero.stats.top_heroes.Quickplay[3].Hero;
+                    TopHeroesLabel5.Text = currentHero.stats.top_heroes.Quickplay[4].Hero;
 
                     //Competitive top heroes
-                    TopHeroLabel1.Text = currentHero.stats.top_heroes.competitive[0].hero.ToString();
-                    TopHeroLabel2.Text = currentHero.stats.top_heroes.competitive[1].hero.ToString();
-                    TopHeroLabel3.Text = currentHero.stats.top_heroes.competitive[2].hero.ToString();
-                    TopHeroLabel4.Text = currentHero.stats.top_heroes.competitive[3].hero.ToString();
-                    TopHeroLabel5.Text = currentHero.stats.top_heroes.competitive[4].hero.ToString();
+                    TopHeroLabel1.Text = currentHero.stats.top_heroes.Competitive[0].Hero;
+                    TopHeroLabel2.Text = currentHero.stats.top_heroes.Competitive[1].Hero;
+                    TopHeroLabel3.Text = currentHero.stats.top_heroes.Competitive[2].Hero;
+                    TopHeroLabel4.Text = currentHero.stats.top_heroes.Competitive[3].Hero;
+                    TopHeroLabel5.Text = currentHero.stats.top_heroes.Competitive[4].Hero;
 
-                    AssistsLabel.Text = currentHero.stats.assists.quickplay[0].value.ToString();
-                    CompAssistsLabel.Text = currentHero.stats.assists.competitive[0].value.ToString();
+                    AssistsLabel.Text = currentHero.stats.assists.Quickplay[0].Value;
+                    CompAssistsLabel.Text = currentHero.stats.assists.Competitive[0].Value;
 
-                    CombatQuickLabel.Text = currentHero.stats.combat.quickplay[0].title.ToString();
-                    CombatQuickLabel1.Text = currentHero.stats.combat.quickplay[0].value.ToString();
+                    CombatQuickLabel.Text = currentHero.stats.combat.Quickplay[0].Title;
+                    CombatQuickLabel1.Text = currentHero.stats.combat.Quickplay[0].Value;
 
-                    CombatCompLabel.Text = currentHero.stats.combat.competitive[0].title.ToString();
-                    CombatCompLabel1.Text = currentHero.stats.combat.competitive[0].value.ToString();
+                    CombatCompLabel.Text = currentHero.stats.combat.Competitive[0].Title;
+                    CombatCompLabel1.Text = currentHero.stats.combat.Competitive[0].Value;
 
-                    GameQuickLabel.Text = currentHero.stats.game.quickplay[0].title.ToString();
-                    GameQuickLabel1.Text = currentHero.stats.game.quickplay[0].value.ToString();
+                    GameQuickLabel.Text = currentHero.stats.game.Quickplay[0].Title;
+                    GameQuickLabel1.Text = currentHero.stats.game.Quickplay[0].Value;
 
-                    GameCompLabel.Text = currentHero.stats.game.competitive[0].title.ToString();
-                    GameCompLabel1.Text = currentHero.stats.game.competitive[0].value.ToString();
+                    GameCompLabel.Text = currentHero.stats.game.Competitive[0].Title;
+                    GameCompLabel1.Text = currentHero.stats.game.Competitive[0].Value;
 
-                    Match_AwardsQuickLabel.Text = currentHero.stats.match_awards.quickplay[0].title.ToString();
-                    Match_AwardsQuickLabel1.Text = currentHero.stats.match_awards.quickplay[0].value.ToString();
+                    Match_AwardsQuickLabel.Text = currentHero.stats.match_awards.Quickplay[0].Title;
+                    Match_AwardsQuickLabel1.Text = currentHero.stats.match_awards.Quickplay[0].Value;
 
-                    Match_AwardsCompLabel.Text = currentHero.stats.match_awards.competitive[0].title.ToString();
-                    Match_AwardsCompLabel1.Text = currentHero.stats.match_awards.competitive[0].value.ToString();
+                    Match_AwardsCompLabel.Text = currentHero.stats.match_awards.Competitive[0].Title;
+                    Match_AwardsCompLabel1.Text = currentHero.stats.match_awards.Competitive[0].Value;
 
-                    MiscQuickLabel.Text = currentHero.stats.miscellaneous.quickplay[0].title.ToString();
-                    MiscQuickLabel1.Text = currentHero.stats.miscellaneous.quickplay[0].value.ToString();
+                    MiscQuickLabel.Text = currentHero.stats.miscellaneous.Quickplay[0].Title;
+                    MiscQuickLabel1.Text = currentHero.stats.miscellaneous.Quickplay[0].Value;
 
-                    MiscCompLabel.Text = currentHero.stats.miscellaneous.quickplay[2].title.ToString();
-                    MiscCompLabel1.Text = currentHero.stats.miscellaneous.quickplay[2].value.ToString();
+                    MiscCompLabel.Text = currentHero.stats.miscellaneous.Quickplay[2].Title;
+                    MiscCompLabel1.Text = currentHero.stats.miscellaneous.Quickplay[2].Value;
 
 
 

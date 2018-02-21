@@ -43,7 +43,7 @@ namespace LoLQueen
 
 
             //get specific match information (NEEDS TO BE LOOPED FOR LAST 20)
-            List<MatchInfo.singleMatch> allMatchDetails = new List<MatchInfo.singleMatch>();
+            List<MatchInfo.SingleMatch> allMatchDetails = new List<MatchInfo.SingleMatch>();
             allMatchDetails = MatchInfo.GetMatchDetails("euw1", matchHist);
 
             //get total champion mastery
@@ -56,7 +56,7 @@ namespace LoLQueen
 
             LiveGame.LiveGameData inGameData = LiveGame.GetLiveGame("euw1", currentSummoner.Id.ToString());
 
-            Debug.WriteLine("\n\n\n\n\n\n inGameData contains " + inGameData.gameMode);
+            //Debug.WriteLine("\n\n\n\n\n\n inGameData contains " + inGameData.GameMode);
 
             UpdatePageData(currentSummoner);
             UpdateGrid(matchHist,allMatchDetails);
@@ -88,7 +88,7 @@ namespace LoLQueen
 
         }
 
-        public void UpdateGrid(MatchHist matchHist, List<MatchInfo.singleMatch> allMatchDetails)
+        public void UpdateGrid(MatchHist matchHist, List<MatchInfo.SingleMatch> allMatchDetails)
         {
             TotalGamesLabel.Text = matchHist.TotalGames.ToString();
             foreach (var item in matchHist.Matches)

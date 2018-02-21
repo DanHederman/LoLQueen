@@ -45,8 +45,8 @@
     /// </summary>
     public class Comp2
     {
-        public int rank { get; set; }
-        public string Rank_img { get; set; }
+        public int Rank { get; set; }
+        public string RankImg { get; set; }
     }
 
     /// <summary>

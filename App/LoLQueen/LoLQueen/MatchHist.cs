@@ -15,11 +15,12 @@ namespace LoLQueen
     
         public static MatchHist GetMatchHistory(string region, string accId)
         {
-            string matchHistUrl = RiotUrl.GetMatchHistUrl("euw1", accId);
-            MatchHist matchHist = JsonSettings.GetStats<MatchHist>(matchHistUrl);
+            var matchHistUrl = RiotUrl.GetMatchHistUrl("euw1", accId);
+            var matchHist = JsonSettings.GetStats<MatchHist>(matchHistUrl);
             return matchHist;
         }
     }
+
     /// <summary>
     /// getters and setters to grab and display the information
     /// the user wants
@@ -35,6 +36,4 @@ namespace LoLQueen
         public string Role { get; set; }
         public long Timestamp { get; set; }
     }
-
-    
 }

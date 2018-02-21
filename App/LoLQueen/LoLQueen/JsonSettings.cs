@@ -1,10 +1,6 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Net;
-using System.Web;
 
 namespace LoLQueen
 {
@@ -21,14 +17,14 @@ namespace LoLQueen
 
             try
             {
-                var jsonSerializerSettings = new JsonSerializerSettings();
+                var jsonSerializerSettings =
+                    new JsonSerializerSettings {MissingMemberHandling = MissingMemberHandling.Ignore};
 
                 //ignores json data if structure required is not present
-                jsonSerializerSettings.MissingMemberHandling = MissingMemberHandling.Ignore;
                 Debug.WriteLine("url contains : " + queryUrl);
 
                 var jsonResult = new WebClient().DownloadString(queryUrl);
-                T newObject = JsonConvert.DeserializeObject<T>(jsonResult, jsonSerializerSettings);
+                var newObject = JsonConvert.DeserializeObject<T>(jsonResult, jsonSerializerSettings);
                 Debug.WriteLine("new object is: " + newObject);
                 Debug.WriteLine(newObject.GetType());
                 return newObject;

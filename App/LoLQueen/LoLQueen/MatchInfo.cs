@@ -24,7 +24,7 @@ namespace LoLQueen
 
         public class ParticipantIdentities
         {
-            public Player player;
+            public Player Player;
             public int ParticipantId;
         }
 
@@ -177,7 +177,7 @@ namespace LoLQueen
         /// Structure to hold information based 
         /// on a single in game match
         /// </summary>
-        public class singleMatch
+        public class SingleMatch
         {
             public int SeasonId;
             public int QueueId;
@@ -195,15 +195,15 @@ namespace LoLQueen
         }
 
 
-        public static List<singleMatch> GetMatchDetails(string region,MatchHist matchHist)
+        public static List<SingleMatch> GetMatchDetails(string region,MatchHist matchHist)
         {
-            List<singleMatch> allMatchDetails = new List<singleMatch>();
+            List<SingleMatch> allMatchDetails = new List<SingleMatch>();
 
             for (int i = 0; i < 20; ++i)
             {
                 string matchUrl = RiotUrl.GetMatchUrl("euw1",matchHist.Matches[i].GameId.ToString());
 
-                allMatchDetails.Add(JsonSettings.GetStats<singleMatch>(matchUrl));
+                allMatchDetails.Add(JsonSettings.GetStats<SingleMatch>(matchUrl));
             }
             return allMatchDetails;
         }

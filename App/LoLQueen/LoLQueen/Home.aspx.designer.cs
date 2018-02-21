@@ -58,6 +58,15 @@ namespace LoLQueen {
         protected global::System.Web.UI.WebControls.Button Button3;
         
         /// <summary>
+        /// ChampionImg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ChampionImg;
+        
+        /// <summary>
         /// summonerNameLabel control.
         /// </summary>
         /// <remarks>
@@ -85,13 +94,13 @@ namespace LoLQueen {
         protected global::System.Web.UI.WebControls.Label summonerAccIdLabel;
         
         /// <summary>
-        /// Button2 control.
+        /// TotalGamesLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Label TotalGamesLabel;
         
         /// <summary>
         /// SummonerImg control.
@@ -103,22 +112,13 @@ namespace LoLQueen {
         protected global::System.Web.UI.WebControls.Label SummonerImg;
         
         /// <summary>
-        /// RankImg control.
+        /// Button2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image RankImg;
-        
-        /// <summary>
-        /// TotalGamesLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TotalGamesLabel;
+        protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
         /// LaneLabel control.
@@ -166,15 +166,6 @@ namespace LoLQueen {
         protected global::System.Web.UI.WebControls.Label KillsLabel;
         
         /// <summary>
-        /// AssistsLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label AssistsLabel;
-        
-        /// <summary>
         /// DeathsLabel control.
         /// </summary>
         /// <remarks>
@@ -182,6 +173,15 @@ namespace LoLQueen {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label DeathsLabel;
+        
+        /// <summary>
+        /// AssistsLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AssistsLabel;
         
         /// <summary>
         /// DamageDealtToObjectivesLabel control.

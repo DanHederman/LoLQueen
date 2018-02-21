@@ -96,6 +96,9 @@
       </div>
     </div>
         <p>
+        <asp:Image ID="ChampionImg" ImageUrl="" runat="server" Height="50px" Width="50px" />
+        </p>
+        <p>
          Summoner Name:
          <asp:Label ID="summonerNameLabel" runat="server" Text=""></asp:Label>
          <p>
@@ -106,65 +109,69 @@
             Summoner ID:
             <asp:Label ID="summonerAccIdLabel" runat="server" Text=""></asp:Label>
         </p>
+            <p>
+            Total Games:
+            <asp:Label ID="TotalGamesLabel" runat="server" Text=""></asp:Label>
+                 <p>
+            Summoner ImageID:
+            <asp:Label ID="SummonerImg" Text="" runat="server"/>
+                </p>
         <asp:Button ID="Button2" runat="server" OnClick="RedirectOW" Text="OverWatch" />
          </i></span>
       </div>
-    <section>
-        <div class="col-sm-12">
-
-            <h1> Match History</h1>
-            <p>
-            <asp:Label ID="SummonerImg" Text=" " runat="server"/>
-            <asp:Image ID="RankImg" ImageUrl="GetSummonerImg.Imgid" runat="server" Height="50px" Width="50px" />
-             </p>
-             <p>
-            Total Games:
-            <asp:Label ID="TotalGamesLabel" runat="server" Text=""></asp:Label>
-            Lane:
-            <asp:Label ID="LaneLabel" runat="server" Text=""></asp:Label>
-             Role:
-            <asp:Label ID="SummonerRoleLabel" runat="server" Text=""></asp:Label>
-             Vision Score:
-            <asp:Label ID="VisionScoreLabel" runat="server" Text=""></asp:Label>
-        </p>
-             <p>
-            Champion:
-            <asp:Label ID="ChampionLabel" runat="server" Text=""></asp:Label>
-        </p>
-            <p>
-            Kills:
-            <asp:Label ID="KillsLabel" runat="server" Text=""></asp:Label>
-            Assists:
-            <asp:Label ID="AssistsLabel" runat="server" Text=""></asp:Label>
-            Deaths:
-            <asp:Label ID="DeathsLabel" runat="server" Text=""></asp:Label>
-        </p>
-            <p>
-            Total Damage Dealt:
-            <asp:Label ID="DamageDealtToObjectivesLabel" runat="server" Text=""></asp:Label>
-              Damage Dealt to Objectives:
-            <asp:Label ID="TotalDamageDealtToChampionsLabel" runat="server" Text=""></asp:Label>
-                Damage Taken:
-            <asp:Label ID="TotalDamageTakenLabel" runat="server" Text=""></asp:Label>
-        </p>
-            <p>
-            Item 1:
-            <asp:Label ID="Item1Label" runat="server" Text=""></asp:Label>
-            Item 2:
-            <asp:Label ID="Item2Label" runat="server" Text=""></asp:Label>
-            Item 3:
-            <asp:Label ID="Item3Label" runat="server" Text=""></asp:Label>
-            Item 4:
-            <asp:Label ID="Item4Label" runat="server" Text=""></asp:Label>
-            Item 5:
-            <asp:Label ID="Item5Label" runat="server" Text=""></asp:Label>
-            Item 6:
-            <asp:Label ID="Item6Label" runat="server" Text=""></asp:Label>
-            Item 7:
-            <asp:Label ID="Item7Label" runat="server" Text=""></asp:Label>
-        </p>
+    <section>          
+    <div class="container">
+        <div class="row">
+        <div class="col">
+            <div class="card"">
+            <div class="card-body">
+                <h1>Match History</h1>
+                <br>
+                <div class="show-reviews">
+                    <table class="table table-bordered table-condensed">
+            		<thead>
+                		<tr align="left">
+							<th>Lane:</th>
+                   			<th>Role:</th>
+                            <th>Vision Score:</th>
+                            <th>Champion Label:</th>
+                            <th>KDA</th>
+                            <th>Total Damage Dealt</th>
+                            <th>Total Damage Dealt to Champions</th>
+                            <th>Total Damage Taken</th>
+                            <th>Items</th>
+                		</tr>
+           		   </thead>           
+           	        <tbody>
+                    <tr>
+                    <td><asp:Label ID="LaneLabel" runat="server" Text=""></asp:Label></td>
+                     <td><asp:Label ID="SummonerRoleLabel" runat="server" Text=""></asp:Label></td>
+                     <td><asp:Label ID="VisionScoreLabel" runat="server" Text=""></asp:Label></td>
+                     <td><asp:Label ID="ChampionLabel" runat="server" Text=""></asp:Label></td>
+                      <td> <asp:Label ID="KillsLabel" runat="server" Text=""></asp:Label>
+                        <asp:Label ID="DeathsLabel" runat="server" Text=""></asp:Label>
+                        <asp:Label ID="AssistsLabel" runat="server" Text=""></asp:Label></td>
+                       <td><asp:Label ID="DamageDealtToObjectivesLabel" runat="server" Text=""></asp:Label></td>
+                       <td><asp:Label ID="TotalDamageDealtToChampionsLabel" runat="server" Text=""></asp:Label></td>
+                      <td><asp:Label ID="TotalDamageTakenLabel" runat="server" Text=""></asp:Label></td>
+                       <td><asp:Label ID="Item1Label" runat="server" Text=""></asp:Label>
+                         <asp:Label ID="Item2Label" runat="server" Text=""></asp:Label>
+                         <asp:Label ID="Item3Label" runat="server" Text=""></asp:Label>
+                         <asp:Label ID="Item4Label" runat="server" Text=""></asp:Label>
+                         <asp:Label ID="Item5Label" runat="server" Text=""></asp:Label>
+                         <asp:Label ID="Item6Label" runat="server" Text=""></asp:Label>
+                         <asp:Label ID="Item7Label" runat="server" Text=""></asp:Label></td>
+                    </tr>
+                    </tbody>
+        		  </table>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
         </div>
-    </section>
+        </div>
+    </div>
   </form>
 </div>
 

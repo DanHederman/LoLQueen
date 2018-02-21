@@ -58,15 +58,13 @@ namespace LoLQueen
             UpdateGrid(matchHist,allMatchDetails);
 
         }
-        public static string GetSummonerImg(int IconID,Summoner currentSummoner)
+        public void GetSummonerImg(string IconID, Summoner currentSummoner)
         {
-            IconID = currentSummoner.ProfileIconId;
             string Imgid =
                 $"http://ddragon.leagueoflegends.com/cdn/6.24.1/img/profileicon/{IconID}.png";
 
-           // RankImg.ImageUrl = currentSummoner.Imgid;
+            ChampionImg.ImageUrl = Imgid;
 
-            return Imgid;
         }
 
         /// <summary>
@@ -75,33 +73,44 @@ namespace LoLQueen
         /// <param name="currentSummoner"></param>
         public void UpdatePageData(Summoner currentSummoner)
         {
+            string IconID = currentSummoner.ProfileIconId.ToString();
             summonerNameLabel.Text = currentSummoner.Name;
             summonerLevelLabel.Text = currentSummoner.SummonerLevel.ToString();
             summonerAccIdLabel.Text = currentSummoner.AccountId.ToString();
             SummonerImg.Text = currentSummoner.ProfileIconId.ToString();
+ 
+
         }
 
         public void UpdateGrid(MatchHist matchHist, List<MatchInfo.singleMatch> allMatchDetails)
-        { 
-                
-              TotalGamesLabel.Text = matchHist.TotalGames.ToString();
-              LaneLabel.Text = matchHist.Matches[0].Lane;
-              SummonerRoleLabel.Text = matchHist.Matches[0].Role;
-              ChampionLabel.Text = matchHist.Matches[0].Champion.ToString();
-              KillsLabel.Text = allMatchDetails[0].Participants[0].Stats.Kills.ToString();
-              DeathsLabel.Text = allMatchDetails[0].Participants[0].Stats.Deaths.ToString();
-              AssistsLabel.Text = allMatchDetails[0].Participants[0].Stats.Assists.ToString();
-              VisionScoreLabel.Text= allMatchDetails[0].Participants[0].Stats.VisionScore.ToString();
-            DamageDealtToObjectivesLabel.Text= allMatchDetails[0].Participants[0].Stats.DamageDealtToObjectives.ToString();
-            TotalDamageDealtToChampionsLabel.Text = allMatchDetails[0].Participants[0].Stats.TotalDamageDealtToChampions.ToString();
-            TotalDamageTakenLabel.Text = allMatchDetails[0].Participants[0].Stats.TotalDamageTaken.ToString();
-            Item1Label.Text = allMatchDetails[0].Participants[0].Stats.Item0.ToString();
-            Item2Label.Text = allMatchDetails[0].Participants[0].Stats.Item1.ToString();
-            Item3Label.Text = allMatchDetails[0].Participants[0].Stats.Item2.ToString();
-            Item4Label.Text = allMatchDetails[0].Participants[0].Stats.Item3.ToString();
-            Item5Label.Text = allMatchDetails[0].Participants[0].Stats.Item4.ToString();
-            Item6Label.Text = allMatchDetails[0].Participants[0].Stats.Item5.ToString();
-            Item7Label.Text = allMatchDetails[0].Participants[0].Stats.Item6.ToString();
+        {
+            TotalGamesLabel.Text = matchHist.TotalGames.ToString();
+            foreach (var item in matchHist.Matches)
+            {
+                LaneLabel.Text = matchHist.Matches[0].Lane;
+                SummonerRoleLabel.Text = matchHist.Matches[0].Role;
+                ChampionLabel.Text = matchHist.Matches[0].Champion.ToString();
+            }
+
+            foreach (var item in allMatchDetails)
+            {
+                KillsLabel.Text = allMatchDetails[0].Participants[0].Stats.Kills.ToString();
+                DeathsLabel.Text = allMatchDetails[0].Participants[0].Stats.Deaths.ToString();
+                AssistsLabel.Text = allMatchDetails[0].Participants[0].Stats.Assists.ToString();
+                VisionScoreLabel.Text = allMatchDetails[0].Participants[0].Stats.VisionScore.ToString();
+                DamageDealtToObjectivesLabel.Text = allMatchDetails[0].Participants[0].Stats.DamageDealtToObjectives.ToString();
+                TotalDamageDealtToChampionsLabel.Text = allMatchDetails[0].Participants[0].Stats.TotalDamageDealtToChampions.ToString();
+                TotalDamageTakenLabel.Text = allMatchDetails[0].Participants[0].Stats.TotalDamageTaken.ToString();
+                Item1Label.Text = allMatchDetails[0].Participants[0].Stats.Item0.ToString();
+                Item2Label.Text = allMatchDetails[0].Participants[0].Stats.Item1.ToString();
+                Item3Label.Text = allMatchDetails[0].Participants[0].Stats.Item2.ToString();
+                Item4Label.Text = allMatchDetails[0].Participants[0].Stats.Item3.ToString();
+                Item5Label.Text = allMatchDetails[0].Participants[0].Stats.Item4.ToString();
+                Item6Label.Text = allMatchDetails[0].Participants[0].Stats.Item5.ToString();
+                Item7Label.Text = allMatchDetails[0].Participants[0].Stats.Item6.ToString();
+            }
+
+
         }
 
          

@@ -121,15 +121,6 @@ namespace LoLQueen {
         protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
-        /// MatchHistoryGrid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView MatchHistoryGrid;
-        
-        /// <summary>
         /// TopHeroesLabel control.
         /// </summary>
         /// <remarks>
@@ -137,6 +128,33 @@ namespace LoLQueen {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label TopHeroesLabel;
+        
+        /// <summary>
+        /// TopHeroLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TopHeroLabel1;
+        
+        /// <summary>
+        /// ElimsLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ElimsLabel;
+        
+        /// <summary>
+        /// CompElimsLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CompElimsLabel;
         
         /// <summary>
         /// AssistsLabel control.
@@ -148,6 +166,15 @@ namespace LoLQueen {
         protected global::System.Web.UI.WebControls.Label AssistsLabel;
         
         /// <summary>
+        /// CompAssistsLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CompAssistsLabel;
+        
+        /// <summary>
         /// AverageLabel control.
         /// </summary>
         /// <remarks>
@@ -155,5 +182,14 @@ namespace LoLQueen {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label AverageLabel;
+        
+        /// <summary>
+        /// CompAverageLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CompAverageLabel;
     }
 }

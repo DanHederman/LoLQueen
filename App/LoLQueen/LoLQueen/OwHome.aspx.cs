@@ -73,12 +73,15 @@ namespace LoLQueen
                     QuickWin.Text = currentHero2.Games.Quickplay.Won.ToString();
                     RankImg.ImageUrl = currentHero2.Competitive.Rank_img;
                     CompWin.Text = currentHero2.Games.Competitive.Won.ToString();
-                    MatchHistoryGrid.EmptyDataText = currentHero.Stats.TopHeroes.ToString();
-                    MatchHistoryGrid.EmptyDataText = currentHero.Stats.Assists.ToString();
-                    MatchHistoryGrid.EmptyDataText = currentHero.Stats.Average.ToString();
-                    TopHeroesLabel.Text = currentHero.Stats.TopHeroes.ToString();
-                    AssistsLabel.Text = currentHero.Stats.Assists.ToString();
-                    AverageLabel.Text = currentHero.Stats.Average.ToString();
+
+                    TopHeroesLabel.Text = currentHero.Stats.TopHeroes.Competitive.ToString();
+                    ElimsLabel.Text = currentHero.Stats.Game.Quickplay.ToString();
+                    CompElimsLabel.Text = currentHero.Stats.Game.Competitive.ToString();
+                    TopHeroLabel1.Text = currentHero.Stats.TopHeroes.Competitive.ToString();
+                    AssistsLabel.Text = currentHero.Stats.Assists.Quickplay[0].Value.ToString();
+                    CompAssistsLabel.Text = currentHero.Stats.Assists.Competitive[0].Value.ToString();
+                    AverageLabel.Text = currentHero.Stats.Average.Quickplay[0].Value.ToString();
+                    CompAverageLabel.Text = currentHero.Stats.Average.Quickplay[0].Value.ToString();
                 }
                 catch
                 {

@@ -22,6 +22,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="js/pageFunctionality.js"></script>
+    <?php include 'ChIDToName.php';?>
 
 
 		<!-- Optional theme -->
@@ -79,7 +80,17 @@
     <div class="form-group col-sm-4 col-sm-offset-4">
     	<h1 class="text-center">LoL Queen</h1>
       <div class="input-group input-group-lg center-block">
-          <asp:TextBox ID="SummonerName" class="form-control" runat="server"></asp:TextBox>
+          <asp:TextBox ID="SummonerName" class="form-control" runat="server" Placeholder="Enter Summoner Name"></asp:TextBox>
+          <asp:DropDownList ID="RegionList" runat="server">
+                <asp:ListItem Value="EUW"></asp:ListItem>
+                <asp:ListItem Value="EUNW"></asp:ListItem>
+                <asp:ListItem Value="NA"></asp:ListItem>
+                <asp:ListItem Value="OCE"></asp:ListItem>
+                <asp:ListItem Value="KOR"></asp:ListItem>
+                <asp:ListItem Value="RU"></asp:ListItem>
+                <asp:ListItem Value="JP"></asp:ListItem>
+                <asp:ListItem Value="BR"></asp:ListItem>
+            </asp:DropDownList>
           <asp:Button ID="Button1" type="button" class="btn btn-default" runat="server" Text="Search" OnClick="SubmitSummonerName"/>
           <asp:Button ID="Button3" type="button" class="btn btn-default" runat="server" Text="Search Live Game" OnClick="SubmitSummonerName"/>
       </div>
@@ -87,7 +98,6 @@
         <p>
          Summoner Name:
          <asp:Label ID="summonerNameLabel" runat="server" Text=""></asp:Label>
-        </p>
          <p>
             Summoner Level:
             <asp:Label ID="summonerLevelLabel" runat="server" Text=""></asp:Label>
@@ -100,28 +110,22 @@
          </i></span>
       </div>
     <section>
-        <div>
+        <div class="col-sm-12">
+
             <h1> Match History</h1>
-    <asp:GridView runat="server" ID="MatchHistoryGrid"
-        ItemType="matchHist" DataKeyNames="MatchHistory" AutoGenerateColumns="false">
-        <Columns>
-            <asp:DynamicField DataField="MatchHistoryLane" />
-            <asp:DynamicField DataField="MatchHistoryRole" />
-            <asp:DynamicField DataField="MatchHistoryChampion" />             
-        </Columns>
-    </asp:GridView>
+            <p>
+            <asp:Label ID="SummonerImg" Text=" " runat="server"/>
+            <asp:Image ID="RankImg" ImageUrl="GetSummonerImg.Imgid" runat="server" Height="50px" Width="50px" />
+             </p>
              <p>
             Total Games:
             <asp:Label ID="TotalGamesLabel" runat="server" Text=""></asp:Label>
-        </p>
-             <p>
             Lane:
             <asp:Label ID="LaneLabel" runat="server" Text=""></asp:Label>
-        </p>
-             <p>
-            
-            Role:
+             Role:
             <asp:Label ID="SummonerRoleLabel" runat="server" Text=""></asp:Label>
+             Vision Score:
+            <asp:Label ID="VisionScoreLabel" runat="server" Text=""></asp:Label>
         </p>
              <p>
             Champion:
@@ -134,6 +138,30 @@
             <asp:Label ID="AssistsLabel" runat="server" Text=""></asp:Label>
             Deaths:
             <asp:Label ID="DeathsLabel" runat="server" Text=""></asp:Label>
+        </p>
+            <p>
+            Total Damage Dealt:
+            <asp:Label ID="DamageDealtToObjectivesLabel" runat="server" Text=""></asp:Label>
+              Damage Dealt to Objectives:
+            <asp:Label ID="TotalDamageDealtToChampionsLabel" runat="server" Text=""></asp:Label>
+                Damage Taken:
+            <asp:Label ID="TotalDamageTakenLabel" runat="server" Text=""></asp:Label>
+        </p>
+            <p>
+            Item 1:
+            <asp:Label ID="Item1Label" runat="server" Text=""></asp:Label>
+            Item 2:
+            <asp:Label ID="Item2Label" runat="server" Text=""></asp:Label>
+            Item 3:
+            <asp:Label ID="Item3Label" runat="server" Text=""></asp:Label>
+            Item 4:
+            <asp:Label ID="Item4Label" runat="server" Text=""></asp:Label>
+            Item 5:
+            <asp:Label ID="Item5Label" runat="server" Text=""></asp:Label>
+            Item 6:
+            <asp:Label ID="Item6Label" runat="server" Text=""></asp:Label>
+            Item 7:
+            <asp:Label ID="Item7Label" runat="server" Text=""></asp:Label>
         </p>
         </div>
     </section>

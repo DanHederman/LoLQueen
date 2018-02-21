@@ -46,7 +46,6 @@ namespace LoLQueen
             List<MatchInfo.singleMatch> allMatchDetails = new List<MatchInfo.singleMatch>();
             allMatchDetails = MatchInfo.GetMatchDetails("euw1", matchHist);
 
-
             //get total champion mastery
             string masteryUrl = RiotUrl.GetTotalMasteryScoreUrl("euw1", currentSummoner.Id.ToString());
             var mastery = new WebClient().DownloadString(masteryUrl);
@@ -56,11 +55,19 @@ namespace LoLQueen
             IList<ProgressionContents> champMastery = JsonSettings.GetStats<IList<ProgressionContents>>(masteryProgressUrl);
 
             UpdatePageData(currentSummoner);
-          //  UpdateGrid(matchHist);
+            UpdateGrid(matchHist,allMatchDetails);
 
         }
+        public static string GetSummonerImg(int IconID,Summoner currentSummoner)
+        {
+            IconID = currentSummoner.ProfileIconId;
+            string Imgid =
+                $"http://ddragon.leagueoflegends.com/cdn/6.24.1/img/profileicon/{IconID}.png";
 
+           // RankImg.ImageUrl = currentSummoner.Imgid;
 
+            return Imgid;
+        }
 
         /// <summary>
         /// 
@@ -71,25 +78,30 @@ namespace LoLQueen
             summonerNameLabel.Text = currentSummoner.Name;
             summonerLevelLabel.Text = currentSummoner.SummonerLevel.ToString();
             summonerAccIdLabel.Text = currentSummoner.AccountId.ToString();
+            SummonerImg.Text = currentSummoner.ProfileIconId.ToString();
         }
 
         public void UpdateGrid(MatchHist matchHist, List<MatchInfo.singleMatch> allMatchDetails)
         { 
                 
-                MatchHistoryGrid.EmptyDataText = matchHist.TotalGames.ToString();
-                MatchHistoryGrid.EmptyDataText = matchHist.Matches[0].Lane;
-                MatchHistoryGrid.EmptyDataText = matchHist.Matches[0].Role;
-                MatchHistoryGrid.EmptyDataText = matchHist.Matches[0].Champion.ToString();
               TotalGamesLabel.Text = matchHist.TotalGames.ToString();
               LaneLabel.Text = matchHist.Matches[0].Lane;
               SummonerRoleLabel.Text = matchHist.Matches[0].Role;
               ChampionLabel.Text = matchHist.Matches[0].Champion.ToString();
-             /* KillsLabel.Text = allMatchDetails[0].singleMatch.Participants[0].Stats.Kills;
-              DeathsLabel.Text = allMatchDetails[0].singleMatch.Participants[0].Stats.Deaths;
-              AssistsLabel.Text = allMatchDetails[0].singleMatch.Participants[0].Stats.Assists;
-              */
-
-
+              KillsLabel.Text = allMatchDetails[0].Participants[0].Stats.Kills.ToString();
+              DeathsLabel.Text = allMatchDetails[0].Participants[0].Stats.Deaths.ToString();
+              AssistsLabel.Text = allMatchDetails[0].Participants[0].Stats.Assists.ToString();
+              VisionScoreLabel.Text= allMatchDetails[0].Participants[0].Stats.VisionScore.ToString();
+            DamageDealtToObjectivesLabel.Text= allMatchDetails[0].Participants[0].Stats.DamageDealtToObjectives.ToString();
+            TotalDamageDealtToChampionsLabel.Text = allMatchDetails[0].Participants[0].Stats.TotalDamageDealtToChampions.ToString();
+            TotalDamageTakenLabel.Text = allMatchDetails[0].Participants[0].Stats.TotalDamageTaken.ToString();
+            Item1Label.Text = allMatchDetails[0].Participants[0].Stats.Item0.ToString();
+            Item2Label.Text = allMatchDetails[0].Participants[0].Stats.Item1.ToString();
+            Item3Label.Text = allMatchDetails[0].Participants[0].Stats.Item2.ToString();
+            Item4Label.Text = allMatchDetails[0].Participants[0].Stats.Item3.ToString();
+            Item5Label.Text = allMatchDetails[0].Participants[0].Stats.Item4.ToString();
+            Item6Label.Text = allMatchDetails[0].Participants[0].Stats.Item5.ToString();
+            Item7Label.Text = allMatchDetails[0].Participants[0].Stats.Item6.ToString();
         }
 
          

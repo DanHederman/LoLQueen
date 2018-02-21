@@ -95,7 +95,7 @@
             <asp:Label ID="HeroLevel" runat="server" Text=""></asp:Label>
         </p>
         <p>
-            <asp:Image ID="RankImg" ImageUrl="" runat="server" Height="50px" Width="50px" />
+            <asp:Image ID="RankImg" ImageUrl="" runat="server" />
         </p>
             QuickPlay Wins:
         <asp:Label ID="QuickWin" runat="server" Text=""></asp:Label>
@@ -110,26 +110,32 @@
         <section>
         <div>
             <h1> Match History</h1>
-    <asp:GridView runat="server" ID="MatchHistoryGrid"
-        ItemType="currentHero" DataKeyNames="currentHero.Stats" SelectMethod="" AutoGenerateColumns="false">
-        <Columns>
-            <asp:DynamicField DataField="TopHeroes" />
-            <asp:DynamicField DataField="Assists" />
-            <asp:DynamicField DataField="Average" />               
-        </Columns>
-    </asp:GridView>
             <p>
             Top Heroes:
-            <asp:Label ID="TopHeroesLabel" runat="server" Text=""></asp:Label>
+            QuickPlay:<asp:Label ID="TopHeroesLabel" runat="server" Text=""></asp:Label>
+                <p>
+            Competitive:<asp:Label ID="TopHeroLabel1" runat="server" Text=""></asp:Label>
             </p>
+                <p>
+            Elims:
+            <asp:Label ID="ElimsLabel" runat="server" Text=""></asp:Label>
+             Competitive Elims:
+             <asp:Label ID="CompElimsLabel" runat="server" Text=""></asp:Label>
+
+         </p>
             <p>
             Assits:
-            <asp:Label ID="AssistsLabel" runat="server" Text=""></asp:Label>
+            Quickplay :<asp:Label ID="AssistsLabel" runat="server" Text=""></asp:Label>
+                <p>
+            Competitive:<asp:Label ID="CompAssistsLabel" runat="server" Text=""></asp:Label>
             </p>
             <p>
             Average:
             <asp:Label ID="AverageLabel" runat="server" Text=""></asp:Label>
-</p>
+                <p>
+            <asp:Label ID="CompAverageLabel" runat="server" Text=""></asp:Label>
+
+                </p>
         </div>
     </section>
     </form>

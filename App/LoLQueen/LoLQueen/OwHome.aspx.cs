@@ -80,16 +80,49 @@ namespace LoLQueen
                     RankImg.ImageUrl = currentHero2.Competitive.Rank_img;
                     CompWin.Text = currentHero2.Games.Competitive.Won.ToString();
                     
-                    /*
-                    TopHeroesLabel.Text = currentHero.stats.topHeroes.Competitive.ToString();
-                    ElimsLabel.Text = currentHero.Stats.Game.Quickplay.ToString();
-                    CompElimsLabel.Text = currentHero.Stats.Game.Competitive.ToString();
-                    TopHeroLabel1.Text = currentHero.Stats.TopHeroes.Competitive.ToString();
-                    AssistsLabel.Text = currentHero.Stats.Assists.Quickplay.Count.ToString();
-                    CompAssistsLabel.Text = currentHero.Stats.Assists.Competitive.Count.ToString();
-                    AverageLabel.Text = currentHero.Stats.Average.Quickplay[0].Value.ToString();
-                    CompAverageLabel.Text = currentHero.Stats.Average.Quickplay[0].Value.ToString();
-                    */
+                    //Quickplay top herpoes
+                    TopHeroesLabel1.Text = currentHero.stats.top_heroes.quickplay[0].hero.ToString();
+                    TopHeroesLabel2.Text = currentHero.stats.top_heroes.quickplay[1].hero.ToString();
+                    TopHeroesLabel3.Text = currentHero.stats.top_heroes.quickplay[2].hero.ToString();
+                    TopHeroesLabel4.Text = currentHero.stats.top_heroes.quickplay[3].hero.ToString();
+                    TopHeroesLabel5.Text = currentHero.stats.top_heroes.quickplay[4].hero.ToString();
+
+                    //Competitive top heroes
+                    TopHeroLabel1.Text = currentHero.stats.top_heroes.competitive[0].hero.ToString();
+                    TopHeroLabel2.Text = currentHero.stats.top_heroes.competitive[1].hero.ToString();
+                    TopHeroLabel3.Text = currentHero.stats.top_heroes.competitive[2].hero.ToString();
+                    TopHeroLabel4.Text = currentHero.stats.top_heroes.competitive[3].hero.ToString();
+                    TopHeroLabel5.Text = currentHero.stats.top_heroes.competitive[4].hero.ToString();
+
+                    AssistsLabel.Text = currentHero.stats.assists.quickplay[0].value.ToString();
+                    CompAssistsLabel.Text = currentHero.stats.assists.competitive[0].value.ToString();
+
+                    CombatQuickLabel.Text = currentHero.stats.combat.quickplay[0].title.ToString();
+                    CombatQuickLabel1.Text = currentHero.stats.combat.quickplay[0].value.ToString();
+
+                    CombatCompLabel.Text = currentHero.stats.combat.competitive[0].title.ToString();
+                    CombatCompLabel1.Text = currentHero.stats.combat.competitive[0].value.ToString();
+
+                    GameQuickLabel.Text = currentHero.stats.game.quickplay[0].title.ToString();
+                    GameQuickLabel1.Text = currentHero.stats.game.quickplay[0].value.ToString();
+
+                    GameCompLabel.Text = currentHero.stats.game.quickplay[0].title.ToString();
+                    GameCompLabel1.Text = currentHero.stats.game.quickplay[0].value.ToString();
+
+                    Match_AwardsQuickLabel.Text = currentHero.stats.match_awards.quickplay[0].title.ToString();
+                    Match_AwardsQuickLabel1.Text = currentHero.stats.match_awards.quickplay[0].value.ToString();
+
+                    Match_AwardsCompLabel.Text = currentHero.stats.match_awards.competitive[0].title.ToString();
+                    Match_AwardsCompLabel1.Text = currentHero.stats.match_awards.competitive[0].value.ToString();
+
+                    MiscQuickLabel.Text = currentHero.stats.miscellaneous.quickplay[0].title.ToString();
+                    MiscQuickLabel1.Text = currentHero.stats.miscellaneous.quickplay[0].value.ToString();
+
+                    MiscCompLabel.Text = currentHero.stats.miscellaneous.competitive[0].ToString();
+                    MiscCompLabel1.Text = currentHero.stats.miscellaneous.competitive[0].ToString();
+
+
+
                 }
                 catch
                 {

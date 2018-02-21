@@ -121,40 +121,49 @@ namespace LoLQueen {
         protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
-        /// TopHeroesLabel control.
+        /// TopHeroesLabel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TopHeroesLabel;
+        protected global::System.Web.UI.WebControls.Label TopHeroesLabel1;
         
         /// <summary>
-        /// TopHeroLabel1 control.
+        /// TopHeroesLabel2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TopHeroLabel1;
+        protected global::System.Web.UI.WebControls.Label TopHeroesLabel2;
         
         /// <summary>
-        /// ElimsLabel control.
+        /// TopHeroesLabel3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ElimsLabel;
+        protected global::System.Web.UI.WebControls.Label TopHeroesLabel3;
         
         /// <summary>
-        /// CompElimsLabel control.
+        /// TopHeroesLabel4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CompElimsLabel;
+        protected global::System.Web.UI.WebControls.Label TopHeroesLabel4;
+        
+        /// <summary>
+        /// TopHeroesLabel5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TopHeroesLabel5;
         
         /// <summary>
         /// AssistsLabel control.
@@ -166,6 +175,123 @@ namespace LoLQueen {
         protected global::System.Web.UI.WebControls.Label AssistsLabel;
         
         /// <summary>
+        /// CombatQuickLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CombatQuickLabel;
+        
+        /// <summary>
+        /// CombatQuickLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CombatQuickLabel1;
+        
+        /// <summary>
+        /// GameQuickLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label GameQuickLabel;
+        
+        /// <summary>
+        /// GameQuickLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label GameQuickLabel1;
+        
+        /// <summary>
+        /// Match_AwardsQuickLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Match_AwardsQuickLabel;
+        
+        /// <summary>
+        /// Match_AwardsQuickLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Match_AwardsQuickLabel1;
+        
+        /// <summary>
+        ///  MiscQuickLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label  MiscQuickLabel;
+        
+        /// <summary>
+        ///  MiscQuickLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label  MiscQuickLabel1;
+        
+        /// <summary>
+        /// TopHeroLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TopHeroLabel1;
+        
+        /// <summary>
+        /// TopHeroLabel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TopHeroLabel2;
+        
+        /// <summary>
+        /// TopHeroLabel3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TopHeroLabel3;
+        
+        /// <summary>
+        /// TopHeroLabel4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TopHeroLabel4;
+        
+        /// <summary>
+        /// TopHeroLabel5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TopHeroLabel5;
+        
+        /// <summary>
         /// CompAssistsLabel control.
         /// </summary>
         /// <remarks>
@@ -175,21 +301,75 @@ namespace LoLQueen {
         protected global::System.Web.UI.WebControls.Label CompAssistsLabel;
         
         /// <summary>
-        /// AverageLabel control.
+        /// CombatCompLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label AverageLabel;
+        protected global::System.Web.UI.WebControls.Label CombatCompLabel;
         
         /// <summary>
-        /// CompAverageLabel control.
+        /// CombatCompLabel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CompAverageLabel;
+        protected global::System.Web.UI.WebControls.Label CombatCompLabel1;
+        
+        /// <summary>
+        /// GameCompLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label GameCompLabel;
+        
+        /// <summary>
+        /// GameCompLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label GameCompLabel1;
+        
+        /// <summary>
+        /// Match_AwardsCompLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Match_AwardsCompLabel;
+        
+        /// <summary>
+        /// Match_AwardsCompLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Match_AwardsCompLabel1;
+        
+        /// <summary>
+        /// MiscCompLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MiscCompLabel;
+        
+        /// <summary>
+        /// MiscCompLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MiscCompLabel1;
     }
 }

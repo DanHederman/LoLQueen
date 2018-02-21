@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace LoLQueen
 {
@@ -67,15 +68,20 @@ namespace LoLQueen
             {
                 try
                 {
-                    HeroName.Text = currentHero.Stats.TopHeroes.Competitive.Capacity.ToString();
-                    HeroLevel.Text = currentHero.Level.ToString();
-                    PlayerImg.ImageUrl = currentHero.Portrait;
+                    Debug.WriteLine("Attempt");
+                    Debug.WriteLine("\n\n\n\n\n\n" + currentHero.stats.top_heroes.competitive[1].hero.ToString());
+                    Debug.WriteLine("\n\n\n\n\n\n\n");
+                    HeroName.Text = currentHero.username;
+                    Debug.WriteLine("new hero"+HeroName);
+                    HeroLevel.Text = currentHero.level.ToString();
+                    Debug.WriteLine("Successful");
+                    PlayerImg.ImageUrl = currentHero.portrait;
                     QuickWin.Text = currentHero2.Games.Quickplay.Won.ToString();
                     RankImg.ImageUrl = currentHero2.Competitive.Rank_img;
                     CompWin.Text = currentHero2.Games.Competitive.Won.ToString();
                     
-
-                    TopHeroesLabel.Text = currentHero.Stats.TopHeroes.Competitive.ToString();
+                    /*
+                    TopHeroesLabel.Text = currentHero.stats.topHeroes.Competitive.ToString();
                     ElimsLabel.Text = currentHero.Stats.Game.Quickplay.ToString();
                     CompElimsLabel.Text = currentHero.Stats.Game.Competitive.ToString();
                     TopHeroLabel1.Text = currentHero.Stats.TopHeroes.Competitive.ToString();
@@ -83,6 +89,7 @@ namespace LoLQueen
                     CompAssistsLabel.Text = currentHero.Stats.Assists.Competitive.Count.ToString();
                     AverageLabel.Text = currentHero.Stats.Average.Quickplay[0].Value.ToString();
                     CompAverageLabel.Text = currentHero.Stats.Average.Quickplay[0].Value.ToString();
+                    */
                 }
                 catch
                 {

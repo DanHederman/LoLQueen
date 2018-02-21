@@ -116,6 +116,10 @@
             Summoner ImageID:
             <asp:Label ID="SummonerImg" Text="" runat="server"/>
                 </p>
+                <p>
+            User Game Status:
+            <asp:Label ID="UserGameStatusLabel" Text="" runat="server"/>
+                </p>
         <asp:Button ID="Button2" runat="server" OnClick="RedirectOW" Text="OverWatch" />
          </i></span>
       </div>

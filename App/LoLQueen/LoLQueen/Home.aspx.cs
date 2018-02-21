@@ -82,7 +82,9 @@ namespace LoLQueen
             summonerLevelLabel.Text = currentSummoner.SummonerLevel.ToString();
             summonerAccIdLabel.Text = currentSummoner.AccountId.ToString();
             SummonerImg.Text = currentSummoner.ProfileIconId.ToString();
- 
+            
+
+
 
         }
 
@@ -112,6 +114,7 @@ namespace LoLQueen
                 Item5Label.Text = allMatchDetails[0].Participants[0].Stats.Item4.ToString();
                 Item6Label.Text = allMatchDetails[0].Participants[0].Stats.Item5.ToString();
                 Item7Label.Text = allMatchDetails[0].Participants[0].Stats.Item6.ToString();
+                //UserGameStatusLabel.Text = 
             }
 
 

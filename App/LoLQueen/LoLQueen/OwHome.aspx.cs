@@ -67,7 +67,7 @@ namespace LoLQueen
             {
                 try
                 {
-                    HeroName.Text = currentHero.Username;
+                    HeroName.Text = currentHero.Stats.TopHeroes.Competitive.Capacity.ToString();
                     HeroLevel.Text = currentHero.Level.ToString();
                     PlayerImg.ImageUrl = currentHero.Portrait;
                     QuickWin.Text = currentHero2.Games.Quickplay.Won.ToString();

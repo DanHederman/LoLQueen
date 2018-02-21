@@ -65,10 +65,4 @@ namespace LoLQueen
             return liveGame;
         }
     }
-
-
-    
-
-
-
 }

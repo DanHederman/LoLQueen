@@ -54,6 +54,10 @@ namespace LoLQueen
             string masteryProgressUrl = RiotUrl.GetMasteryProgressUrl("euw1", currentSummoner.Id.ToString());
             IList<ProgressionContents> champMastery = JsonSettings.GetStats<IList<ProgressionContents>>(masteryProgressUrl);
 
+            LiveGame.LiveGameData inGameData = LiveGame.GetLiveGame("euw1", currentSummoner.Id.ToString());
+
+            Debug.WriteLine("\n\n\n\n\n\n inGameData contains " + inGameData.gameMode);
+
             UpdatePageData(currentSummoner);
             UpdateGrid(matchHist,allMatchDetails);
 

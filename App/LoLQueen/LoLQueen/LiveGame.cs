@@ -60,8 +60,17 @@ namespace LoLQueen
             public List<long> perkIds;
             public long perkSubStyle;
         }
+
+        public static LiveGameData GetLiveGame(string region, string summonerId)
+        {
+            string liveGameUrl = RiotUrl.GetLiveGameUrl("euw1", summonerId);
+            LiveGameData liveGame = JsonSettings.GetStats<LiveGameData>(liveGameUrl);
+            return liveGame;
+        }
     }
 
+
+    
 
 
 

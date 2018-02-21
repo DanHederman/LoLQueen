@@ -11,7 +11,7 @@
     public class RiotUrl
     {
         
-        static string apiKey = "RGAPI-5467a338-3d2e-4c7d-b306-2f502df7b1a8";
+        static string apiKey = "RGAPI-40c20c64-9db8-42af-8231-e03620be8c50";
         /// <summary>
         /// Summoner information
         /// </summary>
@@ -72,6 +72,13 @@
         {
             string url =
                 $"https://{region}.api.riotgames.com/lol/champion-mastery/v3/champion-masteries/by-summoner/{summonerId}?api_key={apiKey}";
+            return url;
+        }
+
+        public static string GetLiveGameUrl(string region,  string summonerId)
+        {
+            string url = 
+                $"https://{region}.api.riotgames.com/lol/spectator/v3/active-games/by-summoner/{summonerId}?api_key={apiKey}";
             return url;
         }
 

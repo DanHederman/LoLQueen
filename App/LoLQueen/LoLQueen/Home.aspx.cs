@@ -32,8 +32,6 @@ namespace LoLQueen
             //get summoner info from user input through textbox
             Summoner currentSummoner = Summoner.GetSummonerInfo("euw1", summonerName);
 
-
-
             //get 2o match history games
             MatchHist matchHist = MatchHist.GetMatchHistory("euw1", currentSummoner.AccountId.ToString());
          
@@ -57,12 +55,12 @@ namespace LoLQueen
             UpdateGrid(matchHist,allMatchDetails);
 
         }
-        public void GetSummonerImg(string IconID, Summoner currentSummoner)
+        public void GetSummonerImg(string iconId, Summoner currentSummoner)
         {
-            string Imgid =
-                $"http://ddragon.leagueoflegends.com/cdn/6.24.1/img/profileicon/{IconID}.png";
+            string imgid =
+                $"http://ddragon.leagueoflegends.com/cdn/6.24.1/img/profileicon/{iconId}.png";
 
-            ChampionImg.ImageUrl = Imgid;
+            ChampionImg.ImageUrl = imgid;
 
         }
 
@@ -72,7 +70,7 @@ namespace LoLQueen
         /// <param name="currentSummoner"></param>
         public void UpdatePageData(Summoner currentSummoner)
         {
-            var IconID = currentSummoner.ProfileIconId.ToString();
+            var iconId = currentSummoner.ProfileIconId.ToString();
             summonerNameLabel.Text = currentSummoner.Name;
             summonerLevelLabel.Text = currentSummoner.SummonerLevel.ToString();
             summonerAccIdLabel.Text = currentSummoner.AccountId.ToString();
@@ -124,7 +122,7 @@ namespace LoLQueen
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected void RedirectOW(object sender, EventArgs e)
+        protected void RedirectOw(object sender, EventArgs e)
         {
             Response.Redirect("OwHome.aspx");
         }

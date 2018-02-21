@@ -73,7 +73,7 @@ namespace LoLQueen.Tests
         public void Test_Struct_Hero()
         {
             var actual = JsonSettings.GetStats<RootObject>("https://ow-api.herokuapp.com/profile/pc/us/Quadzilla-21122");
-            var actualName = actual.username;
+            var actualName = actual.Username;
             const string expected = ("Quadzilla");
             Assert.AreEqual(expected, actualName);
         }
@@ -82,7 +82,7 @@ namespace LoLQueen.Tests
         public void Test_GetStats_Struct_Hero_End()
         {
             RootObject actual = JsonSettings.GetStats<RootObject>("https://ow-api.herokuapp.com/stats/pc/us/Quadzilla-21122");
-            var actualString = actual.portrait;
+            var actualString = actual.Portrait;
             const string expected = ("https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x0250000000000BB8.png");
             Assert.AreEqual(actualString, expected);
         }       

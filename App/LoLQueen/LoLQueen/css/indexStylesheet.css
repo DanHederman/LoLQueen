@@ -252,44 +252,6 @@ li.dropdown:hover > .dropdown-menu {
 
 
 
-/*Trending buttons*/
-
-.bodyheading {
-	margin-left: 3%;
-	font-size: 25px;
-	font-weight: bold;
-	color: #000066;
-}
-
-.bodyheading:last-child {
-	margin-top: 5%;
-}
-
-#firstbodyheading {
-	margin-top: 5%;
-}
-
-/*trending button*/
-#trendingButtonsContainer{
-	text-align: center;
-}
-
-.trendingButtons {
-    color: black;
-    border: 2px solid #0a64ad;
-    border-top: none;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 80%;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer
-}
 
 .cardContainer {
 	margin-top: 1%;
@@ -335,36 +297,7 @@ li.dropdown:hover > .dropdown-menu {
 
 }
 
-.courseImg{
-	width: 100%;
-	height: auto;
-}
-.courseCard{
-	background-color: white;
 
-	width: 250px;
-	text-decoration: none;
-	color: black;
-}
-
-.courseCard a{
-	text-decoration: none;
-	color:black;
-}
-
-.courseCard h5 {
-	margin-left: 4%;
-	margin-right: 4%;
-	margin-top: 5%;
-	margin-bottom: 15%;
-	white-space: normal;
-}
-
-
-.courses li {
-	width: 20%;
-	display: inline-block;
-}
 
 .top {
 	margin-top: 3%;

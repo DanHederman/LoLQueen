@@ -22,7 +22,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="js/pageFunctionality.js"></script>
-    <?php include 'ChIDToName.php';?>
+    <?php include 'ChIDToName.php'?>
 
 
 		<!-- Optional theme -->
@@ -134,7 +134,7 @@
 							<th>Lane:</th>
                    			<th>Role:</th>
                             <th>Vision Score:</th>
-                            <th>Champion Label:</th>
+                            <th>Champion:</th>
                             <th>KDA</th>
                             <th>Total Damage Dealt</th>
                             <th>Total Damage Dealt to Champions</th>
@@ -162,6 +162,7 @@
                          <asp:Label ID="Item6Label" runat="server" Text=""></asp:Label>
                          <asp:Label ID="Item7Label" runat="server" Text=""></asp:Label></td>
                     </tr>
+
                     </tbody>
         		  </table>
                 </div>

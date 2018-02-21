@@ -106,8 +106,8 @@ namespace LoLQueen
                     GameQuickLabel.Text = currentHero.stats.game.quickplay[0].title.ToString();
                     GameQuickLabel1.Text = currentHero.stats.game.quickplay[0].value.ToString();
 
-                    GameCompLabel.Text = currentHero.stats.game.quickplay[0].title.ToString();
-                    GameCompLabel1.Text = currentHero.stats.game.quickplay[0].value.ToString();
+                    GameCompLabel.Text = currentHero.stats.game.competitive[0].title.ToString();
+                    GameCompLabel1.Text = currentHero.stats.game.competitive[0].value.ToString();
 
                     Match_AwardsQuickLabel.Text = currentHero.stats.match_awards.quickplay[0].title.ToString();
                     Match_AwardsQuickLabel1.Text = currentHero.stats.match_awards.quickplay[0].value.ToString();
@@ -118,8 +118,8 @@ namespace LoLQueen
                     MiscQuickLabel.Text = currentHero.stats.miscellaneous.quickplay[0].title.ToString();
                     MiscQuickLabel1.Text = currentHero.stats.miscellaneous.quickplay[0].value.ToString();
 
-                    MiscCompLabel.Text = currentHero.stats.miscellaneous.competitive[0].ToString();
-                    MiscCompLabel1.Text = currentHero.stats.miscellaneous.competitive[0].ToString();
+                    MiscCompLabel.Text = currentHero.stats.miscellaneous.quickplay[2].title.ToString();
+                    MiscCompLabel1.Text = currentHero.stats.miscellaneous.quickplay[2].value.ToString();
 
 
 

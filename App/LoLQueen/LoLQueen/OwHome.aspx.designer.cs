@@ -175,15 +175,6 @@ namespace LoLQueen {
         protected global::System.Web.UI.WebControls.Label AssistsLabel;
         
         /// <summary>
-        /// CombatQuickLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CombatQuickLabel;
-        
-        /// <summary>
         /// CombatQuickLabel1 control.
         /// </summary>
         /// <remarks>
@@ -191,6 +182,15 @@ namespace LoLQueen {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label CombatQuickLabel1;
+        
+        /// <summary>
+        /// CombatQuickLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CombatQuickLabel;
         
         /// <summary>
         /// GameQuickLabel control.
@@ -211,15 +211,6 @@ namespace LoLQueen {
         protected global::System.Web.UI.WebControls.Label GameQuickLabel1;
         
         /// <summary>
-        /// Match_AwardsQuickLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Match_AwardsQuickLabel;
-        
-        /// <summary>
         /// Match_AwardsQuickLabel1 control.
         /// </summary>
         /// <remarks>
@@ -229,22 +220,31 @@ namespace LoLQueen {
         protected global::System.Web.UI.WebControls.Label Match_AwardsQuickLabel1;
         
         /// <summary>
-        ///  MiscQuickLabel control.
+        /// Match_AwardsQuickLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label  MiscQuickLabel;
+        protected global::System.Web.UI.WebControls.Label Match_AwardsQuickLabel;
         
         /// <summary>
-        ///  MiscQuickLabel1 control.
+        /// MiscQuickLabel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label  MiscQuickLabel1;
+        protected global::System.Web.UI.WebControls.Label MiscQuickLabel1;
+        
+        /// <summary>
+        /// MiscQuickLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MiscQuickLabel;
         
         /// <summary>
         /// TopHeroLabel1 control.
@@ -301,15 +301,6 @@ namespace LoLQueen {
         protected global::System.Web.UI.WebControls.Label CompAssistsLabel;
         
         /// <summary>
-        /// CombatCompLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CombatCompLabel;
-        
-        /// <summary>
         /// CombatCompLabel1 control.
         /// </summary>
         /// <remarks>
@@ -317,6 +308,15 @@ namespace LoLQueen {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label CombatCompLabel1;
+        
+        /// <summary>
+        /// CombatCompLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CombatCompLabel;
         
         /// <summary>
         /// GameCompLabel control.
@@ -337,15 +337,6 @@ namespace LoLQueen {
         protected global::System.Web.UI.WebControls.Label GameCompLabel1;
         
         /// <summary>
-        /// Match_AwardsCompLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Match_AwardsCompLabel;
-        
-        /// <summary>
         /// Match_AwardsCompLabel1 control.
         /// </summary>
         /// <remarks>
@@ -355,13 +346,13 @@ namespace LoLQueen {
         protected global::System.Web.UI.WebControls.Label Match_AwardsCompLabel1;
         
         /// <summary>
-        /// MiscCompLabel control.
+        /// Match_AwardsCompLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label MiscCompLabel;
+        protected global::System.Web.UI.WebControls.Label Match_AwardsCompLabel;
         
         /// <summary>
         /// MiscCompLabel1 control.
@@ -371,5 +362,14 @@ namespace LoLQueen {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label MiscCompLabel1;
+        
+        /// <summary>
+        /// MiscCompLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MiscCompLabel;
     }
 }

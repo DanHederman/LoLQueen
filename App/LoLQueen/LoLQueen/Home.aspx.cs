@@ -54,9 +54,18 @@ namespace LoLQueen
             string masteryProgressUrl = RiotUrl.GetMasteryProgressUrl("euw1", currentSummoner.Id.ToString());
             IList<ProgressionContents> champMastery = JsonSettings.GetStats<IList<ProgressionContents>>(masteryProgressUrl);
 
-            LiveGame.LiveGameData inGameData = LiveGame.GetLiveGame("euw1", currentSummoner.Id.ToString());
 
-            //Debug.WriteLine("\n\n\n\n\n\n inGameData contains " + inGameData.GameMode);
+            LiveGame.LiveGameData inGameData = new LiveGame.LiveGameData();
+            try
+            {
+                inGameData = LiveGame.GetLiveGame("euw1", currentSummoner.Id.ToString());
+                UpdateLiveGame();
+            }
+            catch (NullReferenceException)
+            {
+                Debug.WriteLine("No live game data available");
+            }
+
 
             UpdatePageData(currentSummoner);
             UpdateGrid(matchHist,allMatchDetails);
@@ -69,6 +78,11 @@ namespace LoLQueen
 
             ChampionImg.ImageUrl = Imgid;
 
+        }
+
+        public void UpdateLiveGame()
+        {
+            //UserGameStatusLabel.Text =
         }
 
         /// <summary>

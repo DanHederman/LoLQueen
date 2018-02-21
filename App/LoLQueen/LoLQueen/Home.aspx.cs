@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Net;
-using Newtonsoft.Json;
 
 namespace LoLQueen
 
@@ -56,8 +53,6 @@ namespace LoLQueen
 
             LiveGame.LiveGameData inGameData = LiveGame.GetLiveGame("euw1", currentSummoner.Id.ToString());
 
-            //Debug.WriteLine("\n\n\n\n\n\n inGameData contains " + inGameData.GameMode);
-
             UpdatePageData(currentSummoner);
             UpdateGrid(matchHist,allMatchDetails);
 
@@ -77,7 +72,7 @@ namespace LoLQueen
         /// <param name="currentSummoner"></param>
         public void UpdatePageData(Summoner currentSummoner)
         {
-            string IconID = currentSummoner.ProfileIconId.ToString();
+            var IconID = currentSummoner.ProfileIconId.ToString();
             summonerNameLabel.Text = currentSummoner.Name;
             summonerLevelLabel.Text = currentSummoner.SummonerLevel.ToString();
             summonerAccIdLabel.Text = currentSummoner.AccountId.ToString();
@@ -87,7 +82,11 @@ namespace LoLQueen
 
 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="matchHist"></param>
+        /// <param name="allMatchDetails"></param>
         public void UpdateGrid(MatchHist matchHist, List<MatchInfo.SingleMatch> allMatchDetails)
         {
             TotalGamesLabel.Text = matchHist.TotalGames.ToString();
@@ -118,9 +117,7 @@ namespace LoLQueen
             }
 
 
-        }
-
-         
+        }     
 
         /// <summary>
         /// Redirect to OverWatch

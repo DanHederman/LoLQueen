@@ -114,7 +114,7 @@
                 </p>
                 <p>
             User Game Status:
-            <asp:Label ID="UserGameStatusLabel" Text="Not In Game" runat="server"/>
+            <asp:Label ID="UserGameStatusLabel" Text="" runat="server"/>
                 </p>
         <asp:Button ID="Button2" runat="server" OnClick="RedirectOw" Text="OverWatch" />
          </i></span>

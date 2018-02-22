@@ -56,12 +56,21 @@ namespace LoLQueen
 
                 LiveGame.LiveGameData inGameData = new LiveGame.LiveGameData();
                 try
-                {
-                    inGameData = LiveGame.GetLiveGame("euw1", currentSummoner.Id.ToString());
-                    UpdateLiveGame();
+                {   
+                    inGameData = LiveGame.GetLiveGame(region, currentSummoner.Id.ToString());
+                    if(inGameData == null)
+                    {
+                        UpdateLiveGame(false);
+                    }
+                    else
+                    {
+                        UpdateLiveGame(true);
+                    }
+                 
                 }
                 catch (NullReferenceException)
                 {
+                    UpdateLiveGame(false);
                     Debug.WriteLine("No live game data available");
                 }
 
@@ -90,9 +99,16 @@ namespace LoLQueen
 
         }
 
-        public void UpdateLiveGame()
+        public void UpdateLiveGame(bool inGame)
         {
-            UserGameStatusLabel.Text = "In Game";
+            if(inGame == true)
+            {
+                UserGameStatusLabel.Text = "In Game";
+            }
+            else
+            {
+                UserGameStatusLabel.Text = "Not in Game";
+            }
         }
 
         /// <summary>

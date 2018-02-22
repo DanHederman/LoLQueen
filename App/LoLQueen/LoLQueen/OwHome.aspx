@@ -122,34 +122,127 @@
                 		</tr>
            		   </thead>           
            	        <tbody>
-                    <tr>
-                    <td><asp:Label ID="TopHeroesLabel1" runat="server" Text=""></asp:Label>,
+                           <tr>
+                               <td><asp:Label ID="TopHeroesLabel1" runat="server" Text=""></asp:Label>,
                          <asp:Label ID="TopHeroesLabel2" runat="server" Text=""></asp:Label>,
                          <asp:Label ID="TopHeroesLabel3" runat="server" Text=""></asp:Label>,
                          <asp:Label ID="TopHeroesLabel4" runat="server" Text=""></asp:Label>,
                          <asp:Label ID="TopHeroesLabel5" runat="server" Text=""></asp:Label>,
                          </td>
-                        <td>
+                                <td>
                              <asp:Label ID="AssistsLabel" runat="server" Text=""></asp:Label>
                             </td>
                          <td>
-                             <asp:Label ID="CombatQuickLabel1" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
                              <asp:Label ID="CombatQuickLabel" runat="server" Text=""></asp:Label> 
                             </td>
                          <td>
                              <asp:Label ID="GameQuickLabel" runat="server" Text=""></asp:Label>:
-                             <asp:Label ID="GameQuickLabel1" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
                             </td>
                         <td>
-                            <asp:Label ID="Match_AwardsQuickLabel1" runat="server" Text=""></asp:Label>
-                             <asp:Label ID="Match_AwardsQuickLabel" runat="server" Text=""></asp:Label> Cards Awarded
+                            <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="Match_AwardsQuickLabel" runat="server" Text=""></asp:Label> Awarded
                             </td>
 
                         <td>
-                            <asp:Label ID="MiscQuickLabel1" runat="server" Text=""></asp:Label>
+                            <asp:Label ID="Label4" runat="server" Text=""></asp:Label>
                              <asp:Label ID="MiscQuickLabel" runat="server" Text=""></asp:Label>
                             </td>
+                           </tr>
+                            <tr>
+                        <td> </td>
+                        <td>
+                             <asp:Label ID="AssistsLabel1" runat="server" Text=""></asp:Label>
+                            </td>
+                         <td>
+                             <asp:Label ID="CombatQuickLabel11" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="CombatQuickLabel1" runat="server" Text=""></asp:Label> 
+                            </td>
+                         <td>
+                             <asp:Label ID="GameQuickLabel1" runat="server" Text=""></asp:Label>:
+                             <asp:Label ID="GameQuickLabel11" runat="server" Text=""></asp:Label>
+                            </td>
+                        <td>
+                            <asp:Label ID="Match_AwardsQuickLabel11" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="Match_AwardsQuickLabel1" runat="server" Text=""></asp:Label> Awarded
+                            </td>
+
+                        <td>
+                            <asp:Label ID="MiscQuickLabel11" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="MiscQuickLabel1" runat="server" Text=""></asp:Label>
+                            </td>
                     </tr>
+                           <tr>
+                        <td> </td>
+                        <td>
+                             <asp:Label ID="AssistsLabel2" runat="server" Text=""></asp:Label>
+                            </td>
+                         <td>
+                             <asp:Label ID="CombatQuickLabel12" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="CombatQuickLabel2" runat="server" Text=""></asp:Label> 
+                            </td>
+                         <td>
+                             <asp:Label ID="GameQuickLabel2" runat="server" Text=""></asp:Label>:
+                             <asp:Label ID="GameQuickLabel12" runat="server" Text=""></asp:Label>
+                            </td>
+                        <td>
+                            <asp:Label ID="Match_AwardsQuickLabel12" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="Match_AwardsQuickLabel2" runat="server" Text=""></asp:Label> Awarded
+                            </td>
+
+                        <td>
+                            <asp:Label ID="MiscQuickLabel12" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="MiscQuickLabel2" runat="server" Text=""></asp:Label>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td>
+                             <asp:Label ID="AssistsLabel3" runat="server" Text=""></asp:Label>
+                            </td>
+                         <td>
+                             <asp:Label ID="CombatQuickLabel13" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="CombatQuickLabel3" runat="server" Text=""></asp:Label> 
+                            </td>
+                         <td>
+                             <asp:Label ID="GameQuickLabel3" runat="server" Text=""></asp:Label>:
+                             <asp:Label ID="GameQuickLabel13" runat="server" Text=""></asp:Label>
+                            </td>
+                        <td>
+                            <asp:Label ID="Match_AwardsQuickLabel13" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="Match_AwardsQuickLabel3" runat="server" Text=""></asp:Label>  Awarded
+                            </td>
+
+                        <td>
+                            <asp:Label ID="MiscQuickLabel13" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="MiscQuickLabel3" runat="server" Text=""></asp:Label>
+                            </td>
+                    </tr>
+                           <tr>
+                        <td> </td>
+                        <td>
+                             <asp:Label ID="AssistsLabel4" runat="server" Text=""></asp:Label>
+                            </td>
+                         <td>
+                             <asp:Label ID="CombatQuickLabel14" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="CombatQuickLabel4" runat="server" Text=""></asp:Label> 
+                            </td>
+                         <td>
+                             <asp:Label ID="GameQuickLabel4" runat="server" Text=""></asp:Label>:
+                             <asp:Label ID="GameQuickLabel14" runat="server" Text=""></asp:Label>
+                            </td>
+                        <td>
+                            <asp:Label ID="Match_AwardsQuickLabel14" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="Match_AwardsQuickLabel4" runat="server" Text=""></asp:Label> Awarded
+                            </td>
+
+                        <td>
+                            <asp:Label ID="MiscQuickLabel14" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="MiscQuickLabel4" runat="server" Text=""></asp:Label>
+                            </td>
+                    </tr>
+
 
                     </tbody>
         		  </table>
@@ -159,6 +252,7 @@
             </div>
             </div>
         </div>
+ 
              <div class="container">
         <div class="row">
         <div class="col">
@@ -179,15 +273,15 @@
                 		</tr>
            		   </thead>           
            	        <tbody>
-                    <tr>
-                    <td><asp:Label ID="TopHeroLabel1" runat="server" Text=""></asp:Label>,
+                           <tr>
+                               <td><asp:Label ID="TopHeroLabel1" runat="server" Text=""></asp:Label>,
                          <asp:Label ID="TopHeroLabel2" runat="server" Text=""></asp:Label>,
                          <asp:Label ID="TopHeroLabel3" runat="server" Text=""></asp:Label>,
                          <asp:Label ID="TopHeroLabel4" runat="server" Text=""></asp:Label>,
                          <asp:Label ID="TopHeroLabel5" runat="server" Text=""></asp:Label>,
                          </td>
-                        <td>
-                             <asp:Label ID="CompAssistsLabel" runat="server" Text=""></asp:Label>
+                             <td>
+                             <asp:Label ID="CompAssistsLabel1" runat="server" Text=""></asp:Label>
                             </td>
                          <td>
                              <asp:Label ID="CombatCompLabel1" runat="server" Text=""></asp:Label>
@@ -199,12 +293,104 @@
                             </td>
                         <td>
                             <asp:Label ID="Match_AwardsCompLabel1" runat="server" Text=""></asp:Label>
-                             <asp:Label ID="Match_AwardsCompLabel" runat="server" Text=""></asp:Label> Cards Awarded
+                             <asp:Label ID="Match_AwardsCompLabel" runat="server" Text=""></asp:Label> Awarded
                             </td>
 
                         <td>
                             <asp:Label ID="MiscCompLabel1" runat="server" Text=""></asp:Label>
                              <asp:Label ID="MiscCompLabel" runat="server" Text=""></asp:Label>
+                            </td>
+                           </tr>
+                            <tr>
+                        <td>    </td>
+                        <td>
+                             <asp:Label ID="CompAssistsLabel19" runat="server" Text=""></asp:Label>
+                            </td>
+                         <td>
+                             <asp:Label ID="CombatCompLabel19" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="CombatCompLabel9" runat="server" Text=""></asp:Label>
+                            </td>
+                         <td>
+                             <asp:Label ID="GameCompLabel9" runat="server" Text=""></asp:Label>:
+                             <asp:Label ID="GameCompLabel19" runat="server" Text=""></asp:Label>
+                            </td>
+                        <td>
+                            <asp:Label ID="Match_AwardsCompLabel19" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="Match_AwardsCompLabel9" runat="server" Text=""></asp:Label> Awarded
+                            </td>
+
+                        <td>
+                            <asp:Label ID="MiscCompLabel19" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="MiscCompLabel9" runat="server" Text=""></asp:Label>
+                            </td>
+                    </tr>
+                           <tr>
+                        <td>    </td>
+                        <td>
+                             <asp:Label ID="CompAssistsLabel18" runat="server" Text=""></asp:Label>
+                            </td>
+                         <td>
+                             <asp:Label ID="CombatCompLabel18" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="CombatCompLabel8" runat="server" Text=""></asp:Label>
+                            </td>
+                         <td>
+                             <asp:Label ID="GameCompLabel8" runat="server" Text=""></asp:Label>:
+                             <asp:Label ID="GameCompLabel18" runat="server" Text=""></asp:Label>
+                            </td>
+                        <td>
+                            <asp:Label ID="Match_AwardsCompLabel18" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="Match_AwardsCompLabel8" runat="server" Text=""></asp:Label> Awarded
+                            </td>
+
+                        <td>
+                            <asp:Label ID="MiscCompLabel18" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="MiscCompLabel8" runat="server" Text=""></asp:Label>
+                            </td>
+                    </tr>
+                           <tr>
+                        <td>    </td>
+                        <td>
+                             <asp:Label ID="CompAssistsLabel17" runat="server" Text=""></asp:Label>
+                            </td>
+                         <td>
+                             <asp:Label ID="CombatCompLabel17" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="CombatCompLabel7" runat="server" Text=""></asp:Label>
+                            </td>
+                         <td>
+                             <asp:Label ID="GameCompLabel7" runat="server" Text=""></asp:Label>:
+                             <asp:Label ID="GameCompLabel17" runat="server" Text=""></asp:Label>
+                            </td>
+                        <td>
+                            <asp:Label ID="Match_AwardsCompLabel17" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="Match_AwardsCompLabel7" runat="server" Text=""></asp:Label>Awarded
+                            </td>
+
+                        <td>
+                            <asp:Label ID="MiscCompLabel17" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="MiscCompLabel7" runat="server" Text=""></asp:Label>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>
+                             <asp:Label ID="CompAssistsLabel16" runat="server" Text=""></asp:Label>
+                            </td>
+                         <td>
+                             <asp:Label ID="CombatCompLabel16" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="CombatCompLabel6" runat="server" Text=""></asp:Label>
+                            </td>
+                         <td>
+                             <asp:Label ID="GameCompLabel6" runat="server" Text=""></asp:Label>:
+                             <asp:Label ID="GameCompLabel16" runat="server" Text=""></asp:Label>
+                            </td>
+                        <td>
+                            <asp:Label ID="Match_AwardsCompLabel16" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="Match_AwardsCompLabel6" runat="server" Text=""></asp:Label> Awarded
+                            </td>
+
+                        <td>
+                            <asp:Label ID="MiscCompLabel16" runat="server" Text=""></asp:Label>
+                             <asp:Label ID="MiscCompLabel6" runat="server" Text=""></asp:Label>
                             </td>
                     </tr>
 
@@ -217,13 +403,16 @@
             </div>
         </div>
         </div>
-    </div>
-    <p>
+        <div>
+                <p>
+            User Icon:
             <asp:Image ID="PlayerImg" ImageUrl="" runat="server"  />
                 </p>
                 <p>
             <asp:Image ID="RankImg" ImageUrl="" runat="server" />
             </p>
+            </div>
+    </div>
     </section>
     </form>
         </div>

@@ -596,6 +596,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BlizzardUrl.cs" />
     <Compile Include="ChampionMastery.cs" />
+    <Compile Include="Champions.cs" />
     <Compile Include="Hero.cs" />
     <Compile Include="Hero2.cs" />
     <Compile Include="Home.aspx.cs">

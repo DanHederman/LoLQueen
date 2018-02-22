@@ -82,14 +82,14 @@
       <div class="input-group input-group-lg center-block">
           <asp:TextBox ID="SummonerName" class="form-control" runat="server" Placeholder="Enter Summoner Name"></asp:TextBox>
           <asp:DropDownList ID="RegionList" runat="server">
-                <asp:ListItem Value="EUW"></asp:ListItem>
-                <asp:ListItem Value="EUNW"></asp:ListItem>
-                <asp:ListItem Value="NA"></asp:ListItem>
-                <asp:ListItem Value="OCE"></asp:ListItem>
-                <asp:ListItem Value="KOR"></asp:ListItem>
+                <asp:ListItem Value="EUW1"></asp:ListItem>
+                <asp:ListItem Value="EUN1"></asp:ListItem>
+                <asp:ListItem Value="NA1"></asp:ListItem>
+                <asp:ListItem Value="OC1"></asp:ListItem>
+                <asp:ListItem Value="KR"></asp:ListItem>
                 <asp:ListItem Value="RU"></asp:ListItem>
-                <asp:ListItem Value="JP"></asp:ListItem>
-                <asp:ListItem Value="BR"></asp:ListItem>
+                <asp:ListItem Value="JP1"></asp:ListItem>
+                <asp:ListItem Value="BR1"></asp:ListItem>
             </asp:DropDownList>
           <asp:Button ID="Button1" type="button" class="btn btn-default" runat="server" Text="Search" OnClick="SubmitSummonerName"/>
           <asp:Button ID="Button3" type="button" class="btn btn-default" runat="server" Text="Search Live Game" OnClick="SubmitSummonerName"/>

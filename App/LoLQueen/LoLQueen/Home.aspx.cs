@@ -66,19 +66,20 @@ namespace LoLQueen
             UpdateGrid(matchHist,allMatchDetails);
 
         }
+        //Tried implementing third party icon
         public void GetSummonerImg(string iconId, Summoner currentSummoner)
         {
             string imgid =
                 $"http://ddragon.leagueoflegends.com/cdn/6.24.1/img/profileicon/{iconId}.png";
 
-            ChampionImg.ImageUrl = imgid;
+            //ChampionImg.ImageUrl = imgid;
             
 
         }
 
         public void UpdateLiveGame()
         {
-           // UserGameStatusLabel.Text = inGameData;
+           //UserGameStatusLabel.Text = inGameData;
         }
 
         /// <summary>

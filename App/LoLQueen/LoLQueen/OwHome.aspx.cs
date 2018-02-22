@@ -68,13 +68,8 @@ namespace LoLQueen
             {
                 try
                 {
-                    Debug.WriteLine("Attempt");
-                    Debug.WriteLine("\n\n\n\n\n\n" + currentHero.Stats.top_heroes.Competitive[1].Hero);
-                    Debug.WriteLine("\n\n\n\n\n\n\n");
                     HeroName.Text = currentHero.Username;
-                    Debug.WriteLine("new hero"+HeroName);
                     HeroLevel.Text = currentHero.Level.ToString();
-                    Debug.WriteLine("Successful");
                     PlayerImg.ImageUrl = currentHero.Portrait;
                     QuickWin.Text = currentHero2.Games.Quickplay.Won.ToString();
                     RankImg.ImageUrl = currentHero2.Competitive.RankImg;
@@ -236,7 +231,7 @@ namespace LoLQueen
                 }
                 catch
                 {
-                    System.Diagnostics.Debug.WriteLine(message: "Error occured: Could not assign data from structures in Hero and Hero2 to GUI");
+                    Debug.WriteLine(message: "Error occured: Could not assign data from structures in Hero and Hero2 to GUI");
                 }
             }
         }

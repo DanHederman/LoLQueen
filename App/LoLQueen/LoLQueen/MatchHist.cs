@@ -15,7 +15,7 @@ namespace LoLQueen
     
         public static MatchHist GetMatchHistory(string region, string accId)
         {
-            var matchHistUrl = RiotUrl.GetMatchHistUrl("euw1", accId);
+            var matchHistUrl = RiotUrl.GetMatchHistUrl(region, accId);
             var matchHist = JsonSettings.GetStats<MatchHist>(matchHistUrl);
             return matchHist;
         }

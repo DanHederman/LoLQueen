@@ -60,7 +60,7 @@ namespace LoLQueen
 
         public static LiveGameData GetLiveGame(string region, string summonerId)
         {
-            var liveGameUrl = RiotUrl.GetLiveGameUrl("euw1", summonerId);
+            var liveGameUrl = RiotUrl.GetLiveGameUrl(region, summonerId);
             var liveGame = JsonSettings.GetStats<LiveGameData>(liveGameUrl);
             return liveGame;
         }

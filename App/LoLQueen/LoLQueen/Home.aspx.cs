@@ -27,27 +27,29 @@ namespace LoLQueen
         protected void SubmitSummonerName(object sender, EventArgs e)
         {
 
+            string region = RegionList.SelectedValue;
+
             //get summoners name from textbox
             string summonerName = ValidateName(SummonerName.Text);
 
             //get summoner info from user input through textbox
-            Summoner currentSummoner = Summoner.GetSummonerInfo("euw1", summonerName);
+            Summoner currentSummoner = Summoner.GetSummonerInfo(region, summonerName);
 
             //get 2o match history games
-            MatchHist matchHist = MatchHist.GetMatchHistory("euw1", currentSummoner.AccountId.ToString());
+            MatchHist matchHist = MatchHist.GetMatchHistory(region, currentSummoner.AccountId.ToString());
          
 
 
             //get specific match information (NEEDS TO BE LOOPED FOR LAST 20)
             List<MatchInfo.SingleMatch> allMatchDetails = new List<MatchInfo.SingleMatch>();
-            allMatchDetails = MatchInfo.GetMatchDetails("euw1", matchHist);
+            allMatchDetails = MatchInfo.GetMatchDetails(region, matchHist);
 
             //get total champion mastery
-            string masteryUrl = RiotUrl.GetTotalMasteryScoreUrl("euw1", currentSummoner.Id.ToString());
+            string masteryUrl = RiotUrl.GetTotalMasteryScoreUrl(region, currentSummoner.Id.ToString());
             var mastery = new WebClient().DownloadString(masteryUrl);
 
             //get individual champion mastery levels
-            string masteryProgressUrl = RiotUrl.GetMasteryProgressUrl("euw1", currentSummoner.Id.ToString());
+            string masteryProgressUrl = RiotUrl.GetMasteryProgressUrl(region, currentSummoner.Id.ToString());
             IList<ProgressionContents> champMastery = JsonSettings.GetStats<IList<ProgressionContents>>(masteryProgressUrl);
 
 

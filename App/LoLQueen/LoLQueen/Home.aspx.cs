@@ -32,40 +32,51 @@ namespace LoLQueen
             //get summoners name from textbox
             string summonerName = ValidateName(SummonerName.Text);
 
-            //get summoner info from user input through textbox
-            Summoner currentSummoner = Summoner.GetSummonerInfo(region, summonerName);
-
-            //get 2o match history games
-            MatchHist matchHist = MatchHist.GetMatchHistory(region, currentSummoner.AccountId.ToString());
-         
-
-
-            //get specific match information (NEEDS TO BE LOOPED FOR LAST 20)
-            List<MatchInfo.SingleMatch> allMatchDetails = new List<MatchInfo.SingleMatch>();
-            allMatchDetails = MatchInfo.GetMatchDetails(region, matchHist);
-
-            //get total champion mastery
-            string masteryUrl = RiotUrl.GetTotalMasteryScoreUrl(region, currentSummoner.Id.ToString());
-            var mastery = new WebClient().DownloadString(masteryUrl);
-
-            //get individual champion mastery levels
-            string masteryProgressUrl = RiotUrl.GetMasteryProgressUrl(region, currentSummoner.Id.ToString());
-            IList<ProgressionContents> champMastery = JsonSettings.GetStats<IList<ProgressionContents>>(masteryProgressUrl);
-
-
-            LiveGame.LiveGameData inGameData = new LiveGame.LiveGameData();
             try
             {
-                inGameData = LiveGame.GetLiveGame("euw1", currentSummoner.Id.ToString());
-                UpdateLiveGame();
+                //get summoner info from user input through textbox
+                Summoner currentSummoner = Summoner.GetSummonerInfo(region, summonerName);
+
+                //get 2o match history games
+                MatchHist matchHist = MatchHist.GetMatchHistory(region, currentSummoner.AccountId.ToString());
+
+
+
+                //get specific match information (NEEDS TO BE LOOPED FOR LAST 20)
+                List<MatchInfo.SingleMatch> allMatchDetails = new List<MatchInfo.SingleMatch>();
+                allMatchDetails = MatchInfo.GetMatchDetails(region, matchHist);
+
+                //get total champion mastery
+                string masteryUrl = RiotUrl.GetTotalMasteryScoreUrl(region, currentSummoner.Id.ToString());
+                var mastery = new WebClient().DownloadString(masteryUrl);
+
+                //get individual champion mastery levels
+                string masteryProgressUrl = RiotUrl.GetMasteryProgressUrl(region, currentSummoner.Id.ToString());
+                IList<ProgressionContents> champMastery = JsonSettings.GetStats<IList<ProgressionContents>>(masteryProgressUrl);
+
+                LiveGame.LiveGameData inGameData = new LiveGame.LiveGameData();
+                try
+                {
+                    inGameData = LiveGame.GetLiveGame("euw1", currentSummoner.Id.ToString());
+                    UpdateLiveGame();
+                }
+                catch (NullReferenceException)
+                {
+                    Debug.WriteLine("No live game data available");
+                }
+
+                UpdatePageData(currentSummoner);
+                UpdateGrid(matchHist, allMatchDetails);
             }
             catch (NullReferenceException)
             {
-                Debug.WriteLine("No live game data available");
+                Debug.WriteLine("No Summoner Found");
             }
+            
 
-            UpdatePageData(currentSummoner);
-            UpdateGrid(matchHist,allMatchDetails);
+
+            
+
 
         }
         //Tried implementing third party icon
@@ -81,7 +92,7 @@ namespace LoLQueen
 
         public void UpdateLiveGame()
         {
-           //UserGameStatusLabel.Text = inGameData;
+            UserGameStatusLabel.Text = "In Game";
         }
 
         /// <summary>

@@ -92,7 +92,6 @@
                 <asp:ListItem Value="BR1"></asp:ListItem>
             </asp:DropDownList>
           <asp:Button ID="Button1" type="button" class="btn btn-default" runat="server" Text="Search" OnClick="SubmitSummonerName"/>
-          <asp:Button ID="Button3" type="button" class="btn btn-default" runat="server" Text="Search Live Game" OnClick="SubmitSummonerName"/>
       </div>
     </div>
         <p>
@@ -115,7 +114,7 @@
                 </p>
                 <p>
             User Game Status:
-            <asp:Label ID="UserGameStatusLabel" Text="" runat="server"/>
+            <asp:Label ID="UserGameStatusLabel" Text="Not In Game" runat="server"/>
                 </p>
         <asp:Button ID="Button2" runat="server" OnClick="RedirectOw" Text="OverWatch" />
          </i></span>

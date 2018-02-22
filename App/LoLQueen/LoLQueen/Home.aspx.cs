@@ -71,7 +71,6 @@ namespace LoLQueen
                 catch (NullReferenceException)
                 {
                     UpdateLiveGame(false);
-                    Debug.WriteLine("No live game data available");
                 }
 
                 UpdatePageData(currentSummoner);
@@ -79,6 +78,7 @@ namespace LoLQueen
             }
             catch (NullReferenceException)
             {
+                UpdateSummonerNotFound();
                 Debug.WriteLine("No Summoner Found");
             }
             
@@ -99,6 +99,18 @@ namespace LoLQueen
 
         }
 
+        /// <summary>
+        /// Occurs if invalid summoner name, displays label telling user summoner could not be found
+        /// </summary>
+        public void UpdateSummonerNotFound()
+        {
+            WrongUser.Text = "Summoner Not Found";
+        }
+
+        /// <summary>
+        /// Occurs when pulling live game data. Changes status of Current game based on value
+        /// </summary>
+        /// <param name="inGame"></param>
         public void UpdateLiveGame(bool inGame)
         {
             if(inGame == true)

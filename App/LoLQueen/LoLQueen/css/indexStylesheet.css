@@ -15,6 +15,14 @@ body {
 	line-height:1;
 	margin: 30px 0px;
 }
+
+form > div {
+    position: relative;
+}
+
+    form > div > label {
+        position: absolute;
+    }
 	
 p {
 	margin: 0 0 1em 0;

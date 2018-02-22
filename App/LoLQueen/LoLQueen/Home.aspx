@@ -80,7 +80,11 @@
     <div class="form-group col-sm-4 col-sm-offset-4">
     	<h1 class="text-center">LoL Queen</h1>
       <div class="input-group input-group-lg center-block">
+          <div>
+          <asp:Label ID="WrongUser" runat="server" Text=""></asp:Label>
           <asp:TextBox ID="SummonerName" class="form-control" runat="server" Placeholder="Enter Summoner Name"></asp:TextBox>
+              </div>
+          <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
           <asp:DropDownList ID="RegionList" runat="server">
                 <asp:ListItem Value="EUW1"></asp:ListItem>
                 <asp:ListItem Value="EUN1"></asp:ListItem>

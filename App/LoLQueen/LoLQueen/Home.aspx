@@ -119,7 +119,6 @@
                 </p>
         <asp:Button ID="Button2" runat="server" OnClick="RedirectOw" Text="OverWatch" />
          </i></span>
-                 <asp:Image ID="ChampionImg" ImageUrl="GetSummonerImg.imgid" runat="server" />
       </div>
     <section>          
     <div class="container">

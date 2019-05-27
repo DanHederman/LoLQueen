@@ -6,7 +6,7 @@ This is the repository for a group assignment that was part of the DIT EDDIT pro
 
 ## Contributers 
 - Daniel Hederman <danhederman@gmail.com>
-- Tom McNulty <tommcnulty007@gmail.com >
+- Tom McNulty <tommcnulty007@gmail.com>
 - Alex Hurduc <c15344251@student.dit.ie>
 
 ## Licence & Copyright
